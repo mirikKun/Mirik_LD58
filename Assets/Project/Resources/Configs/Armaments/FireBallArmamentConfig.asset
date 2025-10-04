@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b58eddf099f4e72852498850decdf78, type: 3}
+  m_Name: FireBallArmamentConfig
+  m_EditorClassIdentifier: 
+  <Type>k__BackingField: 2
+  <ArmamentPrefab>k__BackingField: {fileID: 4053863625894755348, guid: 22c762b2d67679a40b5de0a80c30d081, type: 3}
+  <Effects>k__BackingField:
+  - rid: 6954361874895863897
+  <ParticlesToSpawnOnStart>k__BackingField: []
+  <ParticlesToSpawnOnDestroy>k__BackingField: []
+  <ArmamentHitType>k__BackingField: 0
+  <ArmamentPlacementType>k__BackingField: 1
+  <CasterIsParent>k__BackingField: 0
+  <Duration>k__BackingField: 9
+  <Speed>k__BackingField: 12
+  <ArmamentToSpawnOnDestroy>k__BackingField: {fileID: 11400000, guid: c40887e2efebe29419136bfd3e3efa2c, type: 2}
+  references:
+    version: 2
+    RefIds:
+    - rid: 6954361874895863897
+      type: {class: DamageEffect, ns: Assets.Code.GamePlay.DataDriven.Effects, asm: Assembly-CSharp}
+      data:
+        _amount: 15

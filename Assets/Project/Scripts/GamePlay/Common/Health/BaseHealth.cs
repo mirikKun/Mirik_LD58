@@ -1,0 +1,37 @@
+using System;
+using Assets.Code.GamePlay.Common.Entity;
+using UnityEngine;
+
+namespace Assets.Code.GamePlay.Health
+{
+    public abstract class BaseHealth:EntityComponent,IHealth
+    {
+        [SerializeField]
+        private float _health;
+        private bool _isInvincible;
+        public event Action<float> HealthChanged;
+        public float Current { get; set; }
+        public float Max { get; set; }
+        private void Start()
+        {
+            Current = _health;
+            Max = _health;
+        }
+        public virtual void TakeDamage(float damage)
+        {
+            if(_isInvincible)
+                return;
+            
+            damage= Mathf.Clamp(damage, 0, Current);
+            Current -= damage;
+            Current = Mathf.Clamp(Current, 0, Current);
+            HealthChanged?.Invoke(Current/Max);
+            
+        }
+
+        public void SetInvincibility(bool isInvincible)
+        {
+            _isInvincible = isInvincible;
+        }
+    }
+}

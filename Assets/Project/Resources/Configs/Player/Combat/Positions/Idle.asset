@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6947309b71c64382bb842b06a8e9d780, type: 3}
+  m_Name: Idle
+  m_EditorClassIdentifier: 
+  <SpeedCurve>k__BackingField:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: -0.7762254
+      inSlope: 6.7355537
+      outSlope: 6.7355537
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.10692606
+    - serializedVersion: 3
+      time: 0.32575414
+      value: 0.6195965
+      inSlope: 2.5238156
+      outSlope: 2.5238156
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.060074914
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0.9343208
+      outSlope: 0.9343208
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.059260156
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  <Speed>k__BackingField: 4
+  LocalPosition: {x: 0.425, y: -0.502, z: 0.661}
+  LocalRotation: {x: 7.247926, y: 359.95776, z: 352.2165}

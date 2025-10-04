@@ -1,0 +1,131 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a72cfdaf5edfdb044b93da9052e6c535, type: 3}
+  m_Name: SwordWeaponAttackPiersingAnimationData
+  m_EditorClassIdentifier: 
+  <SpeedCurve>k__BackingField:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.01367048
+      value: 0.12052085
+      inSlope: 2.5503595
+      outSlope: 2.5503595
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.21693665
+      value: 0.38215905
+      inSlope: 4.4904857
+      outSlope: 4.4904857
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.25365525
+      value: 1.4209034
+      inSlope: 1.5799677
+      outSlope: 1.5799677
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.5721327
+      value: 1.5561042
+      inSlope: -0.48982352
+      outSlope: -0.48982352
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.81043047
+      value: 0.8410851
+      inSlope: -3.9170384
+      outSlope: -3.9170384
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.82895064
+      value: 0.6390639
+      inSlope: -9.8204775
+      outSlope: -9.8204775
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.14727362
+    - serializedVersion: 3
+      time: 0.91326904
+      value: 0.5026505
+      inSlope: -0.20024078
+      outSlope: -0.20024078
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  <RotationCurve>k__BackingField:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: -0.00034094427
+      inSlope: 0.0017142353
+      outSlope: 0.0017142353
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0.001373291
+      inSlope: 0.0017142353
+      outSlope: 0.0017142353
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  <AttackDuration>k__BackingField: 0.45
+  <PreparingSpeed>k__BackingField: 5
+  <StaticRotation>k__BackingField: 1
+  <Rotation>k__BackingField: {x: -290.8, y: -362.8, z: -355.3}
+  <Path>k__BackingField:
+    points:
+    - {x: 0.002816856, y: -0.3988428, z: 0.2788045}
+    - {x: -0.12307465, y: -0.405146, z: 1.475591}
+    - {x: 0.044661283, y: -0.09709191, z: 1.8874372}
+    - {x: 0.13294029, y: -0.38683426, z: 0.5517605}
+    isClosed: 0
+    space: 0
+    controlMode: 0
+    autoControlLength: 0.3
+    boundsUpToDate: 0
+    bounds:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 0, y: 0, z: 0}
+    perAnchorNormalsAngle:
+    - 0
+    - 0
+    globalNormalsAngle: 216
+    subNormalsAngle: 0
+    flipNormals: 0

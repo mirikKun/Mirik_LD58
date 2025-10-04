@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 687d3700de6e41e79ea9f876c9bd98ab, type: 3}
+  m_Name: WallRunAbilityItem
+  m_EditorClassIdentifier: 
+  itemID: Wall Run
+  itemName: Wall Run
+  itemDescription: Wall Run dash
+  itemIcon: {fileID: 21300000, guid: 94811493920ecae44ab2b2a298f3df37, type: 3}
+  maxStackSize: 1
+  isStackable: 0
+  _slotType: 3
+  _abilityConfig: {fileID: 11400000, guid: 5994456f074e405409e0bac878b2afc1, type: 2}

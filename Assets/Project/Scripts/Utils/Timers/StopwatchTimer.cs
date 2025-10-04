@@ -7,9 +7,9 @@ namespace ImprovedTimers.Project.Scripts.Utils.Timers {
     public class StopwatchTimer : Timer {
         public StopwatchTimer() : base(0) { }
 
-        public override void Tick() {
+        public override void Tick(float deltaTime) {
             if (IsRunning) {
-                CurrentTime += Time.deltaTime;
+                CurrentTime += deltaTime;
             }
         }
 

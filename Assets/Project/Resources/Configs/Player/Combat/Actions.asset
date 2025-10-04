@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3a911c6bc9846879ebd610c4e99dfe2, type: 3}
+  m_Name: Actions
+  m_EditorClassIdentifier: 
+  <LightAttack>k__BackingField:
+    <ActionId>k__BackingField: attack1
+    <LightAttackRight>k__BackingField: {fileID: 11400000, guid: c9b7640d570044541810b774df3d395d, type: 2}
+    <LightAttackLeft>k__BackingField: {fileID: 11400000, guid: a4f8bcff8343168449ee2e5d67ade5f8, type: 2}
+  <HardAttack>k__BackingField:
+    <ActionId>k__BackingField: attack2
+    <HardAttackPath>k__BackingField: {fileID: 11400000, guid: d3bdc546ba6b1a14e85c07d8d3e55e71, type: 2}
+    <PreparingStartPosition>k__BackingField: {fileID: 11400000, guid: 307a27cda0d077b48bc3a386ab1337a9, type: 2}
+    <PreparingDuration>k__BackingField: 0.4
+  <Parry>k__BackingField:
+    <ActionId>k__BackingField: parry
+    WeaponPositionSo: {fileID: 11400000, guid: 577ce4090d24d1844a8849b4507b1958, type: 2}
+    CounterattackDuration: 0.3
+  <Block>k__BackingField:
+    <ActionId>k__BackingField: block
+    WeaponPositionSo: {fileID: 11400000, guid: ab623fe2eb10855438f71db8a1467fe6, type: 2}
+    BlockExitDelay: 0.3
+  <Idle>k__BackingField: {fileID: 11400000, guid: 4754c35821ccdec40af700506382e797, type: 2}

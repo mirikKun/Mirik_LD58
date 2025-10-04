@@ -5,11 +5,17 @@ namespace ImprovedTimers.Project.Scripts.Utils.Timers {
     /// Timer that counts down from a specific value to zero.
     /// </summary>
     public class CountdownTimer : Timer {
-        public CountdownTimer(float value) : base(value) { }
+        private float _timeScale=1;
 
-        public override void Tick() {
+        public CountdownTimer(float value) : base(value) { }
+        public void SetTimeScale(float timeScale)
+        {
+            _timeScale= timeScale;
+        }
+
+        public override void Tick(float deltaTime) {
             if (IsRunning && CurrentTime > 0) {
-                CurrentTime -= Time.deltaTime;
+                CurrentTime -= deltaTime*_timeScale;
             }
 
             if (IsRunning && CurrentTime <= 0) {

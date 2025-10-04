@@ -16,14 +16,14 @@ namespace ImprovedTimers.Project.Scripts.Utils.Timers {
             CalculateTimeThreshold(ticksPerSecond);
         }
 
-        public override void Tick() {
+        public override void Tick(float deltaTime) {
             if (IsRunning && CurrentTime >= timeThreshold) {
                 CurrentTime -= timeThreshold;
                 OnTick.Invoke();
             }
 
             if (IsRunning && CurrentTime < timeThreshold) {
-                CurrentTime += Time.deltaTime;
+                CurrentTime += deltaTime;
             }
         }
 

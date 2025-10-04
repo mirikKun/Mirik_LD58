@@ -1,0 +1,158 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1a8d284bd6a40adbb2086bc1402394f, type: 3}
+  m_Name: BigOrcBehaviorConfig
+  m_EditorClassIdentifier: 
+  _idleStateConfig:
+    <AnimationName>k__BackingField: mutant breathing idle
+    <IdleDuration>k__BackingField: 1
+  _patrollingStateConfig:
+    <AnimationName>k__BackingField: BigOrcMutant Walking
+    <Speed>k__BackingField:
+      _min: 2.1
+      _max: 2.8
+    <Range>k__BackingField: 12
+  _chasingStateConfig:
+    <AnimationName>k__BackingField: BigOrcSlow Run
+    <ChasingDuration>k__BackingField: 1
+    <ChasingMaxDistance>k__BackingField: 12
+    <MovingSpeed>k__BackingField: 4.5
+  _simpleAttackStateConfig:
+    <AttackId>k__BackingField: attack1
+    <AnimationName>k__BackingField: mutant swiping
+    <AttackRange>k__BackingField: 2.4
+    <AttackAngle>k__BackingField: 20
+    <AttackDuration>k__BackingField: 3
+    <RotationDuration>k__BackingField: 0.4
+    <AttackCooldown>k__BackingField: 3
+    <AttackDamage>k__BackingField: 5
+  _jumpAttackStateConfig:
+    <AttackId>k__BackingField: groundAttack1
+    <JumpStartAnimationName>k__BackingField: orc jump attack start
+    <TimeToStartEndAnimation>k__BackingField: 3.5
+    <JumpEndAnimationName>k__BackingField: orc jump attack end
+    <JumpDuration>k__BackingField: 0.65
+    <AttackDuration>k__BackingField: 1
+    <JumpDelay>k__BackingField: 0.35
+    <JumpHeight>k__BackingField: 2
+    <JumpSpeedCurve>k__BackingField:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -0.0016479492
+        inSlope: 0.955341
+        outSlope: 0.955341
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.09354144
+      - serializedVersion: 3
+        time: 0.5114734
+        value: 0.4047956
+        inSlope: 0.41417372
+        outSlope: 0.41417372
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.16933037
+      - serializedVersion: 3
+        time: 0.8706871
+        value: 0.7419807
+        inSlope: 1.8057936
+        outSlope: 1.8057936
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.95600706
+        value: 0.97003335
+        inSlope: 1.6770408
+        outSlope: 1.6770408
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0.6811696
+        outSlope: 0.6811696
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    <JumpHeightCurve>k__BackingField:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 5.5581126
+        outSlope: 5.5581126
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.069774285
+      - serializedVersion: 3
+        time: 0.4341221
+        value: 0.99256766
+        inSlope: -0.30986285
+        outSlope: -0.30986285
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.14699818
+      - serializedVersion: 3
+        time: 0.86940426
+        value: 0.6482966
+        inSlope: -2.390354
+        outSlope: -2.390354
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.24639845
+      - serializedVersion: 3
+        time: 1.0013428
+        value: -0.000045776367
+        inSlope: -3.4279914
+        outSlope: -3.4279914
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.062462494
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    <TargetDistanceToPlayer>k__BackingField: 0.2
+    <JumpAttackRange>k__BackingField: 14
+    <JumpAttackMinRange>k__BackingField: 10
+  _onslaughtAttackConfig:
+    <AttackId>k__BackingField: onslaughtAttack1
+    <AnimationName>k__BackingField: orc Fast Run
+    <Speed>k__BackingField: 15
+    <Range>k__BackingField: 25
+  _restStateConfig:
+    <AnimationName>k__BackingField: mutant breathing idle
+    <RestDuration>k__BackingField: 1
+  _roarAttackStateConfig:
+    <AttackId>k__BackingField: roarAttack1
+    <AnimationName>k__BackingField: mutant roaring
+    <AttackRadius>k__BackingField: 2.4
+    <AttackDamage>k__BackingField: 5
+    <AttackDuration>k__BackingField: 4
+    <StateDuration>k__BackingField: 6
+    <Rotate>k__BackingField: 1

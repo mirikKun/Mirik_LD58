@@ -1,0 +1,185 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c0fa51b3d344d52a906b47c9379abfd, type: 3}
+  m_Name: LightKnightSwordBehaviorConfig
+  m_EditorClassIdentifier: 
+  _idleStateConfig:
+    <AnimationName>k__BackingField: sword and shield idle (4)
+    <IdleDuration>k__BackingField: 1
+  _patrollingStateConfig:
+    <AnimationName>k__BackingField: sword and shield walk
+    <Speed>k__BackingField:
+      _min: 2
+      _max: 2.6
+    <Range>k__BackingField: 9
+  _chasingStateConfig:
+    <AnimationName>k__BackingField: sword and shield run
+    <ChasingDuration>k__BackingField: 1
+    <ChasingMaxDistance>k__BackingField: 10
+    <MovingSpeed>k__BackingField: 4.5
+  _simpleAttackStateConfig:
+    <AttackId>k__BackingField: 
+    <AnimationName>k__BackingField: sword and shield slash
+    <AttackRange>k__BackingField: 2.4
+    <AttackAngle>k__BackingField: 20
+    <AttackDuration>k__BackingField: 3
+    <RotationDuration>k__BackingField: 0.4
+    <AttackCooldown>k__BackingField: 3
+    <AttackDamage>k__BackingField: 5
+  _simpleAttacksSetConfig:
+    <StateSetOrderType>k__BackingField: 2
+    <StateConfigs>k__BackingField:
+    - <AttackId>k__BackingField: attack1
+      <AnimationName>k__BackingField: sword and shield slash
+      <AttackRange>k__BackingField: 2.9
+      <AttackAngle>k__BackingField: 20
+      <AttackDuration>k__BackingField: 3
+      <RotationDuration>k__BackingField: 0.4
+      <AttackCooldown>k__BackingField: 3
+      <AttackDamage>k__BackingField: 5
+    - <AttackId>k__BackingField: attack2
+      <AnimationName>k__BackingField: sword and shield slash (3)
+      <AttackRange>k__BackingField: 2.9
+      <AttackAngle>k__BackingField: 20
+      <AttackDuration>k__BackingField: 3
+      <RotationDuration>k__BackingField: 0.4
+      <AttackCooldown>k__BackingField: 2
+      <AttackDamage>k__BackingField: 5
+  _attackPreparingStateConfig:
+    <AnimationName>k__BackingField: sword and shield walk
+    <Speed>k__BackingField:
+      _min: 0.8
+      _max: 1.7
+    <Range>k__BackingField:
+      _min: 3.8
+      _max: 6
+    <MaxRange>k__BackingField:
+      _min: 7
+      _max: 10
+    <ReturnDuration>k__BackingField: 3
+  _attackPreparingIdleStateConfig:
+    <AnimationName>k__BackingField: sword and shield idle (4)
+    <IdleDuration>k__BackingField: 2
+  _jumpAttackStateConfig:
+    <AttackId>k__BackingField: 
+    <JumpStartAnimationName>k__BackingField: sword and shield jump attack start
+    <TimeToStartEndAnimation>k__BackingField: 3.5
+    <JumpEndAnimationName>k__BackingField: sword and shield jump attack end
+    <JumpDuration>k__BackingField: 0.52
+    <AttackDuration>k__BackingField: 2
+    <JumpDelay>k__BackingField: 0.3
+    <JumpHeight>k__BackingField: 1
+    <JumpSpeedCurve>k__BackingField:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -0.0016479492
+        inSlope: 0.955341
+        outSlope: 0.955341
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.09354144
+      - serializedVersion: 3
+        time: 0.26205584
+        value: 0.36757368
+        inSlope: 0.4671032
+        outSlope: 0.4671032
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.55769265
+        value: 0.46399522
+        inSlope: 0.85916
+        outSlope: 0.85916
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.94106066
+        value: 0.8579627
+        inSlope: 2.4268806
+        outSlope: 2.4268806
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.9673596
+        value: 0.95858544
+        inSlope: 2.547463
+        outSlope: 2.547463
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 1.2688129
+        outSlope: 1.2688129
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    <JumpHeightCurve>k__BackingField:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0.44330144
+        outSlope: 0.44330144
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.17997803
+      - serializedVersion: 3
+        time: 0.2507242
+        value: 0.6739094
+        inSlope: 2.2672138
+        outSlope: 2.2672138
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.61391956
+        value: 0.9991088
+        inSlope: -0.30986285
+        outSlope: -0.30986285
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.14699818
+      - serializedVersion: 3
+        time: 1.0013428
+        value: -0.000045776367
+        inSlope: -7.4866924
+        outSlope: -7.4866924
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.037373938
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    <TargetDistanceToPlayer>k__BackingField: 1
+    <JumpAttackRange>k__BackingField: 9
+    <JumpAttackMinRange>k__BackingField: 8.4
