@@ -19,8 +19,6 @@ namespace Assets.Code.GamePlay.Enemies.EnemyController
 
         [SerializeField] private EnemyEntity[] _enemies;
 
-        [SerializeField] private float _combatStateCheckCooldown = 0.5f;
-        private CountdownTimer _combatStateCheckTimer;
         private IUpdateService _updateService;
 
 
@@ -30,25 +28,20 @@ namespace Assets.Code.GamePlay.Enemies.EnemyController
             _updateService = updateService;
         }
 
-        private void Awake()
+        private void Start()
         {
             _enemies = FindObjectsByType<EnemyEntity>(FindObjectsSortMode.None);
-            _combatStateCheckTimer = new CountdownTimer(_combatStateCheckCooldown);
-            _combatStateCheckTimer.Start();
             foreach (var enemy in _enemies)
             {
                 enemy.SetupEnemy(_enemyMediator);
                 enemy.Get<CharacterDetector>().Setup(_characterController);
 
             }
-        
-        }
-  
-        private void Start()
-        {
             _updateService.EnemiesUpdate.Register(this);
             _updateService.EnemiesFixedUpdate.Register(this);
         }
+  
+
 
         private void OnDestroy()
         {
@@ -58,8 +51,8 @@ namespace Assets.Code.GamePlay.Enemies.EnemyController
 
         public void GameUpdate(float deltaTime)
         {
-            if (_combatStateCheckTimer.IsFinished)
-                ConfigureAttackingEnemy();
+            // if (_combatStateCheckTimer.IsFinished)
+            //     ConfigureAttackingEnemy();
             foreach (var enemy in _enemies)
             {
                 enemy.Get<EnemyStatesContainer>().TickUpdate(deltaTime);
@@ -69,61 +62,11 @@ namespace Assets.Code.GamePlay.Enemies.EnemyController
         {
             foreach (var enemy in _enemies)
             {
+                if(enemy.TryGet(out EnemyRigidbodyMover enemyRigidbodyMover)) enemyRigidbodyMover.FixedTick(fixedDeltaTime);
                 enemy.Get<EnemyStatesContainer>().FixedTickUpdate(fixedDeltaTime);
             }
         }
         
-
-     
-
-        private void ConfigureAttackingEnemy()
-        {
-            List<EnemyEntity> battleEnemies=new List<EnemyEntity>();
-
-            foreach (var enemy in _enemies)
-            {
-                if (enemy.Get<EnemyCombat>().CombatData.HasDetectedCharacter)
-                {
-                    battleEnemies.Add(enemy);
-                }
-                else
-                {
-                    enemy.Get<EnemyCombat>().CombatData.CanAttack = false;
-                }
-            }
-
-            for (var i = battleEnemies.ToList().Count - 1; i >= 0; i--)
-            {
-                var enemy = battleEnemies.ToList()[i];
-                if (enemy.Get<EnemyCombat>().CombatLogicType == CombatLogicType.AlwaysAttack)
-                {
-                    enemy.Get<EnemyCombat>().CombatData.CanAttack = true;
-                    battleEnemies.Remove(enemy);
-                }
-            }
-
-            if(HasEnemyWithPriority(battleEnemies,out List<EnemyEntity> priorityEnemies))
-            {
-                EnemyEntity closestEnemy = FindClosestEnemy(priorityEnemies);
-
-                foreach (var battleEnemy in battleEnemies)
-                {
-                    battleEnemy.Get<EnemyCombat>().CombatData.CanAttack = battleEnemy == closestEnemy;
-                }
-             
-            }
-            else
-            {
-                EnemyEntity closestEnemy = FindClosestEnemy(battleEnemies);
-                foreach (var enemy in battleEnemies)
-                {
-                    enemy.Get<EnemyCombat>().CombatData.CanAttack = enemy == closestEnemy;
-                }
-            }
-            
-
-            _combatStateCheckTimer.Start();
-        }
 
         private bool HasEnemyWithPriority(List<EnemyEntity> battleEnemies, out List<EnemyEntity> enemies)
         {

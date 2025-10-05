@@ -41,6 +41,7 @@ namespace Assets.Code.GamePlay.DataDriven.Effects
             // target.GetComponent<Rigidbody>().AddForce(dir * _force, ForceMode.Impulse);
             Debug.Log($"{caster.name} knocked back {target.name} with force {_force}");
             Vector3 dir = (target.transform.position - from).normalized;
+            dir.y = Mathf.Abs(dir.y);
             target.Get<PlayerMover>().SetMomentum(dir * _force);
         }
     }

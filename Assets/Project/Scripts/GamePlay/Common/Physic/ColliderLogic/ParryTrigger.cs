@@ -8,7 +8,7 @@ namespace Assets.Code.GamePlay.Physic.ColliderLogic
     {
         private ActorEntity _casterEntity;
 
-        public event Action OnHitEvent;
+        public event Action<IAttackTrigger> OnHitEvent;
 
         public void Init(ActorEntity casterEntity)
         {
@@ -30,7 +30,7 @@ namespace Assets.Code.GamePlay.Physic.ColliderLogic
             
             
             Debug.Log($"Counter {gameObject.name} was hit by {attackTrigger.GetType()}");
-            OnHitEvent?.Invoke();
+            OnHitEvent?.Invoke(attackTrigger);
             attackTrigger.AddHitProtected(_casterEntity);
         }
     }

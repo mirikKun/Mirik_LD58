@@ -6,6 +6,7 @@ using Assets.Code.GamePlay.Armaments.Projectiles.Configs;
 using Assets.Code.GamePlay.Player.Inventory.Configs;
 using Code.Gameplay.Windows;
 using Code.Gameplay.Windows.Configs;
+using Project.Scripts.GamePlay.Collection.Configs;
 using UnityEngine;
 
 namespace Code.Gameplay.StaticData
@@ -16,6 +17,7 @@ namespace Code.Gameplay.StaticData
         private PlayerStartInventory _playerStartInventory;
 
         private PlayerStartAbilities _playerStartAbilities;
+        private AllCollectableAbilities _allCollectableAbilities;
         private ArmamentsConfig _armamentsConfig;
         //private PlayerMovementConfig _playerMovementConfig;
 
@@ -25,6 +27,7 @@ namespace Code.Gameplay.StaticData
             LoadAbilitiesConfig();
             LoadStartInventoryConfig();
             LoadProjectilesConfig();
+            LoadAllCollectableAbilitiesConfig();
         }
 
 
@@ -32,6 +35,8 @@ namespace Code.Gameplay.StaticData
 
         public PlayerStartInventory GetPlayerStartInventory() =>
             _playerStartInventory ?? throw new Exception("Player start inventory config was not loaded");
+        public AllCollectableAbilities GetAllCollectableAbilities() =>
+            _allCollectableAbilities ?? throw new Exception("All collectable abilities config was not loaded");
 
         public PlayerStartAbilities GetPlayerStartAbilities() =>
             _playerStartAbilities ?? throw new Exception("Player start abilities config was not loaded");
@@ -48,6 +53,11 @@ namespace Code.Gameplay.StaticData
         {
             _armamentsConfig= Resources
                 .Load<ArmamentsConfig>("Configs/Armaments/ProjectilesConfig");
+        }
+        private void LoadAllCollectableAbilitiesConfig()
+        {
+            _allCollectableAbilities= Resources
+                .Load<AllCollectableAbilities>("Configs/Collectables/AllCollectableAbilities");
         }
 
         private void LoadStartInventoryConfig()

@@ -15,6 +15,7 @@ using Code.Infrastructure.States.Factory;
 using Code.Infrastructure.States.GameStates;
 using Code.Infrastructure.States.StateMachine;
 using Code.Progress.Provider;
+using Project.Scripts.GamePlay.Collection.Systems;
 using Zenject;
 
 namespace Code.Infrastructure.Installers
@@ -66,6 +67,7 @@ namespace Code.Infrastructure.Installers
             Container.Bind<IUpdateService>().To<UpdateService>().AsSingle();
             Container.Bind<IInventorySystem>().To<InventorySystem>().AsSingle();
             Container.Bind<IAbilitiesSystem>().To<AbilitiesSystem>().AsSingle();
+            Container.Bind<ICollectionSystem>().To<CollectionSystem>().AsSingle();
         }
 
         private void BindGameplayFactories()

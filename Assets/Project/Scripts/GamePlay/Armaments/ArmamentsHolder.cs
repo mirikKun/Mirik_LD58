@@ -29,7 +29,7 @@ namespace Assets.Code.GamePlay.Armaments.Projectiles
             Armament armament = _armamentsFactory.CreateArmament(config, placement.position, rotation, parent);
             armament.Destroyed += OnArmamentDestroyed;
             armament.Init(Entity, config);
-            //armament.gameObject.layer = _armamentLayer;
+            armament.gameObject.layer = _armamentLayer;
             _armaments.Add(armament); 
             return armament;
         }

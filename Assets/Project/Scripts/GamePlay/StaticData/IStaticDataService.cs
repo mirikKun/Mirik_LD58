@@ -2,6 +2,7 @@
 using Assets.Code.GamePlay.Armaments.Projectiles.Configs;
 using Assets.Code.GamePlay.Player.Inventory.Configs;
 using Code.Gameplay.Windows;
+using Project.Scripts.GamePlay.Collection.Configs;
 using UnityEngine;
 
 namespace Code.Gameplay.StaticData
@@ -15,5 +16,6 @@ namespace Code.Gameplay.StaticData
         PlayerStartInventory GetPlayerStartInventory();
         PlayerStartAbilities GetPlayerStartAbilities();
         ArmamentsConfig GetProjectilesConfig();
+        AllCollectableAbilities GetAllCollectableAbilities();
     }
 }

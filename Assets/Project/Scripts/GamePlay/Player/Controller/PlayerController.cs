@@ -5,6 +5,7 @@ using Assets.Code.GamePlay.Common.GameBehaviour.Services;
 using Assets.Code.GamePlay.Player.Abilities.Factory;
 using Assets.Code.GamePlay.Player.PlayerStateMachine;
 using Assets.Code.GamePlay.Stats;
+using Project.Scripts.GamePlay.Player.StealSystem;
 using UnityEngine;
 using Zenject;
 
@@ -74,8 +75,8 @@ namespace Assets.Code.GamePlay.Player.Controller
 
             Entity.Get<PlayerStateMachineContainer>().Tick(deltaTime);
             Entity.Get<PlayerPickUpper>().Tick();
+            Entity.Get<StealingController>().Tick(deltaTime);
             Entity.Get<PlayerEffects.PlayerEffects>().CameraMovingEffects.Tick(deltaTime);
-            //Entity.Get<EnemyDetector>().Tick(deltaTime);
             Entity.Get<StatsController>().Mediator.Tick(deltaTime);
         }
 

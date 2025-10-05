@@ -7,7 +7,7 @@ using UnityEngine;
 
 namespace Assets.Code.GamePlay.Enemies.EnemyController.EnemyConfigs
 {
-    [CreateAssetMenu(fileName = "FlamingRelicConfig", menuName = "Enemy Configs  public override List<StateConfiguration> GetConfigurations(ActorEntity enemyController)\n        {\n            List<StateConfiguration> configurations = new List<StateConfiguration>()\n            {\n                GetIdleConfiguration(enemyController),\n                GetPatrollingConfiguration(enemyController),\n                GetAttackConfiguration(enemyController),\n            };\n            return configurations;\n        }/FlamingRelicConfig")]
+    [CreateAssetMenu(fileName = "FlamingRelicConfig", menuName = "Enemy Configs/FlamingRelicConfig")]
     public class FlamingRelicConfig : EnemyBehaviorConfig
     {
         [SerializeField] private IdleStateConfig _idleStateConfig;
@@ -21,7 +21,7 @@ namespace Assets.Code.GamePlay.Enemies.EnemyController.EnemyConfigs
             {
                 GetIdleConfiguration(enemyController),
                 GetPatrollingConfiguration(enemyController),
-                GetAttackConfiguration(enemyController),
+                GetArmamentSpawnConfiguration(enemyController),
             };
             return configurations;
         }
@@ -37,6 +37,35 @@ namespace Assets.Code.GamePlay.Enemies.EnemyController.EnemyConfigs
                 {
                     TransitionConfiguration.GetConfiguration<IdleState, PointsFlyPatrollingState>(state.TimerFinished),
 
+                }
+            };
+            return configuration;
+        }
+        private StateConfiguration GetPatrollingConfiguration(ActorEntity enemy)
+        {
+            var state = new PointsFlyPatrollingState(enemy, _pointsFlyPatrollingStateConfig);
+            StateConfiguration configuration = new StateConfiguration
+            {
+                State = state,
+                Transitions = new List<TransitionConfiguration>()
+                {
+                    TransitionConfiguration.GetConfiguration<PointsFlyPatrollingState, IdleState>(state.HasReachedDestination)
+                }
+            };
+            return configuration;
+        }
+        private StateConfiguration GetArmamentSpawnConfiguration(ActorEntity enemy)
+        {
+
+            var state = new ArmamentSpawnState(enemy, _armamentSpawnStateConfig);
+            StateConfiguration configuration = new StateConfiguration
+            {
+                State = state,
+                Transitions = new List<TransitionConfiguration>()
+                {
+                    TransitionConfiguration.GetConfiguration<PointsFlyPatrollingState, ArmamentSpawnState>(state.CanAttackAndCooldownPassed),
+                    TransitionConfiguration.GetConfiguration<IdleState, ArmamentSpawnState>(state.CanAttackAndCooldownPassed),
+                    TransitionConfiguration.GetConfiguration<ArmamentSpawnState, PointsFlyPatrollingState>(state.AttackTimerFinished),
                 }
             };
             return configuration;

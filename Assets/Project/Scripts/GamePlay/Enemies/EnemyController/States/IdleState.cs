@@ -20,14 +20,15 @@ namespace Assets.Code.GamePlay.Enemies.EnemyController.States
 
         public void OnEnter()
         {
-            _enemy.Get<EnemyAnimator>().StartAnimation(_idleConfig.AnimationHash);
+            if(_enemy.TryGet<EnemyAnimator>(out var animator))
+                animator.StartAnimation(_idleConfig.AnimationHash);
             _idleTimer.Start();
         }
         public void OnExit()
         {
             if (_enemy.Get<CharacterDetector>().CanDetectCharacter)
             {
-                _enemy.Get<EnemyCombat>().CombatData.HasDetectedCharacter = true;
+               // _enemy.Get<EnemyCombat>().CombatData.HasDetectedCharacter = true;
 
             }
         }

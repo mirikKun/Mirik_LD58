@@ -51,7 +51,7 @@ namespace Assets.Code.GamePlay.Enemies.EnemyController
         public Vector3 GetCharacterPredictedOffset(float predictTime) =>
             _detectedCharacter.Get<PlayerMover>().GetVelocity() * predictTime;
 
-        public bool CanAttackCharacter(float attackRange, float attackAngle)
+        public bool CanAttackCharacter(float attackRange, float attackAngle=0)
         {
             var directionToCharacter = DetectedCharacter.position - _detectionOrigin.position;
             return directionToCharacter.magnitude <= attackRange

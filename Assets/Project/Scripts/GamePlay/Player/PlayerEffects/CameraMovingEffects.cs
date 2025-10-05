@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Assets.Code.GamePlay.Player.PlayerEffects
 {
-    public class CameraMovingEffects : MonoBehaviour
+    public class  CameraMovingEffects : MonoBehaviour
     {
         [Header("Camera References")] [SerializeField]
         private CinemachineCamera _playerCamera;

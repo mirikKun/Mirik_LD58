@@ -14,15 +14,13 @@ namespace Assets.Code.GamePlay.Enemies.EnemyController.States
     {
         private readonly ActorEntity _enemy;
         private readonly PointsFlyPatrollingStateConfig _patrollingConfig;
-        private EnemyMover Mover => _enemy.Get<EnemyMover>();
-        private EnemyCombat Combat => _enemy.Get<EnemyCombat>();
         private List<Vector3> _patrolPoints;
         private Vector3 _targetPosition;
         public PointsFlyPatrollingState(ActorEntity enemy, PointsFlyPatrollingStateConfig patrollingConfig)
         {
             _enemy = enemy;
             _patrollingConfig = patrollingConfig;
-            _patrolPoints=_patrollingConfig.PatrolPoints.Select(x=>x.position).ToList();
+            _patrolPoints=_enemy.Get<EnemyPatrolPointsHolder>().PatrolPoints.Select(x=>x.position).ToList();
         }
 
         public void OnEnter()
@@ -34,15 +32,25 @@ namespace Assets.Code.GamePlay.Enemies.EnemyController.States
         public void Update(float deltaTime)
         {
             float speed= _patrollingConfig.Speed.RandomValueInRange;
-            float rotationSpeed= _patrollingConfig.RotationSpeed.RandomValueInRange;
-            
-            Vector3 directionToTarget = _targetPosition - Mover.Tr.position;
-            _enemy.Get<>()
+            float rotationSpeed= _patrollingConfig.RotationSpeed;
+
+            EnemyRigidbodyMover mover = _enemy.Get<EnemyRigidbodyMover>();
+            Vector3 directionToTarget = _targetPosition - mover.Tr.position;
+            mover.SetMomentum( directionToTarget.normalized * speed);
+            mover.Tr.forward= Vector3.Slerp(mover.Tr.forward, directionToTarget.normalized, rotationSpeed * deltaTime);
         }
+        
+        
 
         public void OnExit()
         {
-         
+            _enemy.Get<EnemyRigidbodyMover>().SetMomentum( Vector3.zero);
+
+        }
+
+        public bool HasReachedDestination()
+        {
+            return Vector3.Distance(_enemy.GetPosition(), _targetPosition) < _patrollingConfig.ReachThreshold;
         }
     }
 }

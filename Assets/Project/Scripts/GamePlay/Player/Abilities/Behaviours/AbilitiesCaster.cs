@@ -13,7 +13,6 @@ namespace Assets.Code.GamePlay.Abilities.General
     public class AbilitiesCaster:EntityComponent
     {
         private List<IAbility> _abilities = new List<IAbility>();
-        private readonly PlayerController _playerController;
         private IAbilitiesFactory _abilitiesFactory;
         private IAbilitiesSystem _abilitiesSystem;
 

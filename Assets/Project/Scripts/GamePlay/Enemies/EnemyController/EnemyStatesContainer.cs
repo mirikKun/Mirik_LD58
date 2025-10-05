@@ -18,7 +18,10 @@ namespace Assets.Code.GamePlay.Enemies.EnemyController
         private void Start()
         {
             SetupStateMachine();
-            Entity.Get<EnemyCombat>().Init();
+            if(Entity.TryGet<EnemyCombat>(out var combat))
+            {
+                combat.Init();
+            }
         }
 
 

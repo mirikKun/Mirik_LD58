@@ -10,6 +10,8 @@ using Code.Gameplay.Levels;
 using Code.Gameplay.StaticData;
 using Code.Infrastructure.States.StateInfrastructure;
 using Code.Infrastructure.States.StateMachine;
+using Project.Scripts.GamePlay.Collection.Configs;
+using Project.Scripts.GamePlay.Collection.Systems;
 using UnityEngine;
 
 namespace Code.Infrastructure.States.GameStates
@@ -22,11 +24,13 @@ namespace Code.Infrastructure.States.GameStates
         private readonly IInventorySystem _inventorySystem;
         private readonly IStaticDataService _staticDataService;
         private readonly IAbilitiesSystem _abilitiesSystem;
+        private ICollectionSystem _collectionSystem;
 
 
         public GameplayEnterState(IGameStateMachine stateMachine, ILevelDataProvider levelDataProvider,
-            IInventorySystem inventorySystem,IStaticDataService staticDataService,IAbilitiesSystem abilitiesSystem)
+            IInventorySystem inventorySystem,IStaticDataService staticDataService,IAbilitiesSystem abilitiesSystem,ICollectionSystem collectionSystem)
         {
+            _collectionSystem = collectionSystem;
             _stateMachine = stateMachine;
             _levelDataProvider = levelDataProvider;
             _inventorySystem = inventorySystem;
@@ -40,8 +44,15 @@ namespace Code.Infrastructure.States.GameStates
             PlacePlayer();
             SetupCamera();
             SetupInventory();
+            SetupCollector();
             SetupAbilities();
             _stateMachine.Enter<GameLoopState>();
+        }
+
+        private void SetupCollector()
+        {
+            AllCollectableAbilities allCollectableAbilities= _staticDataService.GetAllCollectableAbilities();
+            _collectionSystem.Setup(allCollectableAbilities);
         }
 
         private void SetupInventory()

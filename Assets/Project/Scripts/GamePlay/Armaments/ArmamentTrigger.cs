@@ -22,10 +22,14 @@ namespace Assets.Code.GamePlay.Physic.ColliderLogic
         private Coroutine _hitCoroutine;
         private IArmamentsFactory _armamentsFactory;
         private ArmamentConfig _armamentToSpawn;
+        private ArmamentConfig _currentArmamentConfig;
         public BaseEntity CasterEntity => _casterEntity;
         public List<ITriggerHittable> HitObjects => _hitObjects;
         public List<Effect> Effects { get; private set; }
+        public ArmamentConfig ArmamentConfig=> _currentArmamentConfig;
         public event Action Hitted;
+        public event Action Dismissed;
+        private bool _dismissed;
 
         [Inject]
         private void Construct(IArmamentsFactory armamentsFactory)
@@ -40,6 +44,7 @@ namespace Assets.Code.GamePlay.Physic.ColliderLogic
 
         public void SetData(ArmamentConfig config)
         {
+            _currentArmamentConfig= config;
             Effects = config.Effects;
             _configArmamentHitType = config.ArmamentHitType;
             _armamentToSpawn = config.ArmamentToSpawnOnDestroy;
@@ -51,6 +56,14 @@ namespace Assets.Code.GamePlay.Physic.ColliderLogic
             _hitObjects.Clear();
             _hitProtectedObjects.Clear();
             _hitCoroutine = null;
+        }
+
+        public void Dismiss()
+        {
+            Dismissed?.Invoke();
+            _dismissed= true;
+            Destroy(_root);
+
         }
 
         public Vector3 GetPosition()
@@ -79,13 +92,14 @@ namespace Assets.Code.GamePlay.Physic.ColliderLogic
                 _hitObjects.Add(hittable);
                 hittable.OnHit(this);
             }
-
+            Hitted?.Invoke();
+            if (_dismissed) return;
             foreach (var particleSystem in _particleSystems)
             {
                 particleSystem.Play();
             }
 
-            Hitted?.Invoke();
+        
 
             switch (_configArmamentHitType)
             {

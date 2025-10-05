@@ -28,9 +28,6 @@ MonoBehaviour:
   - <SlotKey>k__BackingField: 0
     <SlotType>k__BackingField: 3
     <EquippedAbility>k__BackingField: {fileID: 11400000, guid: 2ba3e9bf6ec45964d96bdfcb8e50446f, type: 2}
-  - <SlotKey>k__BackingField: 6
-    <SlotType>k__BackingField: 3
-    <EquippedAbility>k__BackingField: {fileID: 11400000, guid: d9285589077f0464eb4730d566455e34, type: 2}
   - <SlotKey>k__BackingField: 2
     <SlotType>k__BackingField: 2
     <EquippedAbility>k__BackingField: {fileID: 11400000, guid: 586226e30e37a5443af8d6e03e818ad1, type: 2}

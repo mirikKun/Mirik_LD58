@@ -23,6 +23,10 @@ namespace Assets.Code.GamePlay.Common.Entity
             foreach (Component component in components)
             {
                 _componentMap.TryAdd(component.GetType(), component);
+            }
+
+            foreach (Component component in components)
+            {
                 if (component is EntityComponent entityComponent)
                 {
                     entityComponent.InitEntity(actorEntity);
@@ -47,6 +51,7 @@ namespace Assets.Code.GamePlay.Common.Entity
                 throw new KeyNotFoundException($"Component of type {typeof(T)} not found in registry.");
             }
         }
+
         public bool TryGet<T>(out T value) where T : class
         {
             if (_componentMap.TryGetValue(typeof(T), out var component))

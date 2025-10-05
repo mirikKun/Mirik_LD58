@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Assets.Code.GamePlay.Armaments;
 using Assets.Code.GamePlay.Player.Inventory.General;
 
 namespace Assets.Code.GamePlay.Player.Inventory

@@ -21,6 +21,7 @@ namespace Assets.Code.GamePlay.Armaments
         private List<IArmamentBehaviour> _armamentBehaviours = new List<IArmamentBehaviour>();
         private IUpdateService _updateService;
         public event Action<Armament> Destroyed;
+        private bool _dissmissed;
 
         [Inject]
         private void Construct( IUpdateService updateService)
@@ -31,11 +32,13 @@ namespace Assets.Code.GamePlay.Armaments
         private void Start()
         {
             _updateService.ProjectilesUpdate.Register(this);
+            _armamentTrigger.Dismissed += OnDismissed;
         }
 
         private void OnDestroy()
         {
             _updateService.ProjectilesUpdate.Unregister(this);
+            _armamentTrigger.Dismissed -= OnDismissed;
 
         }
 
@@ -76,7 +79,12 @@ namespace Assets.Code.GamePlay.Armaments
                 }
             }
         }
-        
+
+        private void OnDismissed()
+        {
+            //throw new NotImplementedException();
+        }
+
 
         public void Destroy()
         {

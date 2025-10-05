@@ -24,6 +24,7 @@ namespace Assets.Code.GamePlay.Inventory.UI
         private InventorySlotUI _selectedSlot;
         private List<InventorySlotUI> _highlightedSlots = new List<InventorySlotUI>();
 
+        private bool _created;
 
         [Inject]
         private void Construct(IInventorySystem inventorySystem)
@@ -33,7 +34,8 @@ namespace Assets.Code.GamePlay.Inventory.UI
 
         private void Start()
         {
-            SetupInventory(_inventorySystem.ActiveAbilities, _inventorySystem.InactiveAbilities);
+            SetupActiveInventory(_inventorySystem.ActiveAbilities );
+            SetupInactiveInventory(_inventorySystem.InactiveAbilities);
 
             foreach (var activeAbilitySlot in _activeAbilitySlots)
             {
@@ -44,6 +46,17 @@ namespace Assets.Code.GamePlay.Inventory.UI
             {
                 inactiveAbilitySlot.OnSlotSelected += OnSlotSelected;
             }
+            _created= true;
+
+        }
+
+        private void OnEnable()
+        {
+            if (_created)
+            {
+                SetupInactiveInventory(_inventorySystem.InactiveAbilities);
+
+            }
         }
 
         private void OnDisable()
@@ -52,7 +65,7 @@ namespace Assets.Code.GamePlay.Inventory.UI
         }
 
 
-        private void SetupInventory(List<AbilitySlot> activeAbilities, List<IAbilityItem> inactiveAbilities)
+        private void SetupActiveInventory(List<AbilitySlot> activeAbilities)
         {
             for (int i = 0; i < _activeAbilitySlots.Count; i++)
             {
@@ -66,6 +79,11 @@ namespace Assets.Code.GamePlay.Inventory.UI
                     _activeAbilitySlots[i].ClearSlot();
                 }
             }
+            
+        }
+        private void SetupInactiveInventory(List<IAbilityItem> inactiveAbilities)
+        {
+         
 
             for (int i = 0; i < _inactiveAbilitySlots.Count; i++)
             {
