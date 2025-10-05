@@ -1,5 +1,6 @@
 using Assets.Code.GamePlay.Player.Inventory;
 using Assets.Code.GamePlay.Player.Inventory.Items;
+using Project.Scripts.GamePlay.Collection.Systems;
 using UnityEngine;
 using Zenject;
 
@@ -9,18 +10,18 @@ namespace Assets.Code.GamePlay.PickUp.Behaviours
     {
 
         [SerializeField] private BaseAbilityItem _abilityItem;
-        private IInventorySystem _inventorySystem;
+        private ICollectionSystem _collectionSystem;
 
         [Inject]
-        private void Construct(IInventorySystem inventorySystem)
+        private void Construct(ICollectionSystem collectionSystem)
         {
-            _inventorySystem = inventorySystem;
+            _collectionSystem = collectionSystem;
         }
         
         
         public void PickUp()
         {
-            _inventorySystem.AddItem(_abilityItem);
+            _collectionSystem.TryPickAbility(_abilityItem);
             Destroy(gameObject);
         }
 

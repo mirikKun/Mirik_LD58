@@ -1,4 +1,5 @@
 using Assets.Code.GamePlay.Armaments;
+using Assets.Code.GamePlay.Player.Inventory.Items;
 using Project.Scripts.GamePlay.Collection.Configs;
 
 namespace Project.Scripts.GamePlay.Collection.Systems
@@ -9,5 +10,7 @@ namespace Project.Scripts.GamePlay.Collection.Systems
         int GetCollectedItemsCount();
         int GetAllAvailableItemsCount();
         void Setup(AllCollectableAbilities  allCollectableAbilities);
+        event System.Action CollectionUpdated;
+        void TryPickAbility(BaseAbilityItem abilityItem);
     }
 }

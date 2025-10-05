@@ -1,4 +1,5 @@
 using System;
+using Assets.Code.GamePlay.Common.Entity;
 
 namespace Assets.Code.GamePlay.Health
 {
@@ -10,5 +11,6 @@ namespace Assets.Code.GamePlay.Health
         void TakeDamage(float damage);
         
         void SetInvincibility(bool isInvincible);
+        event Action<BaseEntity> Died;
     }
 } 

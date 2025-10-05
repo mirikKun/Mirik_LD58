@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: GravityChangeAbility
   m_EditorClassIdentifier: 
   itemID: Gravity
-  itemName: Gravity
-  itemDescription: Gravity boots
+  itemName: Gravity Change
+  itemDescription: "\u0421hanges gravity to the plane you're looking at. Short Range"
   itemIcon: {fileID: 21300000, guid: e5245d10eb9909541911f9e51357fd76, type: 3}
   maxStackSize: 1
   isStackable: 0

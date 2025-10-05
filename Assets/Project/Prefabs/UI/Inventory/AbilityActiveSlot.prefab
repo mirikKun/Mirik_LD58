@@ -247,6 +247,7 @@ MonoBehaviour:
   _availableFrameImage: {fileID: 4776368578574761226}
   _active: 1
   _abilitySlotKey: 0
+  _abilitySlotType: 0
 --- !u!1 &6467133419216367629
 GameObject:
   m_ObjectHideFlags: 0
@@ -314,8 +315,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: _
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b8950807cd509424f9458f59eb7a2a29, type: 2}
+  m_sharedMaterial: {fileID: 7638391173167596726, guid: b8950807cd509424f9458f59eb7a2a29, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

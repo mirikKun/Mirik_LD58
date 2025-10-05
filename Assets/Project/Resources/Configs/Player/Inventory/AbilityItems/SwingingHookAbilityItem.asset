@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: SwingingHookAbilityItem
   m_EditorClassIdentifier: 
   itemID: Hook
-  itemName: Hook
-  itemDescription: Nice Hook
+  itemName: Grappling hook
+  itemDescription: Grappling hook. Look in derection you want to move
   itemIcon: {fileID: 21300000, guid: 747aff8cdcae18b44b07d0c0a7a85539, type: 3}
   maxStackSize: 1
   isStackable: 0

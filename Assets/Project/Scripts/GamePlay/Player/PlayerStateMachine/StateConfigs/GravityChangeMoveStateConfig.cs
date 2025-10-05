@@ -15,6 +15,7 @@ namespace Assets.Code.GamePlay.Player.PlayerStateMachine.StateConfigs
     {
         [field: SerializeField] public float RaycastNearDistance { get; private set; } = 4.5f;
         [field: SerializeField] public float ChangingDuration { get; private set; } = 0.5f;
+        [field: SerializeField] public float GravityChangeFullDuration { get; private set; } = 3f;
         
         [field: SerializeField] public float GravityChangeSpeed { get; private set; } = 10f;
         
@@ -44,8 +45,15 @@ namespace Assets.Code.GamePlay.Player.PlayerStateMachine.StateConfigs
                 Transitions = new List<TransitionConfiguration>()
                 {
                     TransitionConfiguration.GetConfiguration<GroundedState, GravityChangeState>(gravityChange.GroundedToGravityChange),
+                    TransitionConfiguration.GetConfiguration<GroundedState, GravityChangeState>(gravityChange.GravityChangeDurationEnded),
+                    TransitionConfiguration.GetConfiguration<RisingState, GravityChangeState>(gravityChange.GravityChangeDurationEnded),
+                    TransitionConfiguration.GetConfiguration<FallingState, GravityChangeState>(gravityChange.GravityChangeDurationEnded),
+                    TransitionConfiguration.GetConfiguration<SlopeSlidingState, GravityChangeState>(gravityChange.GravityChangeDurationEnded),
                     TransitionConfiguration.GetConfiguration<GravityChangeState, GroundedState>(gravityChange.GravityChangeToGrounded),
                     TransitionConfiguration.GetConfiguration<GravityChangeState, FallingState>(gravityChange.GravityChangeToFalling)
+                    
+                    
+                    
                 }
             };
             return configuration;

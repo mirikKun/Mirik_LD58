@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 687d3700de6e41e79ea9f876c9bd98ab, type: 3}
   m_Name: DiveStrikeAbilityItem
   m_EditorClassIdentifier: 
-  itemID: Attack Dive
-  itemName: Attack Dive
-  itemDescription: Nice Attack Dive
+  itemID: DiveStrike
+  itemName: Dive Strike
+  itemDescription: Dive down and attack all enemies at landing point
   itemIcon: {fileID: 21300000, guid: 4040500227819304a9ecc025c37ca981, type: 3}
   maxStackSize: 1
   isStackable: 0

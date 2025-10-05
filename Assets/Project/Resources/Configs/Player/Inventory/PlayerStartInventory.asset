@@ -16,22 +16,4 @@ MonoBehaviour:
   - <SlotKey>k__BackingField: 1
     <SlotType>k__BackingField: 1
     <EquippedAbility>k__BackingField: {fileID: 11400000, guid: b2817d6753498ab418090ec34c0464da, type: 2}
-  - <SlotKey>k__BackingField: 3
-    <SlotType>k__BackingField: 3
-    <EquippedAbility>k__BackingField: {fileID: 11400000, guid: 4a52f563b6ca6d347838ec9a0a96dbc8, type: 2}
-  - <SlotKey>k__BackingField: 4
-    <SlotType>k__BackingField: 2
-    <EquippedAbility>k__BackingField: {fileID: 11400000, guid: fc064982688789e4785f963b0167a1c3, type: 2}
-  - <SlotKey>k__BackingField: 5
-    <SlotType>k__BackingField: 2
-    <EquippedAbility>k__BackingField: {fileID: 11400000, guid: 508bb5ee28208b74a89fd81125b6f065, type: 2}
-  - <SlotKey>k__BackingField: 0
-    <SlotType>k__BackingField: 3
-    <EquippedAbility>k__BackingField: {fileID: 11400000, guid: 2ba3e9bf6ec45964d96bdfcb8e50446f, type: 2}
-  - <SlotKey>k__BackingField: 2
-    <SlotType>k__BackingField: 2
-    <EquippedAbility>k__BackingField: {fileID: 11400000, guid: 586226e30e37a5443af8d6e03e818ad1, type: 2}
-  <InactiveAbilities>k__BackingField:
-  - {fileID: 11400000, guid: 4b32bd64aa8cb714b9f31aa611054ea7, type: 2}
-  - {fileID: 11400000, guid: 02a0bee646c67ee439847ad7703d1c59, type: 2}
-  - {fileID: 11400000, guid: b46599fa5c8664441b68bf944e0d3087, type: 2}
+  <InactiveAbilities>k__BackingField: []

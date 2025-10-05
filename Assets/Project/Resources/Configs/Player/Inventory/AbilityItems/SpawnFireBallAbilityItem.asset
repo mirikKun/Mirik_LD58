@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: Fire Ball
   itemName: Fire Ball
-  itemDescription: Sends FireBall
+  itemDescription: Sends Fire Ball which pushes everyone away at the point of impact
   itemIcon: {fileID: 21300000, guid: f7c2980f9728a4843834c08c4e069473, type: 3}
   maxStackSize: 1
   isStackable: 0

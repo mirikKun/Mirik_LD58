@@ -3,7 +3,7 @@ namespace Assets.Code.GamePlay.Armaments.Projectiles.Enums
     public enum ArmamentType
     {
         Unknown = 0,
-        SimpleArrow = 1,
+        MagicBolt = 1,
         FireBall = 2,
         SpaceSphere = 3,
         IceShard = 4,

@@ -1,3 +1,4 @@
+using System;
 using Assets.Code.GamePlay.Common.Entity;
 using Assets.Code.GamePlay.Common.GameBehaviour.Services;
 using Code.Gameplay.Common.Time;
@@ -10,8 +11,8 @@ namespace Assets.Code.GamePlay.Enemies.EnemyController
     {
         [SerializeField] private Rigidbody _rigidbody;
         [SerializeField] private bool _canBeMoved = true;
-        public Transform Tr;
-        
+        [SerializeField] private Transform _transform;
+        public Transform Tr => _transform;
         private ITimeService _timeService;
         private IUpdateService _updateService;
         private Vector3 _savedVelocity;
@@ -26,26 +27,30 @@ namespace Assets.Code.GamePlay.Enemies.EnemyController
             _timeService = timeService;
             _updateService = updateService;
         }
+
         private void Start()
         {
             _updateService.Pausable.Register(this);
-        }        public override void InitEntity(ActorEntity entity)
-        {
-            base.InitEntity(entity);
-            Tr = transform;
         }
+
+        private void OnDestroy()
+        {
+            _updateService.Pausable.Unregister(this);
+        }
+
         public void SetMomentum(Vector3 momentum)
         {
             _momentum = momentum;
-
         }
+
         public void FixedTick(float fixedDeltaTime)
         {
             SetRbVelocity(_momentum, _timeService.TimeScale);
         }
+
         public void SetRbVelocity(Vector3 velocity, float timeScale) => _rigidbody.linearVelocity =
-            velocity* timeScale;
-        
+            velocity * timeScale;
+
         public void SetRigidbodyKinematic(bool kinematic)
         {
             _rigidbody.isKinematic = kinematic;
@@ -56,6 +61,7 @@ namespace Assets.Code.GamePlay.Enemies.EnemyController
             SetRigidbodyKinematic(!enable);
             _rigidbody.useGravity = enable;
         }
+
         public void Pause()
         {
             SetRigidbodyKinematic(true);

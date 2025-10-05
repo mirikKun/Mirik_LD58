@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: Speed Up
   itemName: Speed Up
-  itemDescription: Nice Speed Up
+  itemDescription: You become faster
   itemIcon: {fileID: 21300000, guid: bbf924fc72007aa41b0552bd304ebec8, type: 3}
   maxStackSize: 1
   isStackable: 0

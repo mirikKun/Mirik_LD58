@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: FireBallArmamentConfig
   m_EditorClassIdentifier: 
   <Type>k__BackingField: 2
-  <ArmamentPrefab>k__BackingField: {fileID: 4053863625894755348, guid: 22c762b2d67679a40b5de0a80c30d081, type: 3}
+  <ArmamentPrefab>k__BackingField: {fileID: 4053863625894755348, guid: 2907ac520532ce141b9b1167e0443c37, type: 3}
   <Effects>k__BackingField:
   - rid: 6954361874895863897
   <ParticlesToSpawnOnStart>k__BackingField: []

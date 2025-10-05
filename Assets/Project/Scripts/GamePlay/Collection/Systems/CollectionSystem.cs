@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Assets.Code.GamePlay.Armaments;
 using Assets.Code.GamePlay.Player.Inventory;
@@ -12,16 +13,20 @@ namespace Project.Scripts.GamePlay.Collection.Systems
         private List<BaseAbilityItem> _allAbilities=new List<BaseAbilityItem>();
         private List<BaseAbilityItem> _collectedAbilities=new List<BaseAbilityItem>();
         private readonly IInventorySystem _inventorySystem;
+        public event Action CollectionUpdated;
+
 
 
         private CollectionSystem(IInventorySystem inventorySystem)
         {
             _inventorySystem = inventorySystem;
         }
+
         public void Setup(AllCollectableAbilities  allCollectableAbilities)
         {
             _allAbilities=allCollectableAbilities.CollectableAbilities;
         }
+
         public void TryAddStealArmamentAbility(ArmamentConfig armamentTriggerArmamentConfig)
         {
             foreach (var collectedAbility in _collectedAbilities)
@@ -42,14 +47,36 @@ namespace Project.Scripts.GamePlay.Collection.Systems
                 {
                     _inventorySystem.AddItem(ability);
                     _collectedAbilities.Add(ability);
+                    CollectionUpdated?.Invoke();
                 }
             }
             
         }
-
+        public void TryPickAbility(BaseAbilityItem abilityItem)
+        {
+            foreach (var collectedAbility in _collectedAbilities)
+            {
+                if (collectedAbility==abilityItem)
+                {
+                    return;
+                }
+            }
+            
+            
+            foreach (var ability in _allAbilities)
+            {
+                if (ability==abilityItem)
+                {
+                    _inventorySystem.AddItem(ability);
+                    _collectedAbilities.Add(ability);
+                    CollectionUpdated?.Invoke();
+                }
+            }
+            
+        }
         public int GetCollectedItemsCount()
         {
-            throw new System.NotImplementedException();
+            return _collectedAbilities.Count;
         }
 
         public int GetAllAvailableItemsCount()

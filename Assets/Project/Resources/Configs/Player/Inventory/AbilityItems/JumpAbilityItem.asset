@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: JumpAbilityItem
   m_EditorClassIdentifier: 
   itemID: boot
-  itemName: boot
-  itemDescription: Nice boots
+  itemName: Jump
+  itemDescription: Simple vertical jump
   itemIcon: {fileID: 21300000, guid: 5289a3b2aa93d044da53c1a69b475dcf, type: 3}
   maxStackSize: 1
   isStackable: 0

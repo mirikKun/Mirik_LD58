@@ -4,6 +4,7 @@ using Assets.Code.GamePlay.Common.Entity;
 using Assets.Code.GamePlay.Common.GameBehaviour.Services;
 using Assets.Code.GamePlay.Enemies.EnemyController.Enum;
 using Assets.Code.GamePlay.Enemies.EnemyController.Mediator;
+using Assets.Code.GamePlay.Health;
 using ImprovedTimers;
 using ImprovedTimers.Project.Scripts.Utils.Timers;
 using UnityEngine;
@@ -17,7 +18,7 @@ namespace Assets.Code.GamePlay.Enemies.EnemyController
         [SerializeField] private ActorEntity _characterController;
         [SerializeField] private EnemyMediator _enemyMediator;
 
-        [SerializeField] private EnemyEntity[] _enemies;
+        [SerializeField] private List<EnemyEntity> _enemies;
 
         private IUpdateService _updateService;
 
@@ -30,17 +31,23 @@ namespace Assets.Code.GamePlay.Enemies.EnemyController
 
         private void Start()
         {
-            _enemies = FindObjectsByType<EnemyEntity>(FindObjectsSortMode.None);
+            _enemies = FindObjectsByType<EnemyEntity>(FindObjectsSortMode.None).ToList();
             foreach (var enemy in _enemies)
             {
                 enemy.SetupEnemy(_enemyMediator);
                 enemy.Get<CharacterDetector>().Setup(_characterController);
-
+                enemy.Get<IHealth>().Died += OnEnemyDied;
             }
             _updateService.EnemiesUpdate.Register(this);
             _updateService.EnemiesFixedUpdate.Register(this);
         }
-  
+
+        private void OnEnemyDied(BaseEntity enemy)
+        {
+            _enemies.Remove(enemy as EnemyEntity);
+            Destroy(enemy.gameObject);
+
+        }
 
 
         private void OnDestroy()

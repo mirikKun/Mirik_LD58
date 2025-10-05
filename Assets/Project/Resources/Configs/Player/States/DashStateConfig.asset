@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <DashSpeed>k__BackingField: 50
   <DashExitSpeed>k__BackingField: 8
-  <DashDuration>k__BackingField: 0.24
+  <DashDuration>k__BackingField: 0.2
   <UpdatedFov>k__BackingField: 77
-  <AfterDashHoveringDuration>k__BackingField: 0.67
+  <AfterDashHoveringDuration>k__BackingField: 0.3
   <AfterDashHoveringGravity>k__BackingField: 9
   <AfterDashHoveringSpeed>k__BackingField: 19

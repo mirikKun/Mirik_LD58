@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: Dash
   itemName: Dash
-  itemDescription: Nice dash
+  itemDescription: Rapid, short distance movement
   itemIcon: {fileID: 21300000, guid: 57f72fcebf71a4245a38ba2bf7b0db17, type: 3}
   maxStackSize: 1
   isStackable: 0

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: Attack Dash
   itemName: Attack Dash
-  itemDescription: Nice Attack Dash
+  itemDescription: rapid, short-to-medium distance movement taht deals damage
   itemIcon: {fileID: 21300000, guid: d475e3d615a0fe54f921e0199cb7c083, type: 3}
   maxStackSize: 1
   isStackable: 0

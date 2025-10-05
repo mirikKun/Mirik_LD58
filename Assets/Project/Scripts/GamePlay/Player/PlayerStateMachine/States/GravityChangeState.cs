@@ -17,11 +17,15 @@ namespace Assets.Code.GamePlay.Player.PlayerStateMachine.States
         private readonly RaycastSensor _raycastNearSensor;
         private readonly RaycastSensor _raycastFarSensor;
         private readonly CountdownTimer _gravityChangeTimer;
+        private  CountdownTimer _gravityFullChangeTimer;
+
         private PlayerMover Mover => _player.Get<PlayerMover>();
         private PlayerController PlayerController => _player.Get<PlayerController>();
 
 
         private Vector3 _gravityDirection;
+        private Vector3 _lastGravityDirection;
+
         private Quaternion _startRotation;
         private Quaternion _changeRotation;
 
@@ -30,6 +34,7 @@ namespace Assets.Code.GamePlay.Player.PlayerStateMachine.States
 
         private bool _actionKeyPressedDown;
         private bool _actionKeyPressedUp;
+        private bool _wrongGravity;
 
 
         public GravityChangeState(ActorEntity player, GravityChangeMoveStateConfig config,
@@ -39,6 +44,8 @@ namespace Assets.Code.GamePlay.Player.PlayerStateMachine.States
             _config = config;
 
             _gravityChangeTimer = new CountdownTimer(_config.ChangingDuration);
+            _gravityFullChangeTimer = new CountdownTimer(_config.GravityChangeFullDuration);
+
             abilitiesInstance.OnAbilityInput += HandleActionInput;
 
             _raycastNearSensor = new RaycastSensor(PlayerController.CameraTrY);
@@ -84,6 +91,30 @@ namespace Assets.Code.GamePlay.Player.PlayerStateMachine.States
             _gravityChangeTimer.Start();
             _actionKeyIsPressed = false;
 
+            
+            if (!_wrongGravity|| (_actionKeyIsPressed))
+            {
+                _gravityFullChangeTimer.Start();
+                _wrongGravity = true;
+                
+                
+                Mover.SetMomentum(Vector3.zero);
+                _lastGravityDirection = Mover.Tr.up;
+                _startRotation = Mover.Tr.rotation;
+                _changeRotation=Quaternion.FromToRotation(Mover.Tr.up, _raycastNearSensor.GetNormal());
+                _gravityChangeTimer.Start();
+                _actionKeyIsPressed = false;
+                
+            }
+            else
+            {
+                _wrongGravity = false;
+                Mover.SetMomentum(Vector3.zero);
+                _lastGravityDirection = Vector3.up;
+                _startRotation = Mover.Tr.rotation;
+                _changeRotation=Quaternion.FromToRotation(Mover.Tr.up, _lastGravityDirection);
+                _gravityChangeTimer.Start();
+            }
         }
 
         public void OnExit()
@@ -110,6 +141,8 @@ namespace Assets.Code.GamePlay.Player.PlayerStateMachine.States
         public bool GroundedToGravityChange()=>_raycastNearSensor.CastAndCheck(PlayerController.CameraTrY.position)&&
                                                Vector3.Angle(_raycastNearSensor.GetNormal(),Mover.Tr.up)>_angleTreashold&&
                                                _actionKeyPressedUp;
+        public bool GravityChangeDurationEnded() => _wrongGravity && _gravityFullChangeTimer.IsFinished;
+
         public bool GravityChangeToGrounded()=>_gravityChangeTimer.IsFinished&&Mover.IsGrounded();
         public bool GravityChangeToFalling() => _gravityChangeTimer.IsFinished;
 

@@ -7,7 +7,9 @@ using Assets.Code.GamePlay.Player.Inventory.Enums;
 using Assets.Code.GamePlay.Player.Inventory.General;
 using Assets.Code.GamePlay.Player.Inventory.UI;
 using Assets.Code.GamePlay.Player.Inventory.UI.Core;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 using Zenject;
 
 namespace Assets.Code.GamePlay.Inventory.UI
@@ -19,7 +21,11 @@ namespace Assets.Code.GamePlay.Inventory.UI
         [SerializeField] private List<ActiveAbilitySlotUI> _activeAbilitySlots = new List<ActiveAbilitySlotUI>();
         [SerializeField] private List<InactiveAbilitySlotUI> _inactiveAbilitySlots = new List<InactiveAbilitySlotUI>();
 
-
+[Header("Description")]
+[SerializeField] private GameObject _descriptionRoot;
+[SerializeField] private Image _image;
+[SerializeField] private TextMeshProUGUI _nameText;
+[SerializeField] private TextMeshProUGUI _descriptionText;
         private IInventorySystem _inventorySystem;
         private InventorySlotUI _selectedSlot;
         private List<InventorySlotUI> _highlightedSlots = new List<InventorySlotUI>();
@@ -201,6 +207,7 @@ namespace Assets.Code.GamePlay.Inventory.UI
             }
 
             _highlightedSlots.Clear();
+            HideDescription();
         }
 
         private void SetSlotAsActive(InventorySlotUI slot)
@@ -208,6 +215,7 @@ namespace Assets.Code.GamePlay.Inventory.UI
             ClearSelectedSlot();
 
             slot.HighlightActiveSlot();
+            ShowDescription(slot);
             _selectedSlot = slot;
             HighlightAvailableSlots(slot);
         }
@@ -223,6 +231,25 @@ namespace Assets.Code.GamePlay.Inventory.UI
                     _highlightedSlots.Add(activeAbilitySlot);
                 }
             }
+        }
+        private void ShowDescription(InventorySlotUI slot)
+        {
+            if (slot.Item is IAbilityItem abilityItem)
+            {
+                _descriptionRoot.SetActive(true);
+                _image.sprite = abilityItem.Icon;
+                _nameText.text = abilityItem.Name;
+                _descriptionText.text = abilityItem.Description;
+            }
+            else
+            {
+                _descriptionRoot.SetActive(false);
+
+            }
+        }
+        private void HideDescription()
+        {
+            _descriptionRoot.SetActive(false);
         }
 
 
