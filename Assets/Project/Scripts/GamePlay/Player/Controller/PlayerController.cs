@@ -3,6 +3,7 @@ using Assets.Code.GamePlay.Abilities.Systems;
 using Assets.Code.GamePlay.Common.Entity;
 using Assets.Code.GamePlay.Common.GameBehaviour.Services;
 using Assets.Code.GamePlay.Player.Abilities.Factory;
+using Assets.Code.GamePlay.Player.Health;
 using Assets.Code.GamePlay.Player.PlayerStateMachine;
 using Assets.Code.GamePlay.Stats;
 using Project.Scripts.GamePlay.Player.StealSystem;
@@ -26,6 +27,7 @@ namespace Assets.Code.GamePlay.Player.Controller
         private AbilitiesCaster _abilitiesCaster;
         private IUpdateService _updateService;
         private IAbilitiesFactory _abilitiesFactory;
+        private Vector3 _startPosition;
 
 
         public Transform Tr => _transform;
@@ -53,13 +55,24 @@ namespace Assets.Code.GamePlay.Player.Controller
 
         private void Start()
         {
-
+            _startPosition = Entity.Get<PlayerMover>().Tr.position;
             _input.EnablePlayerActions();
             Entity.Get<AbilitiesCaster>().Init();
 
             _updateService.PlayerUpdate.Register(this);
             _updateService.PlayerFixedUpdate.Register(this);
             _updateService.LateUpdate.Register(this);
+            Entity.Get<PlayerHealth>().Died+=RespawnPlayer;
+        }
+
+        public void SetRespawnPosition(Vector3 position)
+        {
+            _startPosition = position;
+        }
+        private void RespawnPlayer(BaseEntity baseEntity)
+        {
+            Entity.Get<PlayerMover>().Tr.position = _startPosition;
+            Entity.Get<PlayerHealth>().ResetHealth();
         }
 
         private void OnDestroy()

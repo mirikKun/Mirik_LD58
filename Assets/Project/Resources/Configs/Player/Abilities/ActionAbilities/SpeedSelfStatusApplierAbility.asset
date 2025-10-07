@@ -23,6 +23,6 @@ MonoBehaviour:
         _statsModifierConfigs:
         - <Stat>k__BackingField:
             <Type>k__BackingField: 3
-            <Value>k__BackingField: 1.5
+            <Value>k__BackingField: 5
           <OperatorType>k__BackingField: 1
-          <Duration>k__BackingField: 5
+          <Duration>k__BackingField: 8

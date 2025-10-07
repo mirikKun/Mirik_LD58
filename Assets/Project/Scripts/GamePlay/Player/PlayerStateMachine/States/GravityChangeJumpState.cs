@@ -38,19 +38,19 @@ namespace Assets.Code.GamePlay.Player.PlayerStateMachine.States
 
         public void OnEnter()
         {
-            Effects.TrajectoryEffects.StartLineDrawing(_raycastSensor.GetPosition(),_raycastSensor.GetNormal());
+           // Effects.TrajectoryEffects.StartLineDrawing(_raycastSensor.GetPosition(),_raycastSensor.GetNormal());
         }
 
         public void Update(float deltaTime)
         {
             _raycastSensor.CastAndCheck(PlayerController.CameraTrY.position);
-            Effects.TrajectoryEffects.DrawGrappleLine(_raycastSensor.GetPosition(),_raycastSensor.GetNormal(),_raycastSensor.GetNormal());
+            //Effects.TrajectoryEffects.DrawGrappleLine(_raycastSensor.GetPosition(),_raycastSensor.GetNormal(),_raycastSensor.GetNormal());
         }
 
         public void OnExit()
         {
             _actionKeyIsPressed = false;
-            Effects.TrajectoryEffects.ClearGrappleLine();
+            //Effects.TrajectoryEffects.ClearGrappleLine();
         }
         
         public bool GroundedToGravityJumpChangePreparing()=>_raycastSensor.CastAndCheck(PlayerController.CameraTrY.position)&&

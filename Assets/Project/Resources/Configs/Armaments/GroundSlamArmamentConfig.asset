@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b58eddf099f4e72852498850decdf78, type: 3}
   m_Name: GroundSlamArmamentConfig
   m_EditorClassIdentifier: 
-  <Type>k__BackingField: 0
+  <Type>k__BackingField: 21
   <ArmamentPrefab>k__BackingField: {fileID: -5982602274214698575, guid: 5a20c6c804c532940bc35561d6ffb73d, type: 3}
   <Effects>k__BackingField:
   - rid: 6954361874895863897
@@ -24,10 +24,11 @@ MonoBehaviour:
   <CasterIsParent>k__BackingField: 0
   <Duration>k__BackingField: 0.1
   <Speed>k__BackingField: 0
+  <ArmamentToSpawnOnDestroy>k__BackingField: {fileID: 0}
   references:
     version: 2
     RefIds:
     - rid: 6954361874895863897
       type: {class: DamageEffect, ns: Assets.Code.GamePlay.DataDriven.Effects, asm: Assembly-CSharp}
       data:
-        _amount: 30
+        _amount: 50

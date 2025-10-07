@@ -56,7 +56,7 @@ namespace Assets.Code.GamePlay.Armaments
         public Armament Init(ActorEntity caster, ArmamentConfig config)
         {
             _armamentTrigger.Init(caster);
-            _armamentTrigger.SetData(config);
+            _armamentTrigger.SetData(config,this);
             
             
             return this;

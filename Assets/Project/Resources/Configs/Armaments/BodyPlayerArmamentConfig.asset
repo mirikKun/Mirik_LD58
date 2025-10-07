@@ -12,17 +12,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b58eddf099f4e72852498850decdf78, type: 3}
   m_Name: BodyPlayerArmamentConfig
   m_EditorClassIdentifier: 
+  <Type>k__BackingField: 22
   <ArmamentPrefab>k__BackingField: {fileID: 7124967010344957559, guid: f5348fe04b7e1984ea135fd52a4d987a, type: 3}
   <Effects>k__BackingField:
   - rid: 6954361874895863897
-  <Speed>k__BackingField: 0
-  <Duration>k__BackingField: 0
+  <ParticlesToSpawnOnStart>k__BackingField: []
+  <ParticlesToSpawnOnDestroy>k__BackingField: []
   <ArmamentHitType>k__BackingField: 2
   <ArmamentPlacementType>k__BackingField: 0
+  <CasterIsParent>k__BackingField: 1
+  <Duration>k__BackingField: 0
+  <Speed>k__BackingField: 0
+  <ArmamentToSpawnOnDestroy>k__BackingField: {fileID: 0}
   references:
     version: 2
     RefIds:
     - rid: 6954361874895863897
       type: {class: DamageEffect, ns: Assets.Code.GamePlay.DataDriven.Effects, asm: Assembly-CSharp}
       data:
-        _amount: 30
+        _amount: 100

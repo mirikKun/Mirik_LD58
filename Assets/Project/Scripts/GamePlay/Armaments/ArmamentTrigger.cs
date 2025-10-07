@@ -30,6 +30,7 @@ namespace Assets.Code.GamePlay.Physic.ColliderLogic
         public event Action Hitted;
         public event Action Dismissed;
         private bool _dismissed;
+        private Armament _armament;
 
         [Inject]
         private void Construct(IArmamentsFactory armamentsFactory)
@@ -42,12 +43,13 @@ namespace Assets.Code.GamePlay.Physic.ColliderLogic
             _casterEntity = casterEntity;
         }
 
-        public void SetData(ArmamentConfig config)
+        public void SetData(ArmamentConfig config,Armament armament)
         {
             _currentArmamentConfig= config;
             Effects = config.Effects;
             _configArmamentHitType = config.ArmamentHitType;
             _armamentToSpawn = config.ArmamentToSpawnOnDestroy;
+            _armament = armament;
         }
 
 
@@ -127,7 +129,7 @@ namespace Assets.Code.GamePlay.Physic.ColliderLogic
                     .StartBehaviours();
             }
 
-            Destroy(_root);
+            _armament.Destroy();
         }
 
         public void AddHitProtected(ITriggerHittable hittable)

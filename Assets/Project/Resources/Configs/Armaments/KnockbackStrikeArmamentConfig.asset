@@ -30,4 +30,4 @@ MonoBehaviour:
     - rid: 4330106686271652105
       type: {class: KnockbackEffect, ns: Assets.Code.GamePlay.DataDriven.Effects, asm: Assembly-CSharp}
       data:
-        _force: 19
+        _force: 31

@@ -12,5 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d4ad5959fd34568819608fcbe5be8b1, type: 3}
   m_Name: GravityChangeStateConfig
   m_EditorClassIdentifier: 
-  <RaycastDistance>k__BackingField: 4.5
+  <RaycastNearDistance>k__BackingField: 7
   <ChangingDuration>k__BackingField: 0.1
+  <GravityChangeFullDuration>k__BackingField: 5
+  <GravityChangeSpeed>k__BackingField: 10
+  <GravityChangeJumpAvailable>k__BackingField: 0
+  <GravityChangeJumpMaxHorizontalDistance>k__BackingField: 13
+  <GravityChangeJumpMaxVerticalDistance>k__BackingField: 30

@@ -17,7 +17,8 @@ MonoBehaviour:
   <Effects>k__BackingField:
   - rid: 6954361874895863897
   <ParticlesToSpawnOnStart>k__BackingField: []
-  <ParticlesToSpawnOnDestroy>k__BackingField: []
+  <ParticlesToSpawnOnDestroy>k__BackingField:
+  - {fileID: 5905830522719466181, guid: d5977de1370ac114993d75ce7d548d3e, type: 3}
   <ArmamentHitType>k__BackingField: 0
   <ArmamentPlacementType>k__BackingField: 1
   <CasterIsParent>k__BackingField: 0

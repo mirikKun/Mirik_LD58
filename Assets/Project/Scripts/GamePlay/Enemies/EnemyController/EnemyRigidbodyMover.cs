@@ -19,6 +19,7 @@ namespace Assets.Code.GamePlay.Enemies.EnemyController
 
         private Vector3 _momentum;
         private Vector3 _savedMovementVelocity;
+        private bool _originallyKinematic;
 
 
         [Inject]
@@ -31,6 +32,7 @@ namespace Assets.Code.GamePlay.Enemies.EnemyController
         private void Start()
         {
             _updateService.Pausable.Register(this);
+            _originallyKinematic= _rigidbody.isKinematic;
         }
 
         private void OnDestroy()
@@ -69,7 +71,7 @@ namespace Assets.Code.GamePlay.Enemies.EnemyController
 
         public void Resume()
         {
-            SetRigidbodyKinematic(false);
+            SetRigidbodyKinematic(_originallyKinematic);
         }
     }
 }

@@ -67,7 +67,10 @@ namespace Assets.Code.GamePlay.Inventory.UI
 
         private void OnDisable()
         {
+            ClearSelectedSlot();
+
             _inventorySystem.OnActiveInventoryChanged();
+
         }
 
 
@@ -113,6 +116,7 @@ namespace Assets.Code.GamePlay.Inventory.UI
             }
             else
             {
+                
                 if (SameSlot(slot))
                 {
                     ChangeSlotActivity(slot);
@@ -120,6 +124,7 @@ namespace Assets.Code.GamePlay.Inventory.UI
                 else if (SameSlotType(slot))
                 {
                     SetSlotAsActive(slot);
+
                 }
                 else
                 {
@@ -142,11 +147,12 @@ namespace Assets.Code.GamePlay.Inventory.UI
             }
             else if (slot is InactiveSlotUI)
             {
-                ActiveAbilitySlotUI emptyInactiveSlot = _activeAbilitySlots.Find(s => s.Item == null);
-                if (emptyInactiveSlot != null)
-                {
-                    MoveToSlot(emptyInactiveSlot);
-                }
+                ClearSelectedSlot();
+                // ActiveAbilitySlotUI emptyInactiveSlot = _activeAbilitySlots.Find(s => s.Item == null);
+                // if (emptyInactiveSlot != null)
+                // {
+                //     MoveToSlot(emptyInactiveSlot);
+                // }
             }
             else
             {
@@ -169,8 +175,8 @@ namespace Assets.Code.GamePlay.Inventory.UI
 
         private bool SameSlotType(InventorySlotUI slot)
         {
-            // return slot is InactiveSlotUI && _selectedSlot is InactiveSlotUI||
-            //        slot is ActiveSlotUI && _selectedSlot is ActiveSlotUI;
+             return (slot is InactiveSlotUI && _selectedSlot is InactiveSlotUI)||
+                    (slot is ActiveSlotUI && _selectedSlot is ActiveSlotUI);
             return false;
         }
 

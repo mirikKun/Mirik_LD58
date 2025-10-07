@@ -11,6 +11,8 @@ namespace Assets.Code.GamePlay.Armaments.Projectiles.Enums
         EarthShardsRock = 6,
         
         Torrent = 20,
+        GroundStrike=21,
+        BodyHit=22,
         Barrier = 50,
         
         FireBallAOE = 101,

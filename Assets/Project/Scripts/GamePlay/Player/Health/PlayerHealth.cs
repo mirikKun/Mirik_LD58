@@ -10,5 +10,10 @@ namespace Assets.Code.GamePlay.Player.Health
             base.TakeDamage(damage);
             Debug.Log($"Player took {damage} damage, current health: {Current}");
         }
+
+        public void ResetHealth()
+        {
+            Current=Max;
+        }
     }
 }

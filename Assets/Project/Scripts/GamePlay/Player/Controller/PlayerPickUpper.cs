@@ -56,6 +56,7 @@ namespace Assets.Code.GamePlay.Player.Controller
                 if (_isInteractPressed)
                 {
                     pickUp.PickUp();
+                    Entity.Get<PlayerController>().SetRespawnPosition(transform.position);
                     UnHighlightLast();
 
                 }

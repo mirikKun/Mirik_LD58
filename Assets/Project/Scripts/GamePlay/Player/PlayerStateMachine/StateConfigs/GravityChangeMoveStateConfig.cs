@@ -31,7 +31,7 @@ namespace Assets.Code.GamePlay.Player.PlayerStateMachine.StateConfigs
             List<StateConfiguration> jumpStateConfigurations = new List<StateConfiguration>()
             {
                 GetPounceConfiguration(playerEntity,abilitiesInstance),
-                GetGravityChangePreparingConfiguration(playerEntity)
+                //GetGravityChangePreparingConfiguration(playerEntity)
             };
             return jumpStateConfigurations;
         }

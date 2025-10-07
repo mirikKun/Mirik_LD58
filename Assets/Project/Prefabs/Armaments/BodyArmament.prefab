@@ -11,9 +11,7 @@ GameObject:
   - component: {fileID: 702034441623642260}
   - component: {fileID: 1728803792601331593}
   - component: {fileID: 3466616024624691199}
-  - component: {fileID: 2946734011936205202}
-  - component: {fileID: 5692739366310916901}
-  m_Layer: 14
+  m_Layer: 10
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50,7 +48,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5343105943440093098}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -88,40 +86,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &2946734011936205202
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5343105943440093098}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5692739366310916901
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5343105943440093098}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23fe3876b26c4b4f93e29d0b6c401569, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _particleSystems: []
 --- !u!1 &5733938605602792560
 GameObject:
   m_ObjectHideFlags: 0
@@ -132,7 +96,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3399170316624359059}
   - component: {fileID: 7124967010344957559}
-  m_Layer: 14
+  - component: {fileID: -4056413987091314735}
+  - component: {fileID: 2250665531357588007}
+  m_Layer: 10
   m_Name: BodyArmament
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -167,4 +133,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c52710d6a27e4843b963afe21780e1b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _attackTrigger: {fileID: 5692739366310916901}
+  _armamentTrigger: {fileID: -4056413987091314735}
+--- !u!114 &-4056413987091314735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5733938605602792560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25a0d484d69e4ca1825a0ec824681c57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _particleSystems: []
+  _root: {fileID: 5733938605602792560}
+--- !u!135 &2250665531357588007
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5733938605602792560}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 1
+  m_Center: {x: 0, y: 0, z: 0}
