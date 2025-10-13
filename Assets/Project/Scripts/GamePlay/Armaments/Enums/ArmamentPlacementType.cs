@@ -1,4 +1,4 @@
-namespace Assets.Code.GamePlay.Armaments.Projectiles.Enums
+namespace Project.Scripts.GamePlay.Armaments.Enums
 {
     public enum ArmamentPlacementType
     {

@@ -1,18 +1,13 @@
 using System;
 using System.Collections.Generic;
-using Assets.Code.GamePlay.Armaments.ArmamentBehaviour;
-using Assets.Code.GamePlay.Armaments.ArmamentBehaviour.Abstract;
-using Assets.Code.GamePlay.Armaments.Enums;
 using Assets.Code.GamePlay.Common.Entity;
 using Assets.Code.GamePlay.Common.GameBehaviour.Services;
-using Assets.Code.GamePlay.DataDriven.Effects;
-using Assets.Code.GamePlay.Health;
-using Assets.Code.GamePlay.Physic.ColliderLogic;
-using Code.Gameplay.Common.Time;
+using Project.Scripts.GamePlay.Armaments.ArmamentBehaviour.Abstract;
+using Project.Scripts.GamePlay.Armaments.Configs;
 using UnityEngine;
 using Zenject;
 
-namespace Assets.Code.GamePlay.Armaments
+namespace Project.Scripts.GamePlay.Armaments
 {
     public class Armament : MonoBehaviour, IGameUpdateable
     {

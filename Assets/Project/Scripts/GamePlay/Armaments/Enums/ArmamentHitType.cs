@@ -1,4 +1,4 @@
-namespace Assets.Code.GamePlay.Armaments.Enums
+namespace Project.Scripts.GamePlay.Armaments.Enums
 {
     public enum ArmamentHitType
     {

@@ -1,7 +1,7 @@
 ﻿using Assets.Code.GamePlay.Abilities.Configs;
-using Assets.Code.GamePlay.Armaments.Projectiles.Configs;
 using Assets.Code.GamePlay.Player.Inventory.Configs;
 using Code.Gameplay.Windows;
+using Project.Scripts.GamePlay.Armaments.Configs;
 using Project.Scripts.GamePlay.Collection.Configs;
 using UnityEngine;
 

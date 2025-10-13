@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using Assets.Code.GamePlay.Armaments;
 using Assets.Code.GamePlay.Player.Inventory.General;
 using Code.Gameplay.StaticData;
 using UnityEngine;

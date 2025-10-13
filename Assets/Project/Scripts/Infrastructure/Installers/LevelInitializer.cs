@@ -1,5 +1,5 @@
-﻿using Assets.Code.GamePlay.Armaments.Projectiles.Factories;
-using Code.Gameplay.Levels;
+﻿using Code.Gameplay.Levels;
+using Project.Scripts.GamePlay.Armaments.Factories;
 using Unity.Cinemachine;
 using UnityEngine;
 using Zenject;

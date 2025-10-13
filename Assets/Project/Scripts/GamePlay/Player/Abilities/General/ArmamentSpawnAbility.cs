@@ -1,8 +1,8 @@
-using Assets.Code.GamePlay.Armaments;
-using Assets.Code.GamePlay.Armaments.ArmamentBehaviour;
-using Assets.Code.GamePlay.Armaments.Projectiles;
-using Assets.Code.GamePlay.Armaments.Projectiles.Factories;
 using Assets.Code.GamePlay.Common.Entity;
+using Project.Scripts.GamePlay.Armaments;
+using Project.Scripts.GamePlay.Armaments.ArmamentBehaviour;
+using Project.Scripts.GamePlay.Armaments.Configs;
+using Project.Scripts.GamePlay.Armaments.Factories;
 using Project.Scripts.GamePlay.Player.Abilities.Configs;
 using UnityEngine;
 using Zenject;

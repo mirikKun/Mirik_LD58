@@ -1,7 +1,6 @@
-using Assets.Code.GamePlay.Armaments.ArmamentBehaviour.Abstract;
-using Code.Gameplay.Common.Time;
+using Project.Scripts.GamePlay.Armaments.ArmamentBehaviour.Abstract;
 
-namespace Assets.Code.GamePlay.Armaments.ArmamentBehaviour
+namespace Project.Scripts.GamePlay.Armaments.ArmamentBehaviour
 {
     public class LifetimeArmamentBehaviour:IArmamentBehaviour,IUpdateableArmament
     {

@@ -1,4 +1,4 @@
-namespace Assets.Code.GamePlay.Armaments.ArmamentBehaviour
+namespace Project.Scripts.GamePlay.Armaments.ArmamentBehaviour.Abstract
 {
     public interface IArmamentBehaviour
     {

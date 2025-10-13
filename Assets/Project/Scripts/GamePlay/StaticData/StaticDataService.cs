@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using Assets.Code.GamePlay.Abilities.Configs;
-using Assets.Code.GamePlay.Armaments.Projectiles.Configs;
 using Assets.Code.GamePlay.Player.Inventory.Configs;
 using Code.Gameplay.Windows;
 using Code.Gameplay.Windows.Configs;
+using Project.Scripts.GamePlay.Armaments.Configs;
 using Project.Scripts.GamePlay.Collection.Configs;
 using UnityEngine;
 

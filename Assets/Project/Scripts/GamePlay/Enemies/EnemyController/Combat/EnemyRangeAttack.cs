@@ -1,10 +1,10 @@
 using System;
 using System.Collections.Generic;
-using Assets.Code.GamePlay.Armaments;
-using Assets.Code.GamePlay.Armaments.Projectiles.Enums;
-using Assets.Code.GamePlay.Armaments.Projectiles.Factories;
 using Assets.Code.GamePlay.Common.Entity;
 using Assets.Code.GamePlay.DataDriven.Effects;
+using Project.Scripts.GamePlay.Armaments;
+using Project.Scripts.GamePlay.Armaments.Enums;
+using Project.Scripts.GamePlay.Armaments.Factories;
 using UnityEngine;
 using Zenject;
 

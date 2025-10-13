@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using Assets.Code.GamePlay.Abilities.General;
-using Assets.Code.GamePlay.Armaments;
 using Assets.Code.GamePlay.Common.Entity;
 using Assets.Code.GamePlay.GameplayStateMachine;
 using Assets.Code.GamePlay.Player.PlayerStateMachine.States;
+using Project.Scripts.GamePlay.Armaments.Configs;
 using UnityEngine;
 
 namespace Assets.Code.GamePlay.Player.PlayerStateMachine.StateConfigs

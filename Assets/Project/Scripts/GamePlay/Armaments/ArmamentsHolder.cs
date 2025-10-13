@@ -1,12 +1,13 @@
 using System;
 using System.Collections.Generic;
-using Assets.Code.GamePlay.Armaments.Projectiles.Enums;
-using Assets.Code.GamePlay.Armaments.Projectiles.Factories;
 using Assets.Code.GamePlay.Common.Entity;
+using Project.Scripts.GamePlay.Armaments.Configs;
+using Project.Scripts.GamePlay.Armaments.Enums;
+using Project.Scripts.GamePlay.Armaments.Factories;
 using UnityEngine;
 using Zenject;
 
-namespace Assets.Code.GamePlay.Armaments.Projectiles
+namespace Project.Scripts.GamePlay.Armaments
 {
     public class ArmamentsHolder : EntityComponent
     {

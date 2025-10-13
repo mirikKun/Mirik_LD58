@@ -1,7 +1,8 @@
-using Assets.Code.GamePlay.Armaments.Projectiles.Enums;
+using Project.Scripts.GamePlay.Armaments.Configs;
+using Project.Scripts.GamePlay.Armaments.Enums;
 using UnityEngine;
 
-namespace Assets.Code.GamePlay.Armaments.Projectiles.Factories
+namespace Project.Scripts.GamePlay.Armaments.Factories
 {
     public interface IArmamentsFactory
     {

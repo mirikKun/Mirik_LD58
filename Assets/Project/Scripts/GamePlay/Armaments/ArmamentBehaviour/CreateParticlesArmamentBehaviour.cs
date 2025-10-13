@@ -1,8 +1,8 @@
-using Assets.Code.GamePlay.Armaments.ArmamentBehaviour.Abstract;
-using Assets.Code.GamePlay.Armaments.Projectiles.Factories;
+using Project.Scripts.GamePlay.Armaments.ArmamentBehaviour.Abstract;
+using Project.Scripts.GamePlay.Armaments.Factories;
 using UnityEngine;
 
-namespace Assets.Code.GamePlay.Armaments.ArmamentBehaviour
+namespace Project.Scripts.GamePlay.Armaments.ArmamentBehaviour
 {
     public class CreateParticlesArmamentBehaviour: IArmamentBehaviour,IStartableBehaviour,IOnDestroyableBehaviour
     {

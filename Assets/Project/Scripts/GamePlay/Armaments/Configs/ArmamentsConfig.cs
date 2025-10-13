@@ -1,7 +1,7 @@
-using Assets.Code.GamePlay.Armaments.Projectiles.Enums;
+using Project.Scripts.GamePlay.Armaments.Enums;
 using UnityEngine;
 
-namespace Assets.Code.GamePlay.Armaments.Projectiles.Configs
+namespace Project.Scripts.GamePlay.Armaments.Configs
 {
     [CreateAssetMenu(fileName = "ProjectilesConfig", menuName = "Configs/Armament/ProjectilesConfig", order = 1)]
     public class ArmamentsConfig:ScriptableObject

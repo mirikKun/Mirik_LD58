@@ -1,10 +1,9 @@
 using System.Collections.Generic;
-using Assets.Code.GamePlay.Armaments.Enums;
-using Assets.Code.GamePlay.Armaments.Projectiles.Enums;
 using Assets.Code.GamePlay.DataDriven.Effects;
+using Project.Scripts.GamePlay.Armaments.Enums;
 using UnityEngine;
 
-namespace Assets.Code.GamePlay.Armaments
+namespace Project.Scripts.GamePlay.Armaments.Configs
 {
     [CreateAssetMenu(fileName = "ArmamentConfig", menuName = "Configs/Armament/ArmamentConfig")]
     public class ArmamentConfig : ScriptableObject

@@ -1,6 +1,5 @@
 using Assets.Code;
 using Assets.Code.GamePlay.Abilities.Systems;
-using Assets.Code.GamePlay.Armaments.Projectiles.Factories;
 using Assets.Code.GamePlay.Common.GameBehaviour.Services;
 using Assets.Code.GamePlay.Player.Abilities.Factory;
 using Assets.Code.GamePlay.Player.Inventory;
@@ -15,6 +14,7 @@ using Code.Infrastructure.States.Factory;
 using Code.Infrastructure.States.GameStates;
 using Code.Infrastructure.States.StateMachine;
 using Code.Progress.Provider;
+using Project.Scripts.GamePlay.Armaments.Factories;
 using Project.Scripts.GamePlay.Collection.Systems;
 using Zenject;
 

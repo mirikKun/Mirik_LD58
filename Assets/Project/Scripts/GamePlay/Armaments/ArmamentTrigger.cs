@@ -1,15 +1,16 @@
 using System;
 using System.Collections.Generic;
-using Assets.Code.GamePlay.Armaments;
-using Assets.Code.GamePlay.Armaments.ArmamentBehaviour;
-using Assets.Code.GamePlay.Armaments.Enums;
-using Assets.Code.GamePlay.Armaments.Projectiles.Factories;
 using Assets.Code.GamePlay.Common.Entity;
 using Assets.Code.GamePlay.DataDriven.Effects;
+using Assets.Code.GamePlay.Physic.ColliderLogic;
+using Project.Scripts.GamePlay.Armaments.ArmamentBehaviour;
+using Project.Scripts.GamePlay.Armaments.Configs;
+using Project.Scripts.GamePlay.Armaments.Enums;
+using Project.Scripts.GamePlay.Armaments.Factories;
 using UnityEngine;
 using Zenject;
 
-namespace Assets.Code.GamePlay.Physic.ColliderLogic
+namespace Project.Scripts.GamePlay.Armaments
 {
     public class ArmamentTrigger : MonoBehaviour, IAttackTrigger
     {

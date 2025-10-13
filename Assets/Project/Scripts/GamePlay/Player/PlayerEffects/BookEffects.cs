@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Project.Scripts.GamePlay.Player.StealSystem
 {
-    public class StealingEffect:MonoBehaviour
+    public class BookEffects:MonoBehaviour
     {
         [SerializeField] private ParticleSystem _particles;
         [SerializeField] private Transform _book;

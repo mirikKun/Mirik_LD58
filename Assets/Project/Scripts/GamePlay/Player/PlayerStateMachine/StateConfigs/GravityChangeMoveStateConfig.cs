@@ -44,7 +44,8 @@ namespace Assets.Code.GamePlay.Player.PlayerStateMachine.StateConfigs
                 State = gravityChange,
                 Transitions = new List<TransitionConfiguration>()
                 {
-                    TransitionConfiguration.GetConfiguration<GroundedState, GravityChangeState>(gravityChange.GroundedToGravityChange),
+                    TransitionConfiguration.GetConfiguration<GroundedState, GravityChangeState>(gravityChange.CanGravityChange),
+                    TransitionConfiguration.GetConfiguration<RisingState, GravityChangeState>(gravityChange.CanGravityChange),
                     TransitionConfiguration.GetConfiguration<GroundedState, GravityChangeState>(gravityChange.GravityChangeDurationEnded),
                     TransitionConfiguration.GetConfiguration<RisingState, GravityChangeState>(gravityChange.GravityChangeDurationEnded),
                     TransitionConfiguration.GetConfiguration<FallingState, GravityChangeState>(gravityChange.GravityChangeDurationEnded),

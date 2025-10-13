@@ -83,6 +83,12 @@ namespace Assets.Code.GamePlay.Abilities.Systems
                 case AbilitySlotKey.AbilityAction3:
                     _inputReader.Action3 += abilityInstance.OnKeyInput;
                     break;
+                case AbilitySlotKey.MouseLeft:
+                    _inputReader.Attack += abilityInstance.OnKeyInput;      
+                    break;
+                case AbilitySlotKey.MouseRight:
+                    _inputReader.AttackAlt += abilityInstance.OnKeyInput;
+                    break;
             }
         }
 
@@ -108,6 +114,13 @@ namespace Assets.Code.GamePlay.Abilities.Systems
                 case AbilitySlotKey.AbilityAction3:
                     _inputReader.Action3 -= abilityInstance.OnKeyInput;
                     break;
+                case AbilitySlotKey.MouseLeft:
+                    _inputReader.Attack -= abilityInstance.OnKeyInput;      
+                    break;
+                case AbilitySlotKey.MouseRight:
+                    _inputReader.AttackAlt -= abilityInstance.OnKeyInput;
+                    break;
+            
             }
         }
     }

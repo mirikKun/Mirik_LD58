@@ -74,7 +74,7 @@ namespace Assets.Code.GamePlay.Player.PlayerStateMachine.States
         // public bool DashToRising() => (_dashTimer.IsFinished )&&_controller.IsRising();
         // public bool DashToFalling() => (_dashTimer.IsFinished || _controller.HitCeiling());
         
-        public bool EndOfDash() => (_dashTimer.IsFinished || _player.Get<CeilingDetector>().HitCeiling());
+        public bool EndOfDash() => (_dashTimer.IsFinished );
         public bool WallClingingToDash() => _jumpKeyIsPressed;
         
         

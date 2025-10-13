@@ -1,6 +1,4 @@
-using Unity.VisualScripting;
-
-namespace Assets.Code.GamePlay.Armaments.ArmamentBehaviour.Abstract
+namespace Project.Scripts.GamePlay.Armaments.ArmamentBehaviour.Abstract
 {
     public interface IOnDestroyableBehaviour
     {

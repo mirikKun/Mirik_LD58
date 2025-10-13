@@ -138,7 +138,7 @@ namespace Assets.Code.GamePlay.Player.PlayerStateMachine.States
         //     
         // }
         
-        public bool GroundedToGravityChange()=>_raycastNearSensor.CastAndCheck(PlayerController.CameraTrY.position)&&
+        public bool CanGravityChange()=>_raycastNearSensor.CastAndCheck(PlayerController.CameraTrY.position)&&
                                                Vector3.Angle(_raycastNearSensor.GetNormal(),Mover.Tr.up)>_angleTreashold&&
                                                _actionKeyPressedUp;
         public bool GravityChangeDurationEnded() => _wrongGravity && _gravityFullChangeTimer.IsFinished;

@@ -1,14 +1,13 @@
 using Assets.Code.Common.Utils;
 using Assets.Code.GamePlay.Abilities.General;
-using Assets.Code.GamePlay.Armaments;
-using Assets.Code.GamePlay.Armaments.ArmamentBehaviour;
-using Assets.Code.GamePlay.Armaments.Projectiles;
 using Assets.Code.GamePlay.Common.Entity;
 using Assets.Code.GamePlay.GameplayStateMachine;
 using Assets.Code.GamePlay.Player.Controller;
 using Assets.Code.GamePlay.Player.PlayerStateMachine.StateConfigs;
 using ImprovedTimers;
 using ImprovedTimers.Project.Scripts.Utils.Timers;
+using Project.Scripts.GamePlay.Armaments;
+using Project.Scripts.GamePlay.Armaments.ArmamentBehaviour;
 using UnityEngine;
 
 namespace Assets.Code.GamePlay.Player.PlayerStateMachine.States

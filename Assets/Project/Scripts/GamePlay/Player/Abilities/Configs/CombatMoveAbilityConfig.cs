@@ -1,7 +1,7 @@
 using Assets.Code.GamePlay.Abilities.General;
-using Assets.Code.GamePlay.Armaments;
 using Assets.Code.GamePlay.Player.Abilities.Factory;
 using Assets.Code.GamePlay.Player.PlayerStateMachine.StateConfigs;
+using Project.Scripts.GamePlay.Armaments.Configs;
 using UnityEngine;
 
 namespace Assets.Code.GamePlay.Player.Abilities.Configs

@@ -1,10 +1,11 @@
-using Assets.Code.GamePlay.Armaments.ArmamentBehaviour;
-using Assets.Code.GamePlay.Armaments.Projectiles.Enums;
 using Code.Gameplay.StaticData;
+using Project.Scripts.GamePlay.Armaments.ArmamentBehaviour;
+using Project.Scripts.GamePlay.Armaments.Configs;
+using Project.Scripts.GamePlay.Armaments.Enums;
 using UnityEngine;
 using Zenject;
 
-namespace Assets.Code.GamePlay.Armaments.Projectiles.Factories
+namespace Project.Scripts.GamePlay.Armaments.Factories
 {
     public class ArmamentsFactory:IArmamentsFactory
     {

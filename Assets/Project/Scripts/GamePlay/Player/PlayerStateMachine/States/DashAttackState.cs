@@ -1,9 +1,8 @@
 using Assets.Code.GamePlay.Abilities.General;
-using Assets.Code.GamePlay.Armaments;
-using Assets.Code.GamePlay.Armaments.Projectiles;
 using Assets.Code.GamePlay.Common.Entity;
 using Assets.Code.GamePlay.Common.Physic;
 using Assets.Code.GamePlay.Player.PlayerStateMachine.StateConfigs;
+using Project.Scripts.GamePlay.Armaments;
 
 namespace Assets.Code.GamePlay.Player.PlayerStateMachine.States
 {

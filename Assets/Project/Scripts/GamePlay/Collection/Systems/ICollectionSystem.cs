@@ -1,5 +1,5 @@
-using Assets.Code.GamePlay.Armaments;
 using Assets.Code.GamePlay.Player.Inventory.Items;
+using Project.Scripts.GamePlay.Armaments.Configs;
 using Project.Scripts.GamePlay.Collection.Configs;
 
 namespace Project.Scripts.GamePlay.Collection.Systems
