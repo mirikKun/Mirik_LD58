@@ -16,5 +16,6 @@ namespace Project.Scripts.GamePlay.Armaments.Enums
         Barrier = 50,
         
         FireBallAOE = 101,
+        StealingField = 102,
     }
 }

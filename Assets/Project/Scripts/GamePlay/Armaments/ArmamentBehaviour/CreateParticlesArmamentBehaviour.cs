@@ -23,7 +23,7 @@ namespace Project.Scripts.GamePlay.Armaments.ArmamentBehaviour
             _armament = armament;
         }
 
-        public void Start()
+        public void StartBehaviour()
         {
             _armamentsFactory.CreateArmamentParticles(_armament, _startParticles);
         }

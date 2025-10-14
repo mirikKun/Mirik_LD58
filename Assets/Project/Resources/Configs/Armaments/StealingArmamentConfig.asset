@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b58eddf099f4e72852498850decdf78, type: 3}
+  m_Name: StealingArmamentConfig
+  m_EditorClassIdentifier: 
+  <Type>k__BackingField: 102
+  <ArmamentPrefab>k__BackingField: {fileID: 1032061808604314182, guid: 59fa6e6e6201e244dbad552c3b92294c, type: 3}
+  <Effects>k__BackingField: []
+  <ParticlesToSpawnOnStart>k__BackingField: []
+  <ParticlesToSpawnOnDestroy>k__BackingField: []
+  <ArmamentHitType>k__BackingField: 2
+  <ArmamentPlacementType>k__BackingField: 1
+  <CasterIsParent>k__BackingField: 1
+  <Duration>k__BackingField: 0
+  <Speed>k__BackingField: 0
+  <ArmamentToSpawnOnDestroy>k__BackingField: {fileID: 0}
+  references:
+    version: 2
+    RefIds: []

@@ -90,7 +90,7 @@ namespace Assets.Code.GamePlay.Player.Controller
             Entity.Get<PlayerStateMachineContainer>().Tick(deltaTime);
             Entity.Get<PlayerPickUpper>().Tick();
             Entity.Get<PlayerManaController>().Tick(deltaTime);
-            Entity.Get<PlayerEffects.PlayerEffects>().CameraMovingEffects.Tick(deltaTime);
+            Entity.Get<PlayerEffects.PlayerEffects>().Tick(deltaTime);
             Entity.Get<StatsController>().Mediator.Tick(deltaTime);
         }
 

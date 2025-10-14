@@ -25,12 +25,19 @@ namespace Project.Scripts.GamePlay.Armaments.ArmamentBehaviour
         {
             _collectionSystem = collectionSystem;
         }
-        public void Start()
+
+        public override void InitArmament(Armament armament)
+        {
+            _casterEntity = armament.CasterEntity;
+        }
+
+        public void StartBehaviour()
         {
             _bookEffects = CasterEntity.Get<PlayerEffects>().BookEffects;
             _parryTrigger.OnHitEvent += OnParryTriggered;
             _bookEffects.StartStealingEffect();
         }
+
         private void OnParryTriggered(IAttackTrigger attackTrigger)
         {
             if (attackTrigger is ArmamentTrigger armamentTrigger  && armamentTrigger.ArmamentConfig!=null)
@@ -42,7 +49,7 @@ namespace Project.Scripts.GamePlay.Armaments.ArmamentBehaviour
 
         public void Tick(float deltaTime)
         {
-            _casterEntity.Get<PlayerManaController>().SpendMana(_manaSpendRate*deltaTime);
+            CasterEntity.Get<PlayerManaController>().SpendMana(_manaSpendRate*deltaTime);
         }
 
         public void OnDestroy()

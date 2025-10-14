@@ -16,5 +16,11 @@ namespace Assets.Code.GamePlay.Player.PlayerEffects
         public CameraMovingEffects CameraMovingEffects => _cameraMovingEffects;
         public TimeSlowEffect TimeSlowEffect => _timeSlowEffect;
         public BookEffects BookEffects => _bookEffects;
+
+        public void Tick(float deltaTime)
+        {
+            CameraMovingEffects.Tick(deltaTime);
+            BookEffects.Tick(deltaTime);
+        }
     }
 }

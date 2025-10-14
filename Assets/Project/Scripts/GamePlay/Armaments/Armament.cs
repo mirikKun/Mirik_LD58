@@ -12,11 +12,14 @@ namespace Project.Scripts.GamePlay.Armaments
     public class Armament : MonoBehaviour, IGameUpdateable
     {
         [SerializeField] private ArmamentTrigger _armamentTrigger;
+        [SerializeField] private List<ComponentBehaviour> _componentBehaviours;
 
         private List<IArmamentBehaviour> _armamentBehaviours = new List<IArmamentBehaviour>();
         private IUpdateService _updateService;
         public event Action<Armament> Destroyed;
         private bool _dissmissed;
+        private ActorEntity _casterEntity;
+        public ActorEntity CasterEntity => _casterEntity;
 
         [Inject]
         private void Construct( IUpdateService updateService)
@@ -50,9 +53,14 @@ namespace Project.Scripts.GamePlay.Armaments
 
         public Armament Init(ActorEntity caster, ArmamentConfig config)
         {
+            _casterEntity = caster;
             _armamentTrigger.Init(caster);
             _armamentTrigger.SetData(config,this);
-            
+
+            foreach (var componentBehaviour in _componentBehaviours)
+            {
+                With(componentBehaviour);
+            }
             
             return this;
         }
@@ -70,7 +78,7 @@ namespace Project.Scripts.GamePlay.Armaments
             {
                 if (armamentBehaviour is IStartableBehaviour armament)
                 {
-                    armament.Start();
+                    armament.StartBehaviour();
                 }
             }
         }
