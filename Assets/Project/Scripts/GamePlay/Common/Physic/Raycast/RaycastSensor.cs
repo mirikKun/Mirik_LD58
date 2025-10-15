@@ -26,6 +26,9 @@ namespace Assets.Code.GamePlay.Physic.Raycast {
             SetCastOrigin(newOrigin);
             Cast();
             return HasDetectedHit();
+        }  public bool CastAndCheck() {
+            Cast();
+            return HasDetectedHit();
         }
         
         public bool HasDetectedHit() => _hitInfo.collider != null;

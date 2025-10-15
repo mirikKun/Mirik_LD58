@@ -19,8 +19,10 @@ namespace Project.Scripts.GamePlay.Player.PlayerIndicators
         private Transform _indicatorsTransform;
 
         [SerializeField] private AbilityDurationIndicator _abilityDurationIndicatorPrefab;
+        
         private List<AbilityDurationIndicator> _currentIndicators = new List<AbilityDurationIndicator>();
         private Stack<AbilityDurationIndicator> _availableIndicators = new Stack<AbilityDurationIndicator>();
+       
         private StatusIconsConfig _statusIcons;
         private StatIconsConfig _statIcons;
         private IStaticDataService _staticDataService;
@@ -34,7 +36,7 @@ namespace Project.Scripts.GamePlay.Player.PlayerIndicators
         private void Start()
         {
             _statusController.StatusAdded += OnStatusAdded;
-            _statsController.Mediator.StatModifierRemoved += OnStatModifierAdded;
+            _statsController.Mediator.StatModifierAdded += OnStatModifierAdded;
             _statusIcons = _staticDataService.GetStatusIconsConfig();
             _statIcons = _staticDataService.GetStatIconsConfig();
         }
@@ -42,7 +44,7 @@ namespace Project.Scripts.GamePlay.Player.PlayerIndicators
         private void OnDestroy()
         {
             _statusController.StatusAdded -= OnStatusAdded;
-            _statsController.Mediator.StatModifierRemoved -= OnStatModifierAdded;
+            _statsController.Mediator.StatModifierAdded -= OnStatModifierAdded;
         }
 
         private void OnStatModifierAdded(StatModifier modifier)

@@ -36,7 +36,7 @@ public class StatsMediator
         while (node != null)
         {
             var modifier = node.Value;
-            modifier.Update(deltaTime);
+            //modifier.Update(deltaTime);
             node = node.Next;
         }
 

@@ -12,4 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2aa1367c4514063b7345f89c81e013b, type: 3}
   m_Name: StatusIconsConfig
   m_EditorClassIdentifier: 
-  _statusIcons: []
+  _statusIcons:
+  - Status: 51
+    Icon: {fileID: 21300000, guid: e5245d10eb9909541911f9e51357fd76, type: 3}
+  - Status: 52
+    Icon: {fileID: 21300000, guid: 747aff8cdcae18b44b07d0c0a7a85539, type: 3}
+  - Status: 10
+    Icon: {fileID: 21300000, guid: 8f716c48736fcfb43bf70615e396ed67, type: 3}

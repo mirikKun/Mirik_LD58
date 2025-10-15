@@ -6,6 +6,8 @@ using Assets.Code.GamePlay.Player.Controller;
 using Assets.Code.GamePlay.Player.PlayerStateMachine.StateConfigs;
 using ImprovedTimers;
 using ImprovedTimers.Project.Scripts.Utils.Timers;
+using Project.Scripts.GamePlay.HUD.HudEffects;
+using Project.Scripts.GamePlay.Player.Indication;
 using Project.Scripts.GamePlay.Statuses;
 using UnityEngine;
 
@@ -58,11 +60,13 @@ namespace Assets.Code.GamePlay.Player.PlayerStateMachine.States
             _raycastFarSensor.CastLength = (_config.GravityChangeJumpMaxVerticalDistance +
                                             _config.GravityChangeJumpMaxHorizontalDistance);
             _raycastFarSensor.SetCastDirection(RaycastSensor.CastDirection.Forward);
+            _player.Get<AbilitiesIndicationController>().RangeIndication.EquipAbilityWithRange(RangeIndicationType.GravityChange,_raycastNearSensor);
         }
 
         public void Dispose()
         {
             //_controller.Input.Action1 -= HandleActionInput;
+            _player.Get<AbilitiesIndicationController>().RangeIndication.UnequipAbilityWithRange(RangeIndicationType.GravityChange);
         }
 
         private void HandleActionInput(bool isButtonPressed)

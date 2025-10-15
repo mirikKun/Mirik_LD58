@@ -8,6 +8,8 @@ using Assets.Code.GamePlay.Player.PlayerStateMachine.StateConfigs;
 using Assets.Code.GamePlay.Player.PlayerStateMachine.States.AbstractStates;
 using ImprovedTimers;
 using ImprovedTimers.Project.Scripts.Utils.Timers;
+using Project.Scripts.GamePlay.HUD.HudEffects;
+using Project.Scripts.GamePlay.Player.Indication;
 using Project.Scripts.GamePlay.Statuses;
 using Project.Scripts.Utils;
 using UnityEngine;
@@ -51,6 +53,7 @@ namespace Assets.Code.GamePlay.Player.PlayerStateMachine.States
             _raycastSensor.CastLength = (_config.SwingingMaxDistance);
             _raycastSensor.SetCastDirection(RaycastSensor.CastDirection.Forward);
 
+            _player.Get<AbilitiesIndicationController>().RangeIndication.EquipAbilityWithRange(RangeIndicationType.GrapplingHook,_raycastSensor);
             _hookTimer = new CountdownTimer(_config.SwingingDuration);
             _preparingTimer = new CountdownTimer(_config.PreparingDuration);
         }
@@ -58,6 +61,7 @@ namespace Assets.Code.GamePlay.Player.PlayerStateMachine.States
         public void Dispose()
         {
             //_controller.Input.Action3 -= HandleActionInput;
+            _player.Get<AbilitiesIndicationController>().RangeIndication.UnequipAbilityWithRange(RangeIndicationType.GrapplingHook);
         }
 
         private void HandleActionInput(bool isButtonPressed)
@@ -116,7 +120,7 @@ namespace Assets.Code.GamePlay.Player.PlayerStateMachine.States
 
         public void Update(float deltaTime)
         {
-            Effects.HookEffects.DrawGrappleLine(_raycastSensor.GetPosition(), 1);
+            Effects.HookEffects.DrawGrappleLine(_swingingPoint, 1);
         }
         
         public void FixedUpdate(float fixedDeltaTime)
