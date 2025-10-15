@@ -4,6 +4,7 @@ using Assets.Code.GamePlay.Common.Entity;
 using Assets.Code.GamePlay.Health;
 using Assets.Code.GamePlay.Player.Controller;
 using Assets.Code.GamePlay.Stats;
+using Project.Scripts.GamePlay.Stats;
 using UnityEngine;
 
 namespace Assets.Code.GamePlay.DataDriven.Effects

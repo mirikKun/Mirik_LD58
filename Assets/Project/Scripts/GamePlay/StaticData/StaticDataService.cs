@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using Assets.Code.GamePlay.Abilities.Configs;
 using Assets.Code.GamePlay.Player.Inventory.Configs;
+using Assets.Code.GamePlay.Stats;
 using Code.Gameplay.Windows;
 using Code.Gameplay.Windows.Configs;
 using Project.Scripts.GamePlay.Armaments.Configs;
 using Project.Scripts.GamePlay.Collection.Configs;
+using Project.Scripts.GamePlay.Statuses;
 using UnityEngine;
 
 namespace Code.Gameplay.StaticData
@@ -19,6 +21,11 @@ namespace Code.Gameplay.StaticData
         private PlayerStartAbilities _playerStartAbilities;
         private AllCollectableAbilities _allCollectableAbilities;
         private ArmamentsConfig _armamentsConfig;
+
+
+        private StatIconsConfig _statIconsConfig;
+        private StatusIconsConfig _statusIconsConfig;
+        
         //private PlayerMovementConfig _playerMovementConfig;
 
         public void LoadAll()
@@ -28,6 +35,17 @@ namespace Code.Gameplay.StaticData
             LoadStartInventoryConfig();
             LoadProjectilesConfig();
             LoadAllCollectableAbilitiesConfig();
+            
+            LoadIconsConfigs();
+        }
+
+        private void LoadIconsConfigs()
+        {
+            _statIconsConfig= Resources
+                .Load<StatIconsConfig>("Configs/Icons/StatIconsConfig");
+            _statusIconsConfig= Resources
+                .Load<StatusIconsConfig>("Configs/Icons/StatusIconsConfig");
+            
         }
 
 
@@ -42,6 +60,10 @@ namespace Code.Gameplay.StaticData
             _playerStartAbilities ?? throw new Exception("Player start abilities config was not loaded");
         public ArmamentsConfig GetProjectilesConfig() =>
             _armamentsConfig ?? throw new Exception("Projectiles config was not loaded");
+        public StatIconsConfig GetStatIconsConfig() =>
+            _statIconsConfig ?? throw new Exception("Stat icons config was not loaded");
+        public StatusIconsConfig GetStatusIconsConfig() =>
+            _statusIconsConfig ?? throw new Exception("Status icons config was not loaded");
 
         public GameObject GetWindowPrefab(WindowId id) =>
             _windowPrefabsById.TryGetValue(id, out GameObject prefab)

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: GravityChangeStateConfig
   m_EditorClassIdentifier: 
   <RaycastNearDistance>k__BackingField: 7
-  <ChangingDuration>k__BackingField: 0.1
+  <ChangingDuration>k__BackingField: 0.3
   <GravityChangeFullDuration>k__BackingField: 5
   <GravityChangeSpeed>k__BackingField: 10
   <GravityChangeJumpAvailable>k__BackingField: 0

@@ -3,16 +3,16 @@ using UnityEngine;
 
 namespace Assets.Code.GamePlay.Stats
 {
-    public class StatsController:EntityComponent
+    public class StatsController : EntityComponent
     {
+        [SerializeField] private BaseStatsConfig _baseStatsConfig;
         private readonly StatsMediator _mediator = new StatsMediator();
-        [SerializeField]private BaseStatsConfig _baseStatsConfig;
 
         public StatsMediator Mediator => _mediator;
 
         public float this[StatType statType]
         {
-            get 
+            get
             {
                 var q = new Query(statType, _baseStatsConfig[statType]);
                 _mediator.PerformQuery(this, q);
@@ -24,6 +24,5 @@ namespace Assets.Code.GamePlay.Stats
         //     this._mediator = mediator;
         //     this._baseStatsConfig = baseStatsConfig;
         // }
-
     }
 }

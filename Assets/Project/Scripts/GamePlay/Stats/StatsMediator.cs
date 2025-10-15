@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Assets.Code.GamePlay.Stats;
+using Project.Scripts.GamePlay.Stats;
 using UnityEngine;
 
 public class StatsMediator
@@ -8,14 +9,18 @@ public class StatsMediator
     readonly LinkedList<StatModifier> modifiers = new();
 
     public event EventHandler<Query> Queries;
+    public event Action<StatModifier> StatModifierAdded;
+    public event Action<StatModifier> StatModifierRemoved;
 
     public void PerformQuery(object sender, Query query) => Queries?.Invoke(sender, query);
 
     public void AddModifier(StatModifier modifier)
-    {        Debug.Log("StatsMediator: Adding modifier " + modifier);
+    {
+        Debug.Log("StatsMediator: Adding modifier " + modifier);
 
         modifiers.AddLast(modifier);
         modifier.MarkedForRemoval = false;
+        StatModifierAdded?.Invoke(modifier);
         Queries += modifier.Handle;
 
         modifier.OnDispose += _ =>
@@ -43,6 +48,7 @@ public class StatsMediator
 
             if (node.Value.MarkedForRemoval)
             {
+                StatModifierRemoved?.Invoke(node.Value);
                 node.Value.Dispose();
             }
 

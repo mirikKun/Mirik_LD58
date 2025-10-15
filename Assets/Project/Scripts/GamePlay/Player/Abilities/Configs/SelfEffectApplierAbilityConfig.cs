@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using Assets.Code.GamePlay.Abilities.General;
 using Assets.Code.GamePlay.DataDriven.Effects;
-using Assets.Code.GamePlay.DataDriven.Statuses;
 using Assets.Code.GamePlay.Player.Abilities.Factory;
 using UnityEngine;
 

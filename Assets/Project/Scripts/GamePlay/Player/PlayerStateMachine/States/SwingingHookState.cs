@@ -8,6 +8,7 @@ using Assets.Code.GamePlay.Player.PlayerStateMachine.StateConfigs;
 using Assets.Code.GamePlay.Player.PlayerStateMachine.States.AbstractStates;
 using ImprovedTimers;
 using ImprovedTimers.Project.Scripts.Utils.Timers;
+using Project.Scripts.GamePlay.Statuses;
 using Project.Scripts.Utils;
 using UnityEngine;
 
@@ -33,6 +34,7 @@ namespace Assets.Code.GamePlay.Player.PlayerStateMachine.States
 
         private PlayerMover Mover => _player.Get<PlayerMover>();
         private PlayerController PlayerController => _player.Get<PlayerController>();
+        private StatusController StatusController => _player.Get<StatusController>();
         private PlayerEffects.PlayerEffects Effects => _player.Get<PlayerEffects.PlayerEffects>();
 
         public SwingingHookState(ActorEntity player, SwingingHookMoveStateConfig config,
@@ -82,6 +84,8 @@ namespace Assets.Code.GamePlay.Player.PlayerStateMachine.States
         {
             Mover.OnGroundContactLost();
             OnSwingingHookStart();
+            StatusController.AddStatus(new Status(StatusType.InGrapplingHook,_config.SwingingDuration));
+
         }
 
         public void OnExit()
@@ -90,6 +94,7 @@ namespace Assets.Code.GamePlay.Player.PlayerStateMachine.States
             float momentumMagnitude = Mover.GetMomentum().magnitude;
             
             Mover.SetMomentum(Mover.GetMomentum() *_config.SwingingExitSpeedMultiplier );
+            StatusController.RemoveStatus(StatusType.InGrapplingHook);
             _preparingTimer.Stop();
             Effects.HookEffects.ClearGrappleLine();
 

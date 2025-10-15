@@ -8,6 +8,7 @@ using Assets.Code.GamePlay.Player.PlayerStateMachine;
 using Assets.Code.GamePlay.Stats;
 using Project.Scripts.GamePlay.Player.PlayerResources;
 using Project.Scripts.GamePlay.Player.StealSystem;
+using Project.Scripts.GamePlay.Statuses;
 using UnityEngine;
 using Zenject;
 
@@ -92,6 +93,7 @@ namespace Assets.Code.GamePlay.Player.Controller
             Entity.Get<PlayerManaController>().Tick(deltaTime);
             Entity.Get<PlayerEffects.PlayerEffects>().Tick(deltaTime);
             Entity.Get<StatsController>().Mediator.Tick(deltaTime);
+            Entity.Get<StatusController>().Tick(deltaTime);
         }
 
         public void GameLateUpdate(float deltaTime)

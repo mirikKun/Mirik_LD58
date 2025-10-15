@@ -4,5 +4,6 @@ namespace Assets.Code.GamePlay.Stats
     {
         Add,
         Multiply,
+        Bool
     }
 }
