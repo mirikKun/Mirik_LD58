@@ -1,4 +1,5 @@
 using System;
+using Assets.Code.GamePlay.Player.Inventory.Items;
 using Project.Scripts.GamePlay.Collection.Systems;
 using TMPro;
 using UnityEngine;
@@ -22,7 +23,7 @@ namespace Project.Scripts.GamePlay.Collection.UI
         private void Start()
         {
             _collectionSystem.CollectionUpdated+=OnCollectionUpdated;
-            OnCollectionUpdated();
+            UpdateCollectablesCount();
             _initialized = true;
         }
 
@@ -31,15 +32,20 @@ namespace Project.Scripts.GamePlay.Collection.UI
             _collectionSystem.CollectionUpdated-=OnCollectionUpdated;
         }
 
-        private void OnCollectionUpdated()
+        private void OnCollectionUpdated(BaseAbilityItem baseAbilityItem)
         {
-            int current=_collectionSystem.GetCollectedItemsCount();
-            int max=_collectionSystem.GetAllAvailableItemsCount();
-            _text.text = $"{current}/{max}";
+            UpdateCollectablesCount();
             if (_initialized)
             {
                 _collectableUpdateEffect.PlayEffect();
             }
+        }
+
+        private void UpdateCollectablesCount()
+        {
+            int current=_collectionSystem.GetCollectedItemsCount();
+            int max=_collectionSystem.GetAllAvailableItemsCount();
+            _text.text = $"{current}/{max}";
         }
     }
 }

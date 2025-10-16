@@ -1,4 +1,5 @@
 using System;
+using Assets.Code.GamePlay.Player.Inventory.Items;
 using Project.Scripts.GamePlay.Collection.Systems;
 using UnityEngine;
 using Zenject;
@@ -26,7 +27,7 @@ namespace Project.Scripts.GamePlay.Collection.Components
             _collectionSystem.CollectionUpdated -= OnCollectionUpdated;
         }
 
-        private void OnCollectionUpdated()
+        private void OnCollectionUpdated(BaseAbilityItem baseAbilityItem)
         {
             if (_collectionSystem.GetAllAvailableItemsCount() <= _collectionSystem.GetCollectedItemsCount())
             {

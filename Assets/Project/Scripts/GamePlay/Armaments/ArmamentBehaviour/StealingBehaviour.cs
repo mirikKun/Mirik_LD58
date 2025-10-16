@@ -42,8 +42,14 @@ namespace Project.Scripts.GamePlay.Armaments.ArmamentBehaviour
         {
             if (attackTrigger is ArmamentTrigger armamentTrigger  && armamentTrigger.ArmamentConfig!=null)
             {
-                _collectionSystem.TryAddStealArmamentAbility(armamentTrigger.ArmamentConfig);
+                _bookEffects.PlayStealSuccessEffect();
+                
+               bool firstSteal= _collectionSystem.TryAddStealArmamentAbility(armamentTrigger.ArmamentConfig);
                 armamentTrigger.Dismiss();
+                if (firstSteal)
+                {
+                    _bookEffects.PlayFirstStealEffect();
+                }
             }
         }
 

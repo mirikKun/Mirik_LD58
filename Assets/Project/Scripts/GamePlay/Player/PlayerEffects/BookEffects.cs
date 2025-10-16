@@ -3,12 +3,15 @@ using UnityEngine;
 
 namespace Project.Scripts.GamePlay.Player.StealSystem
 {
-    public class BookEffects:MonoBehaviour
+    public class BookEffects : MonoBehaviour
     {
         [SerializeField] private ParticleSystem _particles;
         [SerializeField] private Transform _book;
         [SerializeField] private Vector3 _stealingRotation;
         [SerializeField] private float _bookRotationSpeed = 5f;
+
+        [SerializeField] private ParticleSystem _stealSuccessParticles;
+        [SerializeField] private ParticleSystem _firstStealParticles;
 
         private Vector3 _startRotation;
         private Vector3 _targetRotation;
@@ -16,23 +19,36 @@ namespace Project.Scripts.GamePlay.Player.StealSystem
         private void Start()
         {
             _startRotation = _book.localEulerAngles;
-            _targetRotation=_startRotation;
+            _targetRotation = _startRotation;
 
         }
 
         public void Tick(float deltaTime)
         {
-            _book.localEulerAngles = Vector3.Lerp(_book.localEulerAngles, _targetRotation, deltaTime * _bookRotationSpeed);
+            _book.localEulerAngles =
+                Vector3.Lerp(_book.localEulerAngles, _targetRotation, deltaTime * _bookRotationSpeed);
         }
+
         public void StartStealingEffect()
         {
             _particles.Play();
-            _targetRotation=_stealingRotation;
+            _targetRotation = _stealingRotation;
         }
+
         public void StopStealingEffect()
         {
             _particles.Stop();
-            _targetRotation=_startRotation;
+            _targetRotation = _startRotation;
+        }
+
+        public void PlayStealSuccessEffect()
+        {
+            _stealSuccessParticles.Play();
+        }
+
+        public void PlayFirstStealEffect()
+        {
+            _firstStealParticles.Play();
         }
     }
 }

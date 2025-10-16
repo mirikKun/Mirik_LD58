@@ -43,7 +43,7 @@ namespace Project.Scripts.GamePlay.Armaments
             }
             else
             {
-                throw new Exception("Attempted to remove an armament that does not exist in the holder.");
+                throw new Exception($"Attempted to remove an armament {armament} that does not exist in the holder.");
             }
         }
 

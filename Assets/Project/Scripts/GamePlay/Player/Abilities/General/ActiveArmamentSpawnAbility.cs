@@ -60,7 +60,7 @@ namespace Project.Scripts.GamePlay.Player.Abilities.General
         {
             _executing = false;
             _casterEntity.Get<ArmamentsHolder>().RemoveArmament(_armament);
-            _casterEntity.Get<PlayerManaController>().ManaEnded += OnExecutionEnded;
+            _casterEntity.Get<PlayerManaController>().ManaEnded -= OnExecutionEnded;
         }
     }
 }

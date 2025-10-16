@@ -13,7 +13,7 @@ namespace Project.Scripts.GamePlay.Collection.Systems
         private List<BaseAbilityItem> _allAbilities=new List<BaseAbilityItem>();
         private List<BaseAbilityItem> _collectedAbilities=new List<BaseAbilityItem>();
         private readonly IInventorySystem _inventorySystem;
-        public event Action CollectionUpdated;
+        public event Action<BaseAbilityItem> CollectionUpdated;
 
 
 
@@ -27,7 +27,7 @@ namespace Project.Scripts.GamePlay.Collection.Systems
             _allAbilities=allCollectableAbilities.CollectableAbilities;
         }
 
-        public void TryAddStealArmamentAbility(ArmamentConfig armamentTriggerArmamentConfig)
+        public bool TryAddStealArmamentAbility(ArmamentConfig armamentTriggerArmamentConfig)
         {
             foreach (var collectedAbility in _collectedAbilities)
             {
@@ -35,7 +35,7 @@ namespace Project.Scripts.GamePlay.Collection.Systems
                     armamentSpawnAbilityConfig.ArmamentType == armamentTriggerArmamentConfig.Type)
                 {
                     
-                    return;
+                    return false;
                 }
             }
             
@@ -47,10 +47,13 @@ namespace Project.Scripts.GamePlay.Collection.Systems
                 {
                     _inventorySystem.AddItem(ability);
                     _collectedAbilities.Add(ability);
-                    CollectionUpdated?.Invoke();
+                    CollectionUpdated?.Invoke(ability);
+                    return true;
+
                 }
             }
-            
+            return false;
+ 
         }
         public void TryPickAbility(BaseAbilityItem abilityItem)
         {
@@ -69,7 +72,7 @@ namespace Project.Scripts.GamePlay.Collection.Systems
                 {
                     _inventorySystem.AddItem(ability);
                     _collectedAbilities.Add(ability);
-                    CollectionUpdated?.Invoke();
+                    CollectionUpdated?.Invoke(ability);
                 }
             }
             

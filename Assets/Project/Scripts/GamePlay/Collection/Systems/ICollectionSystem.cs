@@ -6,11 +6,11 @@ namespace Project.Scripts.GamePlay.Collection.Systems
 {
     public interface ICollectionSystem
     {
-        void TryAddStealArmamentAbility(ArmamentConfig armamentTriggerArmamentConfig);
+        bool TryAddStealArmamentAbility(ArmamentConfig armamentTriggerArmamentConfig);
         int GetCollectedItemsCount();
         int GetAllAvailableItemsCount();
         void Setup(AllCollectableAbilities  allCollectableAbilities);
-        event System.Action CollectionUpdated;
+        event System.Action<BaseAbilityItem> CollectionUpdated;
         void TryPickAbility(BaseAbilityItem abilityItem);
     }
 }
