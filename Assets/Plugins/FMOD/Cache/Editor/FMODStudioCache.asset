@@ -1,0 +1,588 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9095977335233549404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Spell/Spell 6
+  m_EditorClassIdentifier: 
+  Path: event:/Spell/Spell 6
+  Guid:
+    Data1: -1950035962
+    Data2: 1096480236
+    Data3: 1590619561
+    Data4: -487679788
+  Banks:
+  - {fileID: -7224428835513318133}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-8960345373294980734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Music.bank
+  m_EditorClassIdentifier: 
+  Path: ../../FMOD_Projects/RogueScribe_FMOD_Project/Build/Desktop/Music.bank
+  Name: Music
+  StudioPath: bank:/Music
+  lastModified: 638963447769234291
+  FileSizes:
+  - Name: Desktop
+    Value: 215072
+  Exists: 1
+--- !u!114 &-8237384657500427970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Spell/Spell 7
+  m_EditorClassIdentifier: 
+  Path: event:/Spell/Spell 7
+  Guid:
+    Data1: -2079979966
+    Data2: 1086905062
+    Data3: 1840012416
+    Data4: 380009189
+  Banks:
+  - {fileID: -7224428835513318133}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-7996911952148165970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Slash/Slash 1
+  m_EditorClassIdentifier: 
+  Path: event:/Slash/Slash 1
+  Guid:
+    Data1: -1801374253
+    Data2: 1278893849
+    Data3: 1637987724
+    Data4: 1386803005
+  Banks:
+  - {fileID: -7224428835513318133}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-7915818289798522311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Slash/Slash 2
+  m_EditorClassIdentifier: 
+  Path: event:/Slash/Slash 2
+  Guid:
+    Data1: 293507913
+    Data2: 1111508941
+    Data3: 1969872774
+    Data4: -867967761
+  Banks:
+  - {fileID: -7224428835513318133}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-7881730931861762048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Spell/Spell 10
+  m_EditorClassIdentifier: 
+  Path: event:/Spell/Spell 10
+  Guid:
+    Data1: 1741274839
+    Data2: 1317400836
+    Data3: -1601610598
+    Data4: 66519375
+  Banks:
+  - {fileID: -7224428835513318133}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-7224428835513318133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/SFX.bank
+  m_EditorClassIdentifier: 
+  Path: ../../FMOD_Projects/RogueScribe_FMOD_Project/Build/Desktop/SFX.bank
+  Name: SFX
+  StudioPath: bank:/SFX
+  lastModified: 638963472952059739
+  FileSizes:
+  - Name: Desktop
+    Value: 527648
+  Exists: 1
+--- !u!114 &-5467439150239601205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Spell/Spell 8
+  m_EditorClassIdentifier: 
+  Path: event:/Spell/Spell 8
+  Guid:
+    Data1: 513099657
+    Data2: 1259483248
+    Data3: 1302145684
+    Data4: 1862282541
+  Banks:
+  - {fileID: -7224428835513318133}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-4416350847849282030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Spell/Spell 4
+  m_EditorClassIdentifier: 
+  Path: event:/Spell/Spell 4
+  Guid:
+    Data1: 1951996606
+    Data2: 1258595470
+    Data3: -1563458129
+    Data4: -1919980128
+  Banks:
+  - {fileID: -7224428835513318133}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-3289254012517369560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: ../../FMOD_Projects/RogueScribe_FMOD_Project/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 638963447761626141
+  FileSizes:
+  - Name: Desktop
+    Value: 1454
+  Exists: 1
+--- !u!114 &-3014683095604273414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Music1
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Music1
+  Guid:
+    Data1: -83202798
+    Data2: 1226031180
+    Data3: 409160846
+    Data4: 1636246413
+  Banks:
+  - {fileID: -8960345373294980734}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 18886
+--- !u!114 &-2483529617054999551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Steps/StepsLanding
+  m_EditorClassIdentifier: 
+  Path: event:/Steps/StepsLanding
+  Guid:
+    Data1: 2043903319
+    Data2: 1217553617
+    Data3: 1608389285
+    Data4: 491876167
+  Banks:
+  - {fileID: -7224428835513318133}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 530
+--- !u!114 &-253685923963682373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Spell/Spell 2
+  m_EditorClassIdentifier: 
+  Path: event:/Spell/Spell 2
+  Guid:
+    Data1: 215150733
+    Data2: 1341897112
+    Data3: -731068800
+    Data4: -607860848
+  Banks:
+  - {fileID: -7224428835513318133}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: 
+  EditorBanks:
+  - {fileID: -3289254012517369560}
+  - {fileID: 3057238179270557938}
+  - {fileID: -7224428835513318133}
+  - {fileID: -8960345373294980734}
+  EditorEvents:
+  - {fileID: -9095977335233549404}
+  - {fileID: 5416453437052530543}
+  - {fileID: -8237384657500427970}
+  - {fileID: -7915818289798522311}
+  - {fileID: -5467439150239601205}
+  - {fileID: -253685923963682373}
+  - {fileID: 2050494204096190095}
+  - {fileID: -4416350847849282030}
+  - {fileID: 4448244014716591437}
+  - {fileID: -7996911952148165970}
+  - {fileID: -7881730931861762048}
+  - {fileID: 5917102076758897108}
+  - {fileID: 3928121517017656349}
+  - {fileID: -3014683095604273414}
+  - {fileID: -2483529617054999551}
+  - {fileID: 6062202535974191133}
+  EditorParameters: []
+  MasterBanks:
+  - {fileID: 3057238179270557938}
+  StringsBanks:
+  - {fileID: -3289254012517369560}
+  cacheVersion: 131849
+  cacheTime: 638963472952059739
+  SerializableEventsDict:
+  - key: event:/Spell/Spell 6
+    index: 0
+  - key: event:/Spell/Spell 9
+    index: 1
+  - key: event:/Spell/Spell 7
+    index: 2
+  - key: event:/Slash/Slash 2
+    index: 3
+  - key: event:/Spell/Spell 8
+    index: 4
+  - key: event:/Spell/Spell 2
+    index: 5
+  - key: event:/Spell/Spell 1
+    index: 6
+  - key: event:/Spell/Spell 4
+    index: 7
+  - key: event:/Spell/Spell 5
+    index: 8
+  - key: event:/Slash/Slash 1
+    index: 9
+  - key: event:/Spell/Spell 10
+    index: 10
+  - key: event:/Spell/Spell 3
+    index: 11
+  - key: event:/Slash/Slash 4
+    index: 12
+  - key: event:/Music/Music1
+    index: 13
+  - key: event:/Steps/StepsLanding
+    index: 14
+  - key: event:/Steps/Step
+    index: 15
+--- !u!114 &2050494204096190095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Spell/Spell 1
+  m_EditorClassIdentifier: 
+  Path: event:/Spell/Spell 1
+  Guid:
+    Data1: 1813082027
+    Data2: 1261767167
+    Data3: 1846022553
+    Data4: -138702344
+  Banks:
+  - {fileID: -7224428835513318133}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &3057238179270557938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../../FMOD_Projects/RogueScribe_FMOD_Project/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 638963447761589144
+  FileSizes:
+  - Name: Desktop
+    Value: 1074
+  Exists: 1
+--- !u!114 &3928121517017656349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Slash/Slash 4
+  m_EditorClassIdentifier: 
+  Path: event:/Slash/Slash 4
+  Guid:
+    Data1: 1168427005
+    Data2: 1327296111
+    Data3: -1114592124
+    Data4: -1227402148
+  Banks:
+  - {fileID: -7224428835513318133}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &4448244014716591437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Spell/Spell 5
+  m_EditorClassIdentifier: 
+  Path: event:/Spell/Spell 5
+  Guid:
+    Data1: 1121102024
+    Data2: 1234339515
+    Data3: -1296386883
+    Data4: 121749108
+  Banks:
+  - {fileID: -7224428835513318133}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &5416453437052530543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Spell/Spell 9
+  m_EditorClassIdentifier: 
+  Path: event:/Spell/Spell 9
+  Guid:
+    Data1: 229267774
+    Data2: 1254763863
+    Data3: -1277093226
+    Data4: 1043005408
+  Banks:
+  - {fileID: -7224428835513318133}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &5917102076758897108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Spell/Spell 3
+  m_EditorClassIdentifier: 
+  Path: event:/Spell/Spell 3
+  Guid:
+    Data1: 214220766
+    Data2: 1191410603
+    Data3: 1508383900
+    Data4: 661475438
+  Banks:
+  - {fileID: -7224428835513318133}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &6062202535974191133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Steps/Step
+  m_EditorClassIdentifier: 
+  Path: event:/Steps/Step
+  Guid:
+    Data1: 421633932
+    Data2: 1193331229
+    Data3: -1431445833
+    Data4: -1759331398
+  Banks:
+  - {fileID: -7224428835513318133}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0

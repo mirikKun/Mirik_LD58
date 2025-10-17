@@ -16,6 +16,7 @@ using Code.Infrastructure.States.StateMachine;
 using Code.Progress.Provider;
 using Project.Scripts.GamePlay.Armaments.Factories;
 using Project.Scripts.GamePlay.Collection.Systems;
+using Project.Scripts.Sounds;
 using Zenject;
 
 namespace Code.Infrastructure.Installers
@@ -36,6 +37,7 @@ namespace Code.Infrastructure.Installers
             BindCommonServices();
             BindGameplayServices();
             BindGameplaySystems();
+            BoundsSounds();
         }
 
         private void BindStateMachine()
@@ -46,6 +48,12 @@ namespace Code.Infrastructure.Installers
         private void BindStateFactory()
         {
             Container.BindInterfacesAndSelfTo<StateFactory>().AsSingle();
+        }
+
+        private void BoundsSounds()
+        {
+            Container.Bind<ISoundsSystem>().To<SoundsSystem>().AsSingle();
+
         }
 
         private void BindGameStates()

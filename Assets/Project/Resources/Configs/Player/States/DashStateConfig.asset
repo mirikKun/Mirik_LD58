@@ -16,6 +16,13 @@ MonoBehaviour:
   <DashExitSpeed>k__BackingField: 8
   <DashDuration>k__BackingField: 0.2
   <UpdatedFov>k__BackingField: 77
+  <Sound>k__BackingField:
+    Guid:
+      Data1: 1168427005
+      Data2: 1327296111
+      Data3: -1114592124
+      Data4: -1227402148
+    Path: event:/Slash/Slash 4
   <AfterDashHoveringDuration>k__BackingField: 0.3
   <AfterDashHoveringGravity>k__BackingField: 9
   <AfterDashHoveringSpeed>k__BackingField: 19

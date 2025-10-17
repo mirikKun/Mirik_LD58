@@ -1,4 +1,7 @@
 using Assets.Code.Common.Utils.Extensions;
+using Assets.Code.GamePlay.Common.Entity;
+using FMODUnity;
+using Project.Scripts.Sounds;
 using Unity.Cinemachine;
 using UnityEngine;
 
@@ -25,6 +28,8 @@ namespace Assets.Code.GamePlay.Player.PlayerEffects
         [SerializeField] private AnimationCurve _walkShakeHorizontalCurve = CreateCurve.Sin;
         [SerializeField] private AnimationCurve _walkShakeForwardCurve = CreateCurve.Sin;
         [SerializeField] private bool _enableWalkShake = true;
+        [SerializeField] private EventReference _stepSound;
+
 
         [Header("Fall Settings")] [SerializeField]
         private float _fallMaxHeight = 20;
@@ -39,6 +44,7 @@ namespace Assets.Code.GamePlay.Player.PlayerEffects
         [SerializeField] private float _fallBounceMaxRotation = 5f;
         [SerializeField] private AnimationCurve _fallBounceAnimationCurve = CreateCurve.InOut;
         [SerializeField] private bool _enableFallBounce = true;
+        [SerializeField] private EventReference _fallLandSound;
 
         [Header("Camera Shake Settings")] [SerializeField]
         private float _defaultCameraShakePower = 0.01f;
@@ -79,6 +85,10 @@ namespace Assets.Code.GamePlay.Player.PlayerEffects
 
         private float _currentCameraShakePower;
         private float _currentCameraShakeDuration;
+        
+        private float _prevVerticalOffset;
+        private bool _walkMovingDown;
+
 
         private float _currentWallTiltAngle;
         private float _targetWallTiltAngle;
@@ -90,9 +100,13 @@ namespace Assets.Code.GamePlay.Player.PlayerEffects
         private float _currentFOV;
         private float _targetFOV;
         private bool _isGrounded;
+
         private bool _cameraShakeActive;
+
         private bool _fallBounceActive;
+
         private float _fallHeight;
+            private SoundSource _soundSource;
 
         private Vector3 DefaultCameraPosition => new Vector3(0, _initialCameraY, _initialCameraZ);
 
@@ -110,6 +124,11 @@ namespace Assets.Code.GamePlay.Player.PlayerEffects
 
 
             _targetCameraPosition = DefaultCameraPosition;
+        }
+
+        public void InitEffect(ActorEntity entity)
+        {
+            _soundSource= entity.Get<SoundSource>();
         }
 
         public void Tick(float deltaTime)
@@ -146,6 +165,7 @@ namespace Assets.Code.GamePlay.Player.PlayerEffects
 
         public void StartFallEffect(float height)
         {
+            _soundSource.PlaySound(_fallLandSound,SoundPlacementType.Root);
             float minHeight = 0.3f;
             if (height < minHeight)
                 return;
@@ -223,10 +243,13 @@ namespace Assets.Code.GamePlay.Player.PlayerEffects
 
             if (_isGrounded)
             {
+                
+                
                 _movingShakeElapsedTime += deltaTime;
 
                 float normalizedTime = (_movingShakeElapsedTime % _walkShakeCycleTime) / _walkShakeCycleTime;
 
+                
                 float verticalOffset = _walkShakeVerticalCurve.Evaluate(normalizedTime) * _walkShakeIntensityVertical;
                 float horizontalOffset =
                     _walkShakeHorizontalCurve.Evaluate(normalizedTime) * _walkShakeIntensityHorizontal;
@@ -234,7 +257,19 @@ namespace Assets.Code.GamePlay.Player.PlayerEffects
 
 
                 _targetCameraPosition = new Vector3(horizontalOffset, verticalOffset, forwardOffset);
+
+                CheckOnStepSound(verticalOffset);
             }
+        }
+
+        private void CheckOnStepSound(float verticalOffset)
+        {
+            if (_walkMovingDown && verticalOffset > _prevVerticalOffset)
+            {
+                    _soundSource.PlaySound(_stepSound,SoundPlacementType.Root);
+            }
+            _walkMovingDown= verticalOffset < _prevVerticalOffset;
+            _prevVerticalOffset = verticalOffset;
         }
 
         private void ApplyCameraShakeEffect(float deltaTime)
@@ -257,6 +292,8 @@ namespace Assets.Code.GamePlay.Player.PlayerEffects
 
         private void ApplyFallBounceEffect(float deltaTime)
         {
+
+            
             if (!_fallBounceActive)
                 return;
 

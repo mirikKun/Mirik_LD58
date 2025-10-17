@@ -6,6 +6,7 @@ using Assets.Code.GamePlay.Player.PlayerStateMachine.StateConfigs;
 using Assets.Code.GamePlay.Player.PlayerStateMachine.States.AbstractStates;
 using ImprovedTimers;
 using ImprovedTimers.Project.Scripts.Utils.Timers;
+using Project.Scripts.Sounds;
 using UnityEngine;
 
 namespace Assets.Code.GamePlay.Player.PlayerStateMachine.States
@@ -21,6 +22,7 @@ namespace Assets.Code.GamePlay.Player.PlayerStateMachine.States
         private PlayerMover Mover => _player.Get<PlayerMover>();
         private PlayerController PlayerController => _player.Get<PlayerController>();
         private PlayerEffects.PlayerEffects Effects => _player.Get<PlayerEffects.PlayerEffects>();
+        private SoundSource SoundSource => _player.Get<SoundSource>();
 
 
         public DashState(ActorEntity player, DashBaseStateConfig config, AbilityInstance abilitiesInstance)
@@ -51,6 +53,8 @@ namespace Assets.Code.GamePlay.Player.PlayerStateMachine.States
             Effects.CameraMovingEffects.SetTargetFOV(_config.UpdatedFov);
 
             Effects.TimeSlowEffect.PlayCurve();
+            SoundSource.PlaySound(_config.Sound);
+            
         }
 
         public virtual void OnExit()

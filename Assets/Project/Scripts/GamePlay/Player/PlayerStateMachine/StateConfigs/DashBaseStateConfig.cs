@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using Assets.Code.GamePlay.Abilities.General;
 using Assets.Code.GamePlay.Common.Entity;
 using Assets.Code.GamePlay.GameplayStateMachine;
+using FMODUnity;
 using UnityEngine;
 
 namespace Assets.Code.GamePlay.Player.PlayerStateMachine.StateConfigs
@@ -13,6 +14,11 @@ namespace Assets.Code.GamePlay.Player.PlayerStateMachine.StateConfigs
         [field: SerializeField] public float DashDuration { get; private set; } = 0.24f;
 
         [field: SerializeField] public float UpdatedFov { get; private set; } = 77;
+        [field:Header("Sounds")]
+        [field: SerializeField] public EventReference Sound { get; private set; }
+        
+        
+        
         public override List<StateConfiguration> GetStateConfiguration(ActorEntity playerEntity,
             AbilityInstance abilitiesInstance)
         {
