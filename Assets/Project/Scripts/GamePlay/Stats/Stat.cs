@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace Assets.Code.GamePlay.Stats
+namespace Project.Scripts.GamePlay.Stats
 {
     [Serializable]
     public class Stat

@@ -1,12 +1,11 @@
-using Assets.Code.GamePlay.Player.Inventory;
-using Assets.Code.GamePlay.Player.Inventory.Items;
 using FMODUnity;
 using Project.Scripts.GamePlay.Collection.Systems;
+using Project.Scripts.GamePlay.Player.Inventory.Configs;
 using Project.Scripts.Sounds;
 using UnityEngine;
 using Zenject;
 
-namespace Assets.Code.GamePlay.PickUp.Behaviours
+namespace Project.Scripts.GamePlay.PickUp.Behaviours
 {
     public class AbilityPickUp:MonoBehaviour,IPickUp
     {

@@ -1,7 +1,8 @@
+using Project.Scripts.GamePlay.Common.Input;
 using UnityEngine;
 using Zenject;
 
-namespace Assets.Code.GamePlay.Player.Controller {
+namespace Project.Scripts.GamePlay.Player.Controller {
     public class CameraController : MonoBehaviour {
         [Range(0f, 90f)] public float _upperVerticalLimit =75f;
         [Range(0f, 90f)] public float _lowerVerticalLimit = 76f;

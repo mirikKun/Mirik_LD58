@@ -1,10 +1,8 @@
-using Assets.Code.GamePlay.Common.GameBehaviour.Services;
-using Assets.Code.Infrastructure.States.StateInfrastructure;
-using Code.Gameplay.Common.Time;
+using Project.Scripts.GamePlay.Common.GameBehaviour.Services;
+using Project.Scripts.GamePlay.Common.Time;
+using Project.Scripts.Infrastructure.States.StateInfrastructure;
 
-using Code.Infrastructure.States.StateInfrastructure;
-
-namespace Code.Infrastructure.States.GameStates
+namespace Project.Scripts.Infrastructure.States.GameStates
 {
     public class GameLoopState : IState, IUpdateable,IFixedUpdateable,ILateUpdateable
     {

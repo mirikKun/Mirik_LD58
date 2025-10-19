@@ -1,6 +1,6 @@
-using Assets.Code.GamePlay.Enemies.EnemyController.Enum;
+using Project.Scripts.GamePlay.Enemies.EnemyController.Enum;
 
-namespace Assets.Code.GamePlay.Enemies.EnemyController.StateConfigs.Interfaces
+namespace Project.Scripts.GamePlay.Enemies.EnemyController.StateConfigs.Interfaces
 {
     public interface IStatesSetConfig<TState> where TState : IStateConfig
     {

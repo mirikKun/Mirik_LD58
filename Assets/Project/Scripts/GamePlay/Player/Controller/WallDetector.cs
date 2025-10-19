@@ -1,8 +1,8 @@
 using Assets.Code.GamePlay.Common.Entity;
-using Assets.Code.GamePlay.Physic.Raycast;
+using Project.Scripts.GamePlay.Common.Physic.Raycast;
 using UnityEngine;
 
-namespace Assets.Code.GamePlay.Player.Controller
+namespace Project.Scripts.GamePlay.Player.Controller
 {
     public class WallDetector: EntityComponent
     {

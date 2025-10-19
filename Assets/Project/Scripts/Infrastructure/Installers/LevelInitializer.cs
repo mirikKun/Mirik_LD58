@@ -1,10 +1,10 @@
-﻿using Code.Gameplay.Levels;
-using Project.Scripts.GamePlay.Armaments.Factories;
+﻿using Project.Scripts.GamePlay.Armaments.Factories;
+using Project.Scripts.GamePlay.Level.Systems;
 using Unity.Cinemachine;
 using UnityEngine;
 using Zenject;
 
-namespace Code.Infrastructure.Installers
+namespace Project.Scripts.Infrastructure.Installers
 {
     public class LevelInitializer : MonoBehaviour, IInitializable
     {

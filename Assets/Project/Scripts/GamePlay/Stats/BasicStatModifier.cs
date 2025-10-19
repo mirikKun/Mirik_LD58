@@ -1,5 +1,4 @@
 using System;
-using Assets.Code.GamePlay.Stats;
 
 namespace Project.Scripts.GamePlay.Stats
 {

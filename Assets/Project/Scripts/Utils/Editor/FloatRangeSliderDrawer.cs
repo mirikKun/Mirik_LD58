@@ -1,7 +1,7 @@
 using UnityEditor;
 using UnityEngine;
 
-namespace Assets.Code.Common.Utils.Editor
+namespace Project.Scripts.Utils.Editor
 {
     [CustomPropertyDrawer(typeof(FloatRangeSliderAttribute))]
     public class FloatRangeSliderDrawer : PropertyDrawer

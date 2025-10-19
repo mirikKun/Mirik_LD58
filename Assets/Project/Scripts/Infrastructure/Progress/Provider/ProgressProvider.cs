@@ -1,7 +1,7 @@
-﻿using Code.Progress.Data;
+﻿using Project.Scripts.Infrastructure.Progress.Data;
 using UnityEngine;
 
-namespace Code.Progress.Provider
+namespace Project.Scripts.Infrastructure.Progress.Provider
 {
     public class ProgressProvider : IProgressProvider
     {

@@ -1,10 +1,10 @@
 using System;
 using System.Collections.Generic;
-using Assets.Code.GamePlay.Player.Inventory;
-using Assets.Code.GamePlay.Player.Inventory.Items;
 using Project.Scripts.GamePlay.Armaments.Configs;
 using Project.Scripts.GamePlay.Collection.Configs;
 using Project.Scripts.GamePlay.Player.Abilities.Configs;
+using Project.Scripts.GamePlay.Player.Inventory.Configs;
+using Project.Scripts.GamePlay.Player.Inventory.Systems;
 
 namespace Project.Scripts.GamePlay.Collection.Systems
 {

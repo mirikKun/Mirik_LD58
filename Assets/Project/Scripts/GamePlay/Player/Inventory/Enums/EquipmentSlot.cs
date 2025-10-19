@@ -1,4 +1,4 @@
-namespace Assets.Code.GamePlay.Player.Inventory.Enums
+namespace Project.Scripts.GamePlay.Player.Inventory.Enums
 {
     public enum EquipmentSlot
     {

@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using Assets.Code.GamePlay.Common.Entity;
-using Assets.Code.GamePlay.GameplayStateMachine;
+using Project.Scripts.GamePlay.Common.GameplayStateMachine;
 using UnityEngine;
 
-namespace Assets.Code.GamePlay.Enemies.EnemyController.EnemyConfigs
+namespace Project.Scripts.GamePlay.Enemies.EnemyController.EnemyConfigs.BehaviourConfigs
 {
     public abstract class EnemyBehaviorConfig:ScriptableObject
     {

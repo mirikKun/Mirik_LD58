@@ -1,11 +1,11 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Assets.Code.GamePlay.Physic.Raycast;
+using Project.Scripts.GamePlay.Common.Physic.Raycast;
 using Project.Scripts.GamePlay.Player.Indication;
 using UnityEngine;
 
-namespace Project.Scripts.GamePlay.HUD.HudEffects
+namespace Project.Scripts.GamePlay.HUD.RangeIndication
 {
     public class PlayerRangesIndicationPanel:MonoBehaviour
     {

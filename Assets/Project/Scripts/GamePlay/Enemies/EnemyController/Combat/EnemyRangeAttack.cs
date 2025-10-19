@@ -8,7 +8,7 @@ using Project.Scripts.GamePlay.Armaments.Factories;
 using UnityEngine;
 using Zenject;
 
-namespace Assets.Code.GamePlay.Enemies.EnemyController.Combat
+namespace Project.Scripts.GamePlay.Enemies.EnemyController.Combat
 {
     [Serializable]
     public class EnemyRangeAttack : IEnemyAttack

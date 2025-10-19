@@ -1,8 +1,8 @@
-using Code.Gameplay.Windows;
+using Project.Scripts.GamePlay.Windows;
 using UnityEngine;
 using Zenject;
 
-namespace Code.Infrastructure.Installers
+namespace Project.Scripts.Infrastructure.Installers
 {
     public class UIInitializer : MonoBehaviour, IInitializable
     {

@@ -1,7 +1,7 @@
 ﻿using Unity.Cinemachine;
 using UnityEngine;
 
-namespace Code.Gameplay.Levels
+namespace Project.Scripts.GamePlay.Level.Systems
 {
     public class LevelDataProvider : ILevelDataProvider
     {

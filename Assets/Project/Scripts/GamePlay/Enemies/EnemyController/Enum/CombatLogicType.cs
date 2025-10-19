@@ -1,4 +1,4 @@
-namespace Assets.Code.GamePlay.Enemies.EnemyController.Enum
+namespace Project.Scripts.GamePlay.Enemies.EnemyController.Enum
 {
     public enum CombatLogicType
     {

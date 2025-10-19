@@ -1,8 +1,7 @@
-using System;
-using Assets.Code.GamePlay.Player.Health;
+using Project.Scripts.GamePlay.Player.Health;
 using UnityEngine;
 
-namespace Assets.Code.GamePlay.HUD
+namespace Project.Scripts.GamePlay.HUD
 {
     public class PlayerHealthUI : HealthUI
     {

@@ -1,9 +1,9 @@
 using Assets.Code.GamePlay.Common.Entity;
-using Assets.Code.GamePlay.Player.Abilities.Configs;
+using Project.Scripts.GamePlay.Player.Abilities.Configs;
 using Project.Scripts.Sounds;
 using UnityEngine;
 
-namespace Assets.Code.GamePlay.Abilities.General
+namespace Project.Scripts.GamePlay.Player.Abilities.General
 {
     public class SelfEffectApplierAbility : IAbility
     {

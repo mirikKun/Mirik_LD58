@@ -1,7 +1,7 @@
-using Code.Gameplay.StaticData;
 using Project.Scripts.GamePlay.Armaments.ArmamentBehaviour;
 using Project.Scripts.GamePlay.Armaments.Configs;
 using Project.Scripts.GamePlay.Armaments.Enums;
+using Project.Scripts.GamePlay.StaticData;
 using UnityEngine;
 using Zenject;
 

@@ -6,7 +6,8 @@ using Project.Scripts.GamePlay.Armaments.Factories;
 using Project.Scripts.GamePlay.Player.Abilities.Configs;
 using UnityEngine;
 using Zenject;
-namespace Assets.Code.GamePlay.Abilities.General
+
+namespace Project.Scripts.GamePlay.Player.Abilities.General
 {
     public class ArmamentSpawnAbility:IAbility
     {

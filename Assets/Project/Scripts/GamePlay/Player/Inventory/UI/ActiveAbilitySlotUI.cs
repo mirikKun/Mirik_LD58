@@ -1,10 +1,10 @@
-using Assets.Code.GamePlay.Abilities.Enums;
-using Assets.Code.GamePlay.Player.Inventory.Enums;
-using Assets.Code.GamePlay.Player.Inventory.General;
-using Assets.Code.GamePlay.Player.Inventory.UI.Core;
+using Project.Scripts.GamePlay.Player.Abilities.Enums;
+using Project.Scripts.GamePlay.Player.Inventory.Enums;
+using Project.Scripts.GamePlay.Player.Inventory.General;
+using Project.Scripts.GamePlay.Player.Inventory.UI.Core;
 using UnityEngine;
 
-namespace Assets.Code.GamePlay.Player.Inventory.UI
+namespace Project.Scripts.GamePlay.Player.Inventory.UI
 {
     public class ActiveAbilitySlotUI:ActiveSlotUI
     {

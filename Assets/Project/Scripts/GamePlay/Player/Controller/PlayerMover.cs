@@ -1,16 +1,14 @@
-using System;
-using Assets.Code.Common.Utils;
 using Assets.Code.GamePlay.Common.Entity;
-using Assets.Code.GamePlay.Common.GameBehaviour.Services;
-using Assets.Code.GamePlay.Physic.Raycast;
-using Assets.Code.GamePlay.Player.PlayerStateMachine;
-using Assets.Code.GamePlay.Stats;
-using Code.Gameplay.Common.Time;
+using Project.Scripts.GamePlay.Common.GameBehaviour.Services;
+using Project.Scripts.GamePlay.Common.Physic.Raycast;
+using Project.Scripts.GamePlay.Common.Time;
+using Project.Scripts.GamePlay.Player.PlayerStateMachine;
+using Project.Scripts.GamePlay.Stats;
 using Project.Scripts.Utils;
 using UnityEngine;
 using Zenject;
 
-namespace Assets.Code.GamePlay.Player.Controller
+namespace Project.Scripts.GamePlay.Player.Controller
 {
     [RequireComponent(typeof(Rigidbody), typeof(CapsuleCollider))]
     public class PlayerMover : EntityComponent, IPausable

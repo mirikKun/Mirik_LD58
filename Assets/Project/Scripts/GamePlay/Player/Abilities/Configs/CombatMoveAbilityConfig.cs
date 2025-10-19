@@ -1,10 +1,10 @@
-using Assets.Code.GamePlay.Abilities.General;
-using Assets.Code.GamePlay.Player.Abilities.Factory;
-using Assets.Code.GamePlay.Player.PlayerStateMachine.StateConfigs;
 using Project.Scripts.GamePlay.Armaments.Configs;
+using Project.Scripts.GamePlay.Player.Abilities.Factory;
+using Project.Scripts.GamePlay.Player.Abilities.General;
+using Project.Scripts.GamePlay.Player.PlayerStateMachine.StateConfigs;
 using UnityEngine;
 
-namespace Assets.Code.GamePlay.Player.Abilities.Configs
+namespace Project.Scripts.GamePlay.Player.Abilities.Configs
 {
     [CreateAssetMenu(fileName = "CombatMoveAbility", menuName = "Configs/Abilities/CombatMoveAbility")]
     public class CombatMoveAbilityConfig : BaseAbilityConfig

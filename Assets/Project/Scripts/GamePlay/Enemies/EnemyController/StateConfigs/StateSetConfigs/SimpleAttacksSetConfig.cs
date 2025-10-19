@@ -1,9 +1,9 @@
 using System;
-using Assets.Code.GamePlay.Enemies.EnemyController.Enum;
-using Assets.Code.GamePlay.Enemies.EnemyController.StateConfigs.Interfaces;
+using Project.Scripts.GamePlay.Enemies.EnemyController.Enum;
+using Project.Scripts.GamePlay.Enemies.EnemyController.StateConfigs.Interfaces;
 using UnityEngine;
 
-namespace Assets.Code.GamePlay.Enemies.EnemyController.StateConfigs.StateSetConfigs
+namespace Project.Scripts.GamePlay.Enemies.EnemyController.StateConfigs.StateSetConfigs
 {
     [Serializable]
     public class SimpleAttacksSetConfig:IStatesSetConfig<SimpleAttackStateConfig>

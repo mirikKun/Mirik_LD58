@@ -2,7 +2,7 @@ using System;
 using Assets.Code.GamePlay.Common.Entity;
 using UnityEngine;
 
-namespace Assets.Code.GamePlay.Physic.ColliderLogic
+namespace Project.Scripts.GamePlay.Common.Physic.ColliderLogic
 {
     public class ParryTrigger : MonoBehaviour, ITriggerHittable
     {

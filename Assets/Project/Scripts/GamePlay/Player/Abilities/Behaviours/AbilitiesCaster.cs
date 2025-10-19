@@ -1,14 +1,13 @@
-using System;
 using System.Collections.Generic;
-using Assets.Code.GamePlay.Abilities.Systems;
 using Assets.Code.GamePlay.Common.Entity;
-using Assets.Code.GamePlay.Player.Abilities.Configs;
-using Assets.Code.GamePlay.Player.Abilities.Factory;
-using Assets.Code.GamePlay.Player.Controller;
-using Assets.Code.GamePlay.Player.PlayerStateMachine;
+using Project.Scripts.GamePlay.Player.Abilities.Configs;
+using Project.Scripts.GamePlay.Player.Abilities.Factory;
+using Project.Scripts.GamePlay.Player.Abilities.General;
+using Project.Scripts.GamePlay.Player.Abilities.Systems;
+using Project.Scripts.GamePlay.Player.PlayerStateMachine;
 using Zenject;
 
-namespace Assets.Code.GamePlay.Abilities.General
+namespace Project.Scripts.GamePlay.Player.Abilities.Behaviours
 {
     public class AbilitiesCaster:EntityComponent
     {

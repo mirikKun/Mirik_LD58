@@ -1,11 +1,10 @@
-using Assets.Code.Common.Utils;
 using Assets.Code.GamePlay.Common.Entity;
-using Assets.Code.GamePlay.Player.Controller;
-using Assets.Code.GamePlay.Player.PlayerStateMachine.States.AbstractStates;
+using Project.Scripts.GamePlay.Player.Controller;
+using Project.Scripts.GamePlay.Player.PlayerStateMachine.States.AbstractStates;
 using Project.Scripts.Utils;
 using UnityEngine;
 
-namespace Assets.Code.GamePlay.Player.PlayerStateMachine.States
+namespace Project.Scripts.GamePlay.Player.PlayerStateMachine.States
 {
     public class RisingState : BaseAirState
     {

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Assets.Code.GamePlay.Stats
+namespace Project.Scripts.GamePlay.Stats.Configs
 {
     [CreateAssetMenu(fileName = "StatIconsConfig", menuName = "Configs/Icons/StatIconsConfig", order = 0)]
     public class StatIconsConfig:ScriptableObject

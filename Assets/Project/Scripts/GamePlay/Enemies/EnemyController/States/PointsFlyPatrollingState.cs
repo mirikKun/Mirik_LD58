@@ -1,14 +1,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using Assets.Code.GamePlay.Common.Entity;
-using Assets.Code.GamePlay.Enemies.EnemyController.StateConfigs;
-using Assets.Code.GamePlay.GameplayStateMachine;
-using ImprovedTimers;
+using Project.Scripts.GamePlay.Common.GameplayStateMachine;
+using Project.Scripts.GamePlay.Enemies.EnemyController.StateConfigs;
 using Project.Scripts.Utils.Extensions;
 using UnityEngine;
-using UnityEngine.AI;
 
-namespace Assets.Code.GamePlay.Enemies.EnemyController.States
+namespace Project.Scripts.GamePlay.Enemies.EnemyController.States
 {
     public class PointsFlyPatrollingState:IState
     {

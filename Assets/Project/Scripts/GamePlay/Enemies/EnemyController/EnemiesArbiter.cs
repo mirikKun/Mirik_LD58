@@ -1,16 +1,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using Assets.Code.GamePlay.Common.Entity;
-using Assets.Code.GamePlay.Common.GameBehaviour.Services;
-using Assets.Code.GamePlay.Enemies.EnemyController.Enum;
-using Assets.Code.GamePlay.Enemies.EnemyController.Mediator;
-using Assets.Code.GamePlay.Health;
-using ImprovedTimers;
-using ImprovedTimers.Project.Scripts.Utils.Timers;
+using Project.Scripts.GamePlay.Common.GameBehaviour.Services;
+using Project.Scripts.GamePlay.Common.Health;
+using Project.Scripts.GamePlay.Enemies.EnemyController.Enum;
+using Project.Scripts.GamePlay.Enemies.EnemyController.Mediator;
 using UnityEngine;
 using Zenject;
 
-namespace Assets.Code.GamePlay.Enemies.EnemyController
+namespace Project.Scripts.GamePlay.Enemies.EnemyController
 {
     public class EnemiesArbiter : MonoBehaviour,IGameUpdateable,IGameFixedUpdateable
 

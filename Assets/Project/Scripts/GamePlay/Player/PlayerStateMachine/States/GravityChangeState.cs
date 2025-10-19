@@ -1,18 +1,17 @@
-using Assets.Code.GamePlay.Abilities.General;
 using Assets.Code.GamePlay.Common.Entity;
-using Assets.Code.GamePlay.GameplayStateMachine;
-using Assets.Code.GamePlay.Physic.Raycast;
-using Assets.Code.GamePlay.Player.Controller;
-using Assets.Code.GamePlay.Player.PlayerStateMachine.StateConfigs;
-using ImprovedTimers;
 using ImprovedTimers.Project.Scripts.Utils.Timers;
-using Project.Scripts.GamePlay.HUD.HudEffects;
+using Project.Scripts.GamePlay.Common.GameplayStateMachine;
+using Project.Scripts.GamePlay.Common.Physic.Raycast;
+using Project.Scripts.GamePlay.HUD.RangeIndication;
+using Project.Scripts.GamePlay.Player.Abilities.General;
+using Project.Scripts.GamePlay.Player.Controller;
 using Project.Scripts.GamePlay.Player.Indication;
+using Project.Scripts.GamePlay.Player.PlayerStateMachine.StateConfigs;
 using Project.Scripts.GamePlay.Statuses;
 using Project.Scripts.Sounds;
 using UnityEngine;
 
-namespace Assets.Code.GamePlay.Player.PlayerStateMachine.States
+namespace Project.Scripts.GamePlay.Player.PlayerStateMachine.States
 {
     public class GravityChangeState : IState
     {

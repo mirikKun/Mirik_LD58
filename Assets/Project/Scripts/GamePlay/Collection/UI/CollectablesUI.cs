@@ -1,6 +1,6 @@
 using System;
-using Assets.Code.GamePlay.Player.Inventory.Items;
 using Project.Scripts.GamePlay.Collection.Systems;
+using Project.Scripts.GamePlay.Player.Inventory.Configs;
 using TMPro;
 using UnityEngine;
 using Zenject;

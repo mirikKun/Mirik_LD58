@@ -1,11 +1,11 @@
-using Assets.Code.Common.Utils.Extensions;
 using Assets.Code.GamePlay.Common.Entity;
 using FMODUnity;
 using Project.Scripts.Sounds;
+using Project.Scripts.Utils.Extensions;
 using Unity.Cinemachine;
 using UnityEngine;
 
-namespace Assets.Code.GamePlay.Player.PlayerEffects
+namespace Project.Scripts.GamePlay.Player.PlayerEffects
 {
     public class  CameraMovingEffects : MonoBehaviour
     {

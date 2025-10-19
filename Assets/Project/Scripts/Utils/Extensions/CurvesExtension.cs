@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Assets.Code.Common.Utils.Extensions
+namespace Project.Scripts.Utils.Extensions
 {
     public static class CurvesExtension
     {

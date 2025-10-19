@@ -1,70 +1,71 @@
 using System;
 using System.Collections.Generic;
-using Assets.Code.GamePlay.Stats;
-using Project.Scripts.GamePlay.Stats;
 using UnityEngine;
 
-public class StatsMediator
+namespace Project.Scripts.GamePlay.Stats
 {
-    readonly LinkedList<StatModifier> modifiers = new();
-
-    public event EventHandler<Query> Queries;
-    public event Action<StatModifier> StatModifierAdded;
-    public event Action<StatModifier> StatModifierRemoved;
-
-    public void PerformQuery(object sender, Query query) => Queries?.Invoke(sender, query);
-
-    public void AddModifier(StatModifier modifier)
+    public class StatsMediator
     {
-        Debug.Log("StatsMediator: Adding modifier " + modifier);
+        readonly LinkedList<StatModifier> modifiers = new();
 
-        modifiers.AddLast(modifier);
-        modifier.MarkedForRemoval = false;
-        StatModifierAdded?.Invoke(modifier);
-        Queries += modifier.Handle;
+        public event EventHandler<Query> Queries;
+        public event Action<StatModifier> StatModifierAdded;
+        public event Action<StatModifier> StatModifierRemoved;
 
-        modifier.OnDispose += _ =>
+        public void PerformQuery(object sender, Query query) => Queries?.Invoke(sender, query);
+
+        public void AddModifier(StatModifier modifier)
         {
-            modifiers.Remove(modifier);
-            Queries -= modifier.Handle;
-        };
-    }
+            Debug.Log("StatsMediator: Adding modifier " + modifier);
 
-    public void Tick(float deltaTime)
-    {
-        var node = modifiers.First;
-        while (node != null)
-        {
-            var modifier = node.Value;
-            //modifier.Update(deltaTime);
-            node = node.Next;
+            modifiers.AddLast(modifier);
+            modifier.MarkedForRemoval = false;
+            StatModifierAdded?.Invoke(modifier);
+            Queries += modifier.Handle;
+
+            modifier.OnDispose += _ =>
+            {
+                modifiers.Remove(modifier);
+                Queries -= modifier.Handle;
+            };
         }
 
-
-        node = modifiers.First;
-        while (node != null)
+        public void Tick(float deltaTime)
         {
-            var nextNode = node.Next;
-
-            if (node.Value.MarkedForRemoval)
+            var node = modifiers.First;
+            while (node != null)
             {
-                StatModifierRemoved?.Invoke(node.Value);
-                node.Value.Dispose();
+                var modifier = node.Value;
+                //modifier.Update(deltaTime);
+                node = node.Next;
             }
 
-            node = nextNode;
+
+            node = modifiers.First;
+            while (node != null)
+            {
+                var nextNode = node.Next;
+
+                if (node.Value.MarkedForRemoval)
+                {
+                    StatModifierRemoved?.Invoke(node.Value);
+                    node.Value.Dispose();
+                }
+
+                node = nextNode;
+            }
         }
     }
-}
 
-public class Query
-{
-    public readonly StatType StatType;
-    public float Value;
-
-    public Query(StatType statType, float value)
+    public class Query
     {
-        StatType = statType;
-        Value = value;
+        public readonly StatType StatType;
+        public float Value;
+
+        public Query(StatType statType, float value)
+        {
+            StatType = statType;
+            Value = value;
+        }
     }
 }

@@ -3,11 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using Assets.Code.GamePlay.Common.Entity;
 using Assets.Code.GamePlay.DataDriven.Effects;
-using Assets.Code.GamePlay.Player.Controller;
-using Assets.Code.GamePlay.Player.PlayerEffects;
+using Project.Scripts.GamePlay.Player.Controller;
+using Project.Scripts.GamePlay.Player.PlayerEffects;
 using UnityEngine;
 
-namespace Assets.Code.GamePlay.Physic.ColliderLogic
+namespace Project.Scripts.GamePlay.Common.Physic.ColliderLogic
 {
     public class SimpleAttackTrigger:MonoBehaviour,IAttackTrigger
     {

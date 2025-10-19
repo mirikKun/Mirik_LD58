@@ -1,9 +1,8 @@
-using Assets.Code.GamePlay.Abilities.Enums;
-using Assets.Code.GamePlay.Player.Abilities.Configs;
-using Assets.Code.GamePlay.Player.PlayerStateMachine.StateConfigs;
+using Project.Scripts.GamePlay.Player.Abilities.Configs;
+using Project.Scripts.GamePlay.Player.Abilities.Enums;
 using UnityEngine.Events;
 
-namespace Assets.Code.GamePlay.Abilities.General
+namespace Project.Scripts.GamePlay.Player.Abilities.General
 {
     public class AbilityInstance
     {

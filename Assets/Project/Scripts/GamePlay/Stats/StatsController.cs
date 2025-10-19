@@ -1,7 +1,8 @@
 using Assets.Code.GamePlay.Common.Entity;
+using Project.Scripts.GamePlay.Stats.Configs;
 using UnityEngine;
 
-namespace Assets.Code.GamePlay.Stats
+namespace Project.Scripts.GamePlay.Stats
 {
     public class StatsController : EntityComponent
     {

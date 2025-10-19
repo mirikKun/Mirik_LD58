@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Assets.Code.GamePlay.Abilities.Configs;
-using Assets.Code.GamePlay.Player.Inventory.Configs;
-using Assets.Code.GamePlay.Stats;
-using Code.Gameplay.Windows;
-using Code.Gameplay.Windows.Configs;
 using Project.Scripts.GamePlay.Armaments.Configs;
 using Project.Scripts.GamePlay.Collection.Configs;
+using Project.Scripts.GamePlay.Player.Abilities.Configs;
+using Project.Scripts.GamePlay.Player.Inventory.Configs;
+using Project.Scripts.GamePlay.Stats.Configs;
 using Project.Scripts.GamePlay.Statuses;
+using Project.Scripts.GamePlay.Windows;
+using Project.Scripts.GamePlay.Windows.Configs;
 using UnityEngine;
 
-namespace Code.Gameplay.StaticData
+namespace Project.Scripts.GamePlay.StaticData
 {
     public class StaticDataService : IStaticDataService
     {

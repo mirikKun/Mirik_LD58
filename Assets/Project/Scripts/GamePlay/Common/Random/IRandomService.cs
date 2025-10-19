@@ -1,4 +1,4 @@
-namespace Code.Gameplay.Common.Random
+namespace Project.Scripts.GamePlay.Common.Random
 {
     public interface IRandomService
     {

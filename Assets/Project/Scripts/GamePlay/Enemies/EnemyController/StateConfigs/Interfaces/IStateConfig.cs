@@ -1,4 +1,4 @@
-namespace Assets.Code.GamePlay.Enemies.EnemyController.StateConfigs.Interfaces
+namespace Project.Scripts.GamePlay.Enemies.EnemyController.StateConfigs.Interfaces
 {
 
     public interface IStateConfig

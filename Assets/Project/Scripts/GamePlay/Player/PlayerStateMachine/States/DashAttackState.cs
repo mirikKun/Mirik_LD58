@@ -1,10 +1,10 @@
-using Assets.Code.GamePlay.Abilities.General;
 using Assets.Code.GamePlay.Common.Entity;
-using Assets.Code.GamePlay.Common.Physic;
-using Assets.Code.GamePlay.Player.PlayerStateMachine.StateConfigs;
 using Project.Scripts.GamePlay.Armaments;
+using Project.Scripts.GamePlay.Common.Physic;
+using Project.Scripts.GamePlay.Player.Abilities.General;
+using Project.Scripts.GamePlay.Player.PlayerStateMachine.StateConfigs;
 
-namespace Assets.Code.GamePlay.Player.PlayerStateMachine.States
+namespace Project.Scripts.GamePlay.Player.PlayerStateMachine.States
 {
     public class DashAttackState : DashState
     {

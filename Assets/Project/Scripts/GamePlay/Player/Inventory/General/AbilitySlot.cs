@@ -1,9 +1,9 @@
 using System;
-using Assets.Code.GamePlay.Abilities.Enums;
-using Assets.Code.GamePlay.Player.Inventory.Items;
+using Project.Scripts.GamePlay.Player.Abilities.Enums;
+using Project.Scripts.GamePlay.Player.Inventory.Configs;
 using UnityEngine;
 
-namespace Assets.Code.GamePlay.Player.Inventory.General
+namespace Project.Scripts.GamePlay.Player.Inventory.General
 {
     [Serializable]
     public class AbilitySlot

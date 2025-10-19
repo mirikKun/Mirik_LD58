@@ -1,4 +1,4 @@
-namespace Assets.Code.GamePlay.Abilities.General
+namespace Project.Scripts.GamePlay.Player.Abilities.General
 {
     public interface IUpdatableAbility
     {

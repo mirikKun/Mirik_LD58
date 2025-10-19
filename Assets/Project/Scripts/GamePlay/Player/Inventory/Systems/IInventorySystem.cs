@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
-using Assets.Code.GamePlay.Player.Inventory.General;
+using Project.Scripts.GamePlay.Player.Inventory.General;
 
-namespace Assets.Code.GamePlay.Player.Inventory
+namespace Project.Scripts.GamePlay.Player.Inventory.Systems
 {
     public interface IInventorySystem
     {

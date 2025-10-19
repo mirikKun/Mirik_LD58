@@ -1,8 +1,7 @@
-using Code.Gameplay.StaticData;
-using Code.Infrastructure.AssetManagement;
+using Project.Scripts.Infrastructure.AssetManagement;
 using Zenject;
 
-namespace Assets.Code.GamePlay.Enemies.Factories
+namespace Project.Scripts.GamePlay.Enemies.Factories
 {
     public class EnemyFactory:IEnemyFactory
     {

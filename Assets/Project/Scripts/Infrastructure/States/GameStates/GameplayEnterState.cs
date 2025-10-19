@@ -1,20 +1,18 @@
 using System.Collections.Generic;
 using System.Linq;
-using Assets.Code.GamePlay.Abilities.Configs;
-using Assets.Code.GamePlay.Abilities.Systems;
-using Assets.Code.GamePlay.Player.Inventory;
-using Assets.Code.GamePlay.Player.Inventory.General;
-using Assets.Code.GamePlay.Player.Inventory.Items;
-using Code.Gameplay.Common.Time;
-using Code.Gameplay.Levels;
-using Code.Gameplay.StaticData;
-using Code.Infrastructure.States.StateInfrastructure;
-using Code.Infrastructure.States.StateMachine;
 using Project.Scripts.GamePlay.Collection.Configs;
 using Project.Scripts.GamePlay.Collection.Systems;
+using Project.Scripts.GamePlay.Level.Systems;
+using Project.Scripts.GamePlay.Player.Abilities.Configs;
+using Project.Scripts.GamePlay.Player.Abilities.Systems;
+using Project.Scripts.GamePlay.Player.Inventory.General;
+using Project.Scripts.GamePlay.Player.Inventory.Systems;
+using Project.Scripts.GamePlay.StaticData;
+using Project.Scripts.Infrastructure.States.StateInfrastructure;
+using Project.Scripts.Infrastructure.States.StateMachine;
 using UnityEngine;
 
-namespace Code.Infrastructure.States.GameStates
+namespace Project.Scripts.Infrastructure.States.GameStates
 {
     public class GameplayEnterState : IState
     {

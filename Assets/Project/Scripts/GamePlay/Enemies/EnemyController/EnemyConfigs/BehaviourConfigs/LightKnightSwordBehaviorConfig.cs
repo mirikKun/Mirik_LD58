@@ -1,13 +1,13 @@
 using System.Collections.Generic;
 using Assets.Code.GamePlay.Common.Entity;
-using Assets.Code.GamePlay.Enemies.EnemyController.AttacksSet;
-using Assets.Code.GamePlay.Enemies.EnemyController.StateConfigs;
-using Assets.Code.GamePlay.Enemies.EnemyController.StateConfigs.StateSetConfigs;
-using Assets.Code.GamePlay.Enemies.EnemyController.States;
-using Assets.Code.GamePlay.GameplayStateMachine;
+using Project.Scripts.GamePlay.Common.GameplayStateMachine;
+using Project.Scripts.GamePlay.Enemies.EnemyController.AttacksSet;
+using Project.Scripts.GamePlay.Enemies.EnemyController.StateConfigs;
+using Project.Scripts.GamePlay.Enemies.EnemyController.StateConfigs.StateSetConfigs;
+using Project.Scripts.GamePlay.Enemies.EnemyController.States;
 using UnityEngine;
 
-namespace Assets.Code.GamePlay.Enemies.EnemyController.EnemyConfigs
+namespace Project.Scripts.GamePlay.Enemies.EnemyController.EnemyConfigs.BehaviourConfigs
 {
     [CreateAssetMenu(menuName = "Enemy Configs/Light Knight Sword Behavior Config", fileName = "LightKnightSwordBehaviorConfig")]
     public class LightKnightSwordBehaviorConfig : EnemyBehaviorConfig

@@ -1,10 +1,9 @@
-using System;
-using Assets.Code.GamePlay.Common.GameBehaviour.Services;
+using Project.Scripts.GamePlay.Common.GameBehaviour.Services;
 using UnityEngine;
 using UnityEngine.VFX;
 using Zenject;
 
-namespace Code.Gameplay.Common.Time.Behaviours
+namespace Project.Scripts.GamePlay.Common.Time.Behaviours
 {
     public class EffectTimeScaleListener : MonoBehaviour, IGameUpdateable
     {

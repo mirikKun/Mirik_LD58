@@ -1,8 +1,8 @@
 using System.Collections.Generic;
-using Assets.Code.GamePlay.Enemies.EnemyController;
+using Project.Scripts.GamePlay.Enemies.EnemyController;
 using UnityEngine;
 
-namespace Assets.Code.Common.Utils.Extensions
+namespace Project.Scripts.Utils.Extensions
 {
     public static class EnemyControllerExtensions
     {

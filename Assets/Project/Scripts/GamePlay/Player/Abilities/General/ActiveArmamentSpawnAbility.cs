@@ -1,4 +1,3 @@
-using Assets.Code.GamePlay.Abilities.General;
 using Assets.Code.GamePlay.Common.Entity;
 using Project.Scripts.GamePlay.Armaments;
 using Project.Scripts.GamePlay.Armaments.Configs;

@@ -1,4 +1,4 @@
-namespace Assets.Code.GamePlay.Abilities.Enums
+namespace Project.Scripts.GamePlay.Player.Abilities.Enums
 {
     public enum AbilitySlotKey
     {

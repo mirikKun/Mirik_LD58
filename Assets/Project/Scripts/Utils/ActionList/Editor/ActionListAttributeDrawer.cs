@@ -3,7 +3,7 @@ using System.Linq;
 using UnityEditor;
 using UnityEngine;
 
-namespace Assets.Code.Common.Utils.ActionList.Editor
+namespace Project.Scripts.Utils.ActionList.Editor
 {
     public class ActionListAttributeDrawer<T> : PropertyDrawer where T: IActionElement
     {

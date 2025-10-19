@@ -1,10 +1,9 @@
-using Assets.Code.Common.Utils;
 using Assets.Code.GamePlay.Common.Entity;
-using Assets.Code.GamePlay.Player.Controller;
+using Project.Scripts.GamePlay.Player.Controller;
 using Project.Scripts.Utils;
 using UnityEngine;
 
-namespace Assets.Code.GamePlay.Player.PlayerStateMachine.States.AbstractStates
+namespace Project.Scripts.GamePlay.Player.PlayerStateMachine.States.AbstractStates
 {
     public abstract class BaseAirState: IJumpState
     {

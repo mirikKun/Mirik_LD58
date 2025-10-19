@@ -1,4 +1,4 @@
-namespace Assets.Code.GamePlay.Enemies.Factories
+namespace Project.Scripts.GamePlay.Enemies.Factories
 {
     public interface IEnemyFactory
     {

@@ -1,18 +1,19 @@
-using System;
 using System.Linq;
-using Assets.Code.GamePlay.Stats;
 using UnityEngine;
 
-[CreateAssetMenu (fileName = "BaseStatsConfig", menuName = "Configs/Stats/BaseStatsConfig")]
-public class BaseStatsConfig : ScriptableObject
+namespace Project.Scripts.GamePlay.Stats.Configs
 {
-    [field: SerializeField] public Stat[] BaseStats { get; private set; }
-    
-    public float this[StatType statType]
+    [CreateAssetMenu (fileName = "BaseStatsConfig", menuName = "Configs/Stats/BaseStatsConfig")]
+    public class BaseStatsConfig : ScriptableObject
     {
-        get 
+        [field: SerializeField] public Stat[] BaseStats { get; private set; }
+    
+        public float this[StatType statType]
         {
-           return BaseStats.FirstOrDefault(x=> x.Type == statType)?.Value ?? -1f;
+            get 
+            {
+                return BaseStats.FirstOrDefault(x=> x.Type == statType)?.Value ?? -1f;
+            }
         }
     }
 }

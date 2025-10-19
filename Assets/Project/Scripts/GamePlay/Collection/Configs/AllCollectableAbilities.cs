@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using Assets.Code.GamePlay.Player.Inventory.Items;
+using Project.Scripts.GamePlay.Player.Inventory.Configs;
 using UnityEngine;
 
 namespace Project.Scripts.GamePlay.Collection.Configs

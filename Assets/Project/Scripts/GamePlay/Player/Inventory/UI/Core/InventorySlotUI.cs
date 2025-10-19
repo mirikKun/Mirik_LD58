@@ -1,11 +1,11 @@
 using System;
-using Assets.Code.GamePlay.Player.Inventory.Enums;
-using Assets.Code.GamePlay.Player.Inventory.General;
+using Project.Scripts.GamePlay.Player.Inventory.Enums;
+using Project.Scripts.GamePlay.Player.Inventory.General;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-namespace Assets.Code.GamePlay.Player.Inventory.UI.Core
+namespace Project.Scripts.GamePlay.Player.Inventory.UI.Core
 {
     public abstract class InventorySlotUI : MonoBehaviour, IPointerDownHandler
     {

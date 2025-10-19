@@ -1,7 +1,7 @@
-using Assets.Code.GamePlay.Abilities.General;
+using Project.Scripts.GamePlay.Player.Abilities.General;
 using Zenject;
 
-namespace Assets.Code.GamePlay.Player.Abilities.Factory
+namespace Project.Scripts.GamePlay.Player.Abilities.Factory
 {
     public class AbilitiesFactory:IAbilitiesFactory
     {

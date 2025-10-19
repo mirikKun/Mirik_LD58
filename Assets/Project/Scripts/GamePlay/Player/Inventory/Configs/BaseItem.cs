@@ -1,8 +1,7 @@
-using System;
-using Assets.Code.GamePlay.Player.Inventory.General;
+using Project.Scripts.GamePlay.Player.Inventory.General;
 using UnityEngine;
 
-namespace Assets.Code.GamePlay.Player.Inventory.Items
+namespace Project.Scripts.GamePlay.Player.Inventory.Configs
 {
     public abstract class BaseItem:ScriptableObject, IInventoryItem
     {

@@ -1,8 +1,8 @@
 using System;
-using Assets.Code.GamePlay.Enemies.EnemyController.Enum;
-using Assets.Code.GamePlay.Enemies.EnemyController.StateConfigs.Interfaces;
+using Project.Scripts.GamePlay.Enemies.EnemyController.Enum;
+using Project.Scripts.GamePlay.Enemies.EnemyController.StateConfigs.Interfaces;
 
-namespace Assets.Code.GamePlay.Enemies.EnemyController.AttacksSet
+namespace Project.Scripts.GamePlay.Enemies.EnemyController.AttacksSet
 {
     public class StateSetOrderer<TConfig,TConfigsSet> where TConfig:IStateConfig where TConfigsSet:IStatesSetConfig<TConfig>
     {

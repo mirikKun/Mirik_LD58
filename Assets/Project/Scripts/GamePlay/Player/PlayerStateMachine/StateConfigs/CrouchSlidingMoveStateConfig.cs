@@ -1,13 +1,11 @@
 using System.Collections.Generic;
-using Assets.Code.GamePlay.Abilities.General;
-using Assets.Code.GamePlay.Abilities.Systems;
 using Assets.Code.GamePlay.Common.Entity;
-using Assets.Code.GamePlay.GameplayStateMachine;
-using Assets.Code.GamePlay.Player.Controller;
-using Assets.Code.GamePlay.Player.PlayerStateMachine.States;
+using Project.Scripts.GamePlay.Common.GameplayStateMachine;
+using Project.Scripts.GamePlay.Player.Abilities.General;
+using Project.Scripts.GamePlay.Player.PlayerStateMachine.States;
 using UnityEngine;
 
-namespace Assets.Code.GamePlay.Player.PlayerStateMachine.StateConfigs
+namespace Project.Scripts.GamePlay.Player.PlayerStateMachine.StateConfigs
 {
     [CreateAssetMenu(menuName = "State Configs/Crouch Sliding State Config", fileName = "CrouchSlidingStateConfig")]
 

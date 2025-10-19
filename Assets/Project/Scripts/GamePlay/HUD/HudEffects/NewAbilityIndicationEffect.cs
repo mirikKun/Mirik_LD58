@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
-using Assets.Code.GamePlay.Player.Inventory.Items;
 using DG.Tweening;
 using Project.Scripts.GamePlay.Collection.Systems;
+using Project.Scripts.GamePlay.Player.Inventory.Configs;
 using UnityEngine;
 using UnityEngine.UI;
 using Zenject;

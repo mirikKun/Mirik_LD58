@@ -1,12 +1,12 @@
-using Code.Infrastructure.States.GameStates;
-using Code.Infrastructure.States.StateMachine;
-using Code.Progress.Provider;
+using Project.Scripts.Infrastructure.Progress.Provider;
+using Project.Scripts.Infrastructure.States.GameStates;
+using Project.Scripts.Infrastructure.States.StateMachine;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using Zenject;
 
-namespace Code.Gameplay.MainMenu
+namespace Project.Scripts.GamePlay.MainMenu
 {
     public class MainMenuHud : MonoBehaviour
     {

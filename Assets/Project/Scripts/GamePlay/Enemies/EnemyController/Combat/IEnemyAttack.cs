@@ -1,8 +1,8 @@
-using Assets.Code.Common.Utils.ActionList;
 using Assets.Code.GamePlay.Common.Entity;
+using Project.Scripts.Utils.ActionList;
 using UnityEngine;
 
-namespace Assets.Code.GamePlay.Enemies.EnemyController.Combat
+namespace Project.Scripts.GamePlay.Enemies.EnemyController.Combat
 { 
     public interface IEnemyAttack:IActionElement
     {

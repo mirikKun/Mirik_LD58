@@ -1,9 +1,9 @@
 using System;
-using Code.Gameplay.Common.Time;
+using Project.Scripts.GamePlay.Common.Time;
 using UnityEngine;
 using Zenject;
 
-namespace Assets.Code.GamePlay.Player.PlayerEffects
+namespace Project.Scripts.GamePlay.Player.PlayerEffects
 {
     public class TimeSlowEffect:MonoBehaviour
     {

@@ -1,7 +1,7 @@
 using Assets.Code.GamePlay.Common.Entity;
 using UnityEngine;
 
-namespace Assets.Code.GamePlay.Common.Physic
+namespace Project.Scripts.GamePlay.Common.Physic
 {
     public class LayerChanger:EntityComponent
     {

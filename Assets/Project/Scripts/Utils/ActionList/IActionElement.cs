@@ -1,6 +1,4 @@
-using Assets.Code.GamePlay.Common.Entity;
-
-namespace Assets.Code.Common.Utils.ActionList
+namespace Project.Scripts.Utils.ActionList
 {
     public interface IActionElement
     {

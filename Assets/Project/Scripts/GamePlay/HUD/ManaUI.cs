@@ -1,10 +1,8 @@
-using System;
 using Project.Scripts.GamePlay.Player.PlayerResources;
-using Project.Scripts.GamePlay.Player.StealSystem;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Assets.Code.GamePlay.HUD
+namespace Project.Scripts.GamePlay.HUD
 {
     public class ManaUI:MonoBehaviour
     {

@@ -1,7 +1,7 @@
-using Assets.Code.GamePlay.Health;
+using Project.Scripts.GamePlay.Common.Health;
 using UnityEngine;
 
-namespace Assets.Code.GamePlay.Player.Health
+namespace Project.Scripts.GamePlay.Player.Health
 {
     public class PlayerHealth:BaseHealth
     {

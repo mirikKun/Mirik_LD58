@@ -1,15 +1,13 @@
-using Assets.Code.Common.Utils;
-using Assets.Code.GamePlay.Abilities.General;
 using Assets.Code.GamePlay.Common.Entity;
-using Assets.Code.GamePlay.Player.Controller;
-using Assets.Code.GamePlay.Player.PlayerStateMachine.StateConfigs;
-using Assets.Code.GamePlay.Player.PlayerStateMachine.States.AbstractStates;
-using ImprovedTimers;
 using ImprovedTimers.Project.Scripts.Utils.Timers;
+using Project.Scripts.GamePlay.Player.Abilities.General;
+using Project.Scripts.GamePlay.Player.Controller;
+using Project.Scripts.GamePlay.Player.PlayerStateMachine.StateConfigs;
+using Project.Scripts.GamePlay.Player.PlayerStateMachine.States.AbstractStates;
 using Project.Scripts.Utils;
 using UnityEngine;
 
-namespace Assets.Code.GamePlay.Player.PlayerStateMachine.States {
+namespace Project.Scripts.GamePlay.Player.PlayerStateMachine.States {
     public class JumpingState : BaseAirState {
         private readonly JumpMoveStateConfig _config;
         private readonly CountdownTimer _jumpTimer;

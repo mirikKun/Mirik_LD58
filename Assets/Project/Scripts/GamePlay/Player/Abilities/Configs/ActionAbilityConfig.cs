@@ -1,7 +1,7 @@
-using Assets.Code.GamePlay.Abilities.General;
-using Assets.Code.GamePlay.Player.Abilities.Factory;
+using Project.Scripts.GamePlay.Player.Abilities.Factory;
+using Project.Scripts.GamePlay.Player.Abilities.General;
 
-namespace Assets.Code.GamePlay.Player.Abilities.Configs
+namespace Project.Scripts.GamePlay.Player.Abilities.Configs
 {
     public abstract class ActionAbilityConfig : BaseAbilityConfig
     {

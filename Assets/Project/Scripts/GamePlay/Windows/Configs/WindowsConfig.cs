@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace Code.Gameplay.Windows.Configs
+namespace Project.Scripts.GamePlay.Windows.Configs
 {
     [CreateAssetMenu(fileName = "WindowsConfig", menuName = "Configs/Windows Config")]
     public class WindowsConfig : ScriptableObject

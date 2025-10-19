@@ -1,7 +1,7 @@
-using Assets.Code.GamePlay.Player.PlayerStateMachine.StateConfigs;
+using Project.Scripts.GamePlay.Player.PlayerStateMachine.StateConfigs;
 using UnityEngine;
 
-namespace Assets.Code.GamePlay.Player.Abilities.Configs
+namespace Project.Scripts.GamePlay.Player.Abilities.Configs
 {
     [CreateAssetMenu(fileName = "MovingAbility", menuName = "Configs/Abilities/MovingAbility")]
     public class MovingAbilityConfig : BaseAbilityConfig

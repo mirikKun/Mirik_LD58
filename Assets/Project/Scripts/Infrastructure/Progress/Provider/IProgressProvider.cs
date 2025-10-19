@@ -1,6 +1,6 @@
-using Code.Progress.Data;
+using Project.Scripts.Infrastructure.Progress.Data;
 
-namespace Code.Progress.Provider
+namespace Project.Scripts.Infrastructure.Progress.Provider
 {
     public interface IProgressProvider
     {

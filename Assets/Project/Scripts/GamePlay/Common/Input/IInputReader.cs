@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace Assets.Code
+namespace Project.Scripts.GamePlay.Common.Input
 {
     public interface IInputReader
     {

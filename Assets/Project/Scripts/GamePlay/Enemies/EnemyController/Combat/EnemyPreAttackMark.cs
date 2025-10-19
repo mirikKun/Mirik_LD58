@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace Assets.Code.GamePlay.Enemies.EnemyController.Combat
+namespace Project.Scripts.GamePlay.Enemies.EnemyController.Combat
 {
     [Serializable]
     public class EnemyPreAttackMark

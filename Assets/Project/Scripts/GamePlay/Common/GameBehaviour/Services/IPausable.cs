@@ -1,4 +1,4 @@
-namespace Assets.Code.GamePlay.Common.GameBehaviour.Services
+namespace Project.Scripts.GamePlay.Common.GameBehaviour.Services
 {
     public interface IPausable
     {

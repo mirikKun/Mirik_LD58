@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Assets.Code.GamePlay.Player.PlayerEffects
+namespace Project.Scripts.GamePlay.Player.PlayerEffects
 {
     public class TrajectoryEffects:MonoBehaviour
     {

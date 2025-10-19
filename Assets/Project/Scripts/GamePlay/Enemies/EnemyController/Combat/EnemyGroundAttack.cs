@@ -2,11 +2,11 @@ using System;
 using System.Collections.Generic;
 using Assets.Code.GamePlay.Common.Entity;
 using Assets.Code.GamePlay.DataDriven.Effects;
-using Assets.Code.GamePlay.Physic.ColliderLogic;
+using Project.Scripts.GamePlay.Common.Physic.ColliderLogic;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
-namespace Assets.Code.GamePlay.Enemies.EnemyController.Combat
+namespace Project.Scripts.GamePlay.Enemies.EnemyController.Combat
 {
     [Serializable]
     public class EnemyGroundAttack:IEnemyAttack

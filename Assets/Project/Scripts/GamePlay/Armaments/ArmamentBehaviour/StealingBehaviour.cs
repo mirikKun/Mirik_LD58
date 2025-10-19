@@ -1,11 +1,10 @@
 using Assets.Code.GamePlay.Common.Entity;
-using Assets.Code.GamePlay.Physic.ColliderLogic;
-using Assets.Code.GamePlay.Player.PlayerEffects;
 using FMODUnity;
 using Project.Scripts.GamePlay.Armaments.ArmamentBehaviour.Abstract;
 using Project.Scripts.GamePlay.Collection.Systems;
+using Project.Scripts.GamePlay.Common.Physic.ColliderLogic;
+using Project.Scripts.GamePlay.Player.PlayerEffects;
 using Project.Scripts.GamePlay.Player.PlayerResources;
-using Project.Scripts.GamePlay.Player.StealSystem;
 using UnityEngine;
 using Zenject;
 

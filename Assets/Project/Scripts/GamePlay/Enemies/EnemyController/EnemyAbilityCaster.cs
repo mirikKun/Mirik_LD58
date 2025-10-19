@@ -1,10 +1,10 @@
-using Assets.Code.GamePlay.Abilities.General;
 using Assets.Code.GamePlay.Common.Entity;
-using Assets.Code.GamePlay.Player.Abilities.Configs;
-using Assets.Code.GamePlay.Player.Abilities.Factory;
+using Project.Scripts.GamePlay.Player.Abilities.Configs;
+using Project.Scripts.GamePlay.Player.Abilities.Factory;
+using Project.Scripts.GamePlay.Player.Abilities.General;
 using Zenject;
 
-namespace Assets.Code.GamePlay.Enemies.EnemyController
+namespace Project.Scripts.GamePlay.Enemies.EnemyController
 {
     public class EnemyAbilityCaster:EntityComponent
     {

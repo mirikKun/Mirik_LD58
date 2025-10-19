@@ -1,7 +1,7 @@
-using Assets.Code.GamePlay.Abilities.Enums;
-using Assets.Code.GamePlay.Player.Abilities.Configs;
+using Project.Scripts.GamePlay.Player.Abilities.Configs;
+using Project.Scripts.GamePlay.Player.Abilities.Enums;
 
-namespace Assets.Code.GamePlay.Player.Inventory.General
+namespace Project.Scripts.GamePlay.Player.Inventory.General
 {
     public interface IAbilityItem:IInventoryItem
     {

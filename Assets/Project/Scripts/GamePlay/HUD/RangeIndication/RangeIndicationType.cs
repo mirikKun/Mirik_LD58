@@ -1,4 +1,4 @@
-namespace Project.Scripts.GamePlay.HUD.HudEffects
+namespace Project.Scripts.GamePlay.HUD.RangeIndication
 {
     public enum RangeIndicationType
     {

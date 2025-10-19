@@ -1,25 +1,25 @@
-using Assets.Code;
-using Assets.Code.GamePlay.Abilities.Systems;
-using Assets.Code.GamePlay.Common.GameBehaviour.Services;
-using Assets.Code.GamePlay.Player.Abilities.Factory;
-using Assets.Code.GamePlay.Player.Inventory;
-using Code.Gameplay.Common.Random;
-using Code.Gameplay.Common.Time;
-using Code.Gameplay.Levels;
-using Code.Gameplay.StaticData;
-using Code.Gameplay.Windows;
-using Code.Infrastructure.AssetManagement;
-using Code.Infrastructure.Loading;
-using Code.Infrastructure.States.Factory;
-using Code.Infrastructure.States.GameStates;
-using Code.Infrastructure.States.StateMachine;
-using Code.Progress.Provider;
 using Project.Scripts.GamePlay.Armaments.Factories;
 using Project.Scripts.GamePlay.Collection.Systems;
+using Project.Scripts.GamePlay.Common.GameBehaviour.Services;
+using Project.Scripts.GamePlay.Common.Input;
+using Project.Scripts.GamePlay.Common.Random;
+using Project.Scripts.GamePlay.Common.Time;
+using Project.Scripts.GamePlay.Level.Systems;
+using Project.Scripts.GamePlay.Player.Abilities.Factory;
+using Project.Scripts.GamePlay.Player.Abilities.Systems;
+using Project.Scripts.GamePlay.Player.Inventory.Systems;
+using Project.Scripts.GamePlay.StaticData;
+using Project.Scripts.GamePlay.Windows;
+using Project.Scripts.Infrastructure.AssetManagement;
+using Project.Scripts.Infrastructure.Loading;
+using Project.Scripts.Infrastructure.Progress.Provider;
+using Project.Scripts.Infrastructure.States.Factory;
+using Project.Scripts.Infrastructure.States.GameStates;
+using Project.Scripts.Infrastructure.States.StateMachine;
 using Project.Scripts.Sounds;
 using Zenject;
 
-namespace Code.Infrastructure.Installers
+namespace Project.Scripts.Infrastructure.Installers
 {
     public class BootstrapInstaller : MonoInstaller, ICoroutineRunner, IInitializable
     {
@@ -116,7 +116,7 @@ namespace Code.Infrastructure.Installers
         {
             Container.Bind<IRandomService>().To<UnityRandomService>().AsSingle();
             Container.Bind<ITimeService>().To<UnityTimeService>().AsSingle();
-            Container.Bind<ISceneLoader>().To<SceneLoader>().AsSingle();
+            Container.Bind<ISceneLoader>().To<Loading.SceneLoader>().AsSingle();
         }
 
         private void BindInputService()

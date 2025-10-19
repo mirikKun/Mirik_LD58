@@ -1,6 +1,6 @@
 using Assets.Code.GamePlay.Common.Entity;
 
-namespace Assets.Code.GamePlay.Player.Controller
+namespace Project.Scripts.GamePlay.Player.Controller
 {
     public class PlayerEntity:ActorEntity
     {

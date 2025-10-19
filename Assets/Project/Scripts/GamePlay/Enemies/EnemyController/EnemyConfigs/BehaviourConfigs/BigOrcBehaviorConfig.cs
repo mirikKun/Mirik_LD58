@@ -1,11 +1,11 @@
 using System.Collections.Generic;
 using Assets.Code.GamePlay.Common.Entity;
-using Assets.Code.GamePlay.Enemies.EnemyController.StateConfigs;
-using Assets.Code.GamePlay.Enemies.EnemyController.States;
-using Assets.Code.GamePlay.GameplayStateMachine;
+using Project.Scripts.GamePlay.Common.GameplayStateMachine;
+using Project.Scripts.GamePlay.Enemies.EnemyController.StateConfigs;
+using Project.Scripts.GamePlay.Enemies.EnemyController.States;
 using UnityEngine;
 
-namespace Assets.Code.GamePlay.Enemies.EnemyController.EnemyConfigs
+namespace Project.Scripts.GamePlay.Enemies.EnemyController.EnemyConfigs.BehaviourConfigs
 {
     [CreateAssetMenu(menuName = "Enemy Configs/Big Orc Behavior Config", fileName = "BigOrcBehaviorConfig")]
     public class BigOrcBehaviorConfig : EnemyBehaviorConfig

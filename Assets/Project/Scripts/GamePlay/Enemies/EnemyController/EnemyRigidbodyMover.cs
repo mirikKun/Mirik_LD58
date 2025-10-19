@@ -1,11 +1,10 @@
-using System;
 using Assets.Code.GamePlay.Common.Entity;
-using Assets.Code.GamePlay.Common.GameBehaviour.Services;
-using Code.Gameplay.Common.Time;
+using Project.Scripts.GamePlay.Common.GameBehaviour.Services;
+using Project.Scripts.GamePlay.Common.Time;
 using UnityEngine;
 using Zenject;
 
-namespace Assets.Code.GamePlay.Enemies.EnemyController
+namespace Project.Scripts.GamePlay.Enemies.EnemyController
 {
     public class EnemyRigidbodyMover : EntityComponent, IPausable
     {

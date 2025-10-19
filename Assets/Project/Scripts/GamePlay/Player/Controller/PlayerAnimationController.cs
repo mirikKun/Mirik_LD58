@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Assets.Code.GamePlay.Player.Controller {
+namespace Project.Scripts.GamePlay.Player.Controller {
     [RequireComponent(typeof(PlayerController))]
     public class PlayerAnimationController : MonoBehaviour {
         // PlayerController controller;

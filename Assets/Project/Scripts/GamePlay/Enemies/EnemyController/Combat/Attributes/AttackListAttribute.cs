@@ -1,6 +1,6 @@
-﻿using Assets.Code.Common.Utils.ActionList.Attributes;
+﻿using Project.Scripts.Utils.ActionList.Attributes;
 
-namespace Assets.Code.GamePlay.Enemies.EnemyController.Combat.Attributes
+namespace Project.Scripts.GamePlay.Enemies.EnemyController.Combat.Attributes
 {
     public class AttackListAttribute : ActionListAttribute
     {

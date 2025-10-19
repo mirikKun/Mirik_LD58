@@ -1,5 +1,4 @@
 using System;
-using Assets.Code.GamePlay.Stats;
 using ImprovedTimers.Project.Scripts.Utils.Timers;
 
 namespace Project.Scripts.GamePlay.Stats

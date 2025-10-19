@@ -1,15 +1,13 @@
 using System;
 using System.Collections.Generic;
-using Assets.Code.GamePlay.Abilities.Systems;
 using Assets.Code.GamePlay.Common.Entity;
-using Assets.Code.GamePlay.GameplayStateMachine;
-using Assets.Code.GamePlay.Player.Abilities.Configs;
-using Assets.Code.GamePlay.Player.Controller;
-using Assets.Code.GamePlay.Player.PlayerStateMachine.States;
-using UnityEngine;
+using Project.Scripts.GamePlay.Common.GameplayStateMachine;
+using Project.Scripts.GamePlay.Player.Abilities.Configs;
+using Project.Scripts.GamePlay.Player.Abilities.Systems;
+using Project.Scripts.GamePlay.Player.PlayerStateMachine.States;
 using Zenject;
 
-namespace Assets.Code.GamePlay.Player.PlayerStateMachine
+namespace Project.Scripts.GamePlay.Player.PlayerStateMachine
 {
     public class PlayerStateMachineContainer:EntityComponent
     {

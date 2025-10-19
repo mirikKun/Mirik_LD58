@@ -1,7 +1,7 @@
-using Assets.Code.GamePlay.Player.Controller;
+using Project.Scripts.GamePlay.Player.Controller;
 using UnityEngine;
 
-namespace Scripts.LevelObjects
+namespace Project.Scripts.GamePlay.HUD
 {
     public class TutorialShower : MonoBehaviour
     {

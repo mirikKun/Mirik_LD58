@@ -1,4 +1,4 @@
-using Assets.Code.GamePlay.Physic.ColliderLogic;
+using Project.Scripts.GamePlay.Common.Physic.ColliderLogic;
 using UnityEngine;
 
 namespace Assets.Code.GamePlay.Common.Entity

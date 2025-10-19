@@ -1,9 +1,7 @@
-using Assets.Code.GamePlay.Player.Inventory.Enums;
-using Assets.Code.GamePlay.Player.Inventory.General;
-using Assets.Code.GamePlay.Player.Inventory.UI.Core;
-using UnityEngine;
+using Project.Scripts.GamePlay.Player.Inventory.Enums;
+using Project.Scripts.GamePlay.Player.Inventory.UI.Core;
 
-namespace Assets.Code.GamePlay.Player.Inventory.UI
+namespace Project.Scripts.GamePlay.Player.Inventory.UI
 {
     public class InactiveAbilitySlotUI:InactiveSlotUI
     {

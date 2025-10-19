@@ -1,8 +1,8 @@
 using System;
-using Assets.Code.GamePlay.Enemies.EnemyController.StateConfigs.Interfaces;
+using Project.Scripts.GamePlay.Enemies.EnemyController.StateConfigs.Interfaces;
 using UnityEngine;
 
-namespace Assets.Code.GamePlay.Enemies.EnemyController.StateConfigs
+namespace Project.Scripts.GamePlay.Enemies.EnemyController.StateConfigs
 {
     [Serializable]
     public class RoarAttackStateConfig:IStateConfig

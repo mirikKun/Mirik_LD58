@@ -1,8 +1,8 @@
-using Assets.Code.GamePlay.Enemies.EnemyController.Health;
-using Assets.Code.GamePlay.HUD;
+using Project.Scripts.GamePlay.Enemies.EnemyController.Health;
+using Project.Scripts.GamePlay.HUD;
 using UnityEngine;
 
-namespace Assets.Code.GamePlay.Enemies.EnemyController.UI
+namespace Project.Scripts.GamePlay.Enemies.EnemyController.UI
 {
     public class EnemyHealthUI:HealthUI
     {

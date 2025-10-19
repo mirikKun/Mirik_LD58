@@ -1,11 +1,10 @@
 using Assets.Code.GamePlay.Common.Entity;
-using Assets.Code.GamePlay.Enemies.EnemyController.Detection;
-using Assets.Code.GamePlay.Player.Controller;
-using ImprovedTimers;
 using ImprovedTimers.Project.Scripts.Utils.Timers;
+using Project.Scripts.GamePlay.Enemies.EnemyController.Detection;
+using Project.Scripts.GamePlay.Player.Controller;
 using UnityEngine;
 
-namespace Assets.Code.GamePlay.Enemies.EnemyController
+namespace Project.Scripts.GamePlay.Enemies.EnemyController
 {
     public class CharacterDetector : EntityComponent
     {

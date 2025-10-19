@@ -1,12 +1,12 @@
 using System.Collections.Generic;
 using Assets.Code.GamePlay.Common.Entity;
-using Assets.Code.GamePlay.Enemies.EnemyController.Combat;
-using Assets.Code.GamePlay.Enemies.EnemyController.Combat.Attributes;
-using Assets.Code.GamePlay.Enemies.EnemyController.Enum;
+using Project.Scripts.GamePlay.Enemies.EnemyController.Combat;
+using Project.Scripts.GamePlay.Enemies.EnemyController.Combat.Attributes;
+using Project.Scripts.GamePlay.Enemies.EnemyController.Enum;
 using UnityEngine;
 using Zenject;
 
-namespace Assets.Code.GamePlay.Enemies.EnemyController
+namespace Project.Scripts.GamePlay.Enemies.EnemyController
 {
     public class EnemyCombat:EntityComponent
     {

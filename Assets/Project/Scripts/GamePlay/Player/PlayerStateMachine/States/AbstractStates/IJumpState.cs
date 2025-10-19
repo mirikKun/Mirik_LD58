@@ -1,6 +1,6 @@
-using Assets.Code.GamePlay.GameplayStateMachine;
+using Project.Scripts.GamePlay.Common.GameplayStateMachine;
 
-namespace Assets.Code.GamePlay.Player.PlayerStateMachine.States.AbstractStates
+namespace Project.Scripts.GamePlay.Player.PlayerStateMachine.States.AbstractStates
 {
     public interface IJumpState:IState
     {

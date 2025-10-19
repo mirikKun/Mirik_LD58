@@ -1,13 +1,13 @@
 using System;
 using System.Collections.Generic;
-using Assets.Code.GamePlay.Abilities.Configs;
-using Assets.Code.GamePlay.Abilities.Enums;
-using Assets.Code.GamePlay.Abilities.General;
-using Assets.Code.GamePlay.Player.Abilities.Configs;
-using Assets.Code.GamePlay.Player.Inventory;
-using Assets.Code.GamePlay.Player.Inventory.General;
+using Project.Scripts.GamePlay.Common.Input;
+using Project.Scripts.GamePlay.Player.Abilities.Configs;
+using Project.Scripts.GamePlay.Player.Abilities.Enums;
+using Project.Scripts.GamePlay.Player.Abilities.General;
+using Project.Scripts.GamePlay.Player.Inventory.General;
+using Project.Scripts.GamePlay.Player.Inventory.Systems;
 
-namespace Assets.Code.GamePlay.Abilities.Systems
+namespace Project.Scripts.GamePlay.Player.Abilities.Systems
 {
     public class AbilitiesSystem : IAbilitiesSystem
     {

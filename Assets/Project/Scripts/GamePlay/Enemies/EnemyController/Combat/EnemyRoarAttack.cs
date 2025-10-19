@@ -5,7 +5,7 @@ using Assets.Code.GamePlay.DataDriven.Effects;
 using UnityEngine;
 using UnityEngine.VFX;
 
-namespace Assets.Code.GamePlay.Enemies.EnemyController.Combat
+namespace Project.Scripts.GamePlay.Enemies.EnemyController.Combat
 {
     [Serializable]
     public class EnemyRoarAttack:IEnemyAttack

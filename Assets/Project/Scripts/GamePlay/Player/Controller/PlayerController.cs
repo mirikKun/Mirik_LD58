@@ -1,18 +1,18 @@
-using Assets.Code.GamePlay.Abilities.General;
-using Assets.Code.GamePlay.Abilities.Systems;
 using Assets.Code.GamePlay.Common.Entity;
-using Assets.Code.GamePlay.Common.GameBehaviour.Services;
-using Assets.Code.GamePlay.Player.Abilities.Factory;
-using Assets.Code.GamePlay.Player.Health;
-using Assets.Code.GamePlay.Player.PlayerStateMachine;
-using Assets.Code.GamePlay.Stats;
+using Project.Scripts.GamePlay.Common.GameBehaviour.Services;
+using Project.Scripts.GamePlay.Common.Input;
+using Project.Scripts.GamePlay.Player.Abilities.Behaviours;
+using Project.Scripts.GamePlay.Player.Abilities.Factory;
+using Project.Scripts.GamePlay.Player.Abilities.Systems;
+using Project.Scripts.GamePlay.Player.Health;
 using Project.Scripts.GamePlay.Player.PlayerResources;
-using Project.Scripts.GamePlay.Player.StealSystem;
+using Project.Scripts.GamePlay.Player.PlayerStateMachine;
+using Project.Scripts.GamePlay.Stats;
 using Project.Scripts.GamePlay.Statuses;
 using UnityEngine;
 using Zenject;
 
-namespace Assets.Code.GamePlay.Player.Controller
+namespace Project.Scripts.GamePlay.Player.Controller
 {
     [RequireComponent(typeof(PlayerMover))]
     public class PlayerController : EntityComponent, IGameUpdateable, IGameFixedUpdateable, IGameLateUpdateable

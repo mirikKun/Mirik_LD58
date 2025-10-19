@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
-using Assets.Code.GamePlay.Abilities.Configs;
-using Assets.Code.GamePlay.Abilities.General;
+using Project.Scripts.GamePlay.Player.Abilities.Configs;
+using Project.Scripts.GamePlay.Player.Abilities.General;
 
-namespace Assets.Code.GamePlay.Abilities.Systems
+namespace Project.Scripts.GamePlay.Player.Abilities.Systems
 {
     public interface IAbilitiesSystem
     {

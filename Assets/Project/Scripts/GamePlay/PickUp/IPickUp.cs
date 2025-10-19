@@ -1,4 +1,4 @@
-namespace Assets.Code.GamePlay.PickUp
+namespace Project.Scripts.GamePlay.PickUp
 {
     public interface IPickUp
     {

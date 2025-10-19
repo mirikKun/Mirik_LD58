@@ -1,11 +1,10 @@
 using Assets.Code.GamePlay.Common.Entity;
-using Assets.Code.GamePlay.Player.Abilities.Configs;
-using Assets.Code.GamePlay.Player.Controller;
-using Code.Gameplay.Common.Time;
+using Project.Scripts.GamePlay.Common.Time;
+using Project.Scripts.GamePlay.Player.Abilities.Configs;
 using UnityEngine;
 using Zenject;
 
-namespace Assets.Code.GamePlay.Abilities.General
+namespace Project.Scripts.GamePlay.Player.Abilities.General
 {
     public class TimeSlowAbility:IAbility
     {

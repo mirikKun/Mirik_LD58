@@ -1,10 +1,11 @@
-using Assets.Code.GamePlay.Inventory.UI;
-using Code.Infrastructure.States.GameStates;
-using Code.Infrastructure.States.StateMachine;
+using Project.Scripts.GamePlay.Common.Input;
+using Project.Scripts.GamePlay.Player.Inventory.UI;
+using Project.Scripts.Infrastructure.States.GameStates;
+using Project.Scripts.Infrastructure.States.StateMachine;
 using UnityEngine;
 using Zenject;
 
-namespace Assets.Code.GamePlay.GamePlayUi
+namespace Project.Scripts.GamePlay.GamePlayUi
 {
     public class UiMediator : MonoBehaviour
     {

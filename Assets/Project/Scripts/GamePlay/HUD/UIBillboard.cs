@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Assets.Code.GamePlay.HUD
+namespace Project.Scripts.GamePlay.HUD
 {
 
 public class UIBillboard : MonoBehaviour

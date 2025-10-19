@@ -1,11 +1,10 @@
 using Assets.Code.GamePlay.Common.Entity;
-using Assets.Code.GamePlay.Enemies.EnemyController.StateConfigs;
-using Assets.Code.GamePlay.GameplayStateMachine;
-using ImprovedTimers;
 using ImprovedTimers.Project.Scripts.Utils.Timers;
+using Project.Scripts.GamePlay.Common.GameplayStateMachine;
+using Project.Scripts.GamePlay.Enemies.EnemyController.StateConfigs;
 using UnityEngine;
 
-namespace Assets.Code.GamePlay.Enemies.EnemyController.States
+namespace Project.Scripts.GamePlay.Enemies.EnemyController.States
 {
     public class RoarAttackState:IState
     {

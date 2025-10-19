@@ -1,6 +1,6 @@
 using System;
 using Assets.Code.GamePlay.Common.Entity;
-using Assets.Code.GamePlay.Health;
+using Project.Scripts.GamePlay.Common.Health;
 using UnityEngine;
 
 namespace Project.Scripts.GamePlay.Level.LevelObjects

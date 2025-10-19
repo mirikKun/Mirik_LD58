@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Assets.Code.GamePlay.Player.Inventory.General
+namespace Project.Scripts.GamePlay.Player.Inventory.General
 {
     public interface IInventoryItem
     {

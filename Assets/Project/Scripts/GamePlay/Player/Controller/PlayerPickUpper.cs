@@ -1,11 +1,11 @@
-using System;
 using Assets.Code.GamePlay.Common.Entity;
-using Assets.Code.GamePlay.Physic.Raycast;
-using Assets.Code.GamePlay.PickUp;
+using Project.Scripts.GamePlay.Common.Input;
+using Project.Scripts.GamePlay.Common.Physic.Raycast;
+using Project.Scripts.GamePlay.PickUp;
 using UnityEngine;
 using Zenject;
 
-namespace Assets.Code.GamePlay.Player.Controller
+namespace Project.Scripts.GamePlay.Player.Controller
 {
     public class PlayerPickUpper:EntityComponent
     {

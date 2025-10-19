@@ -2,7 +2,7 @@ using System;
 using Assets.Code.GamePlay.Common.Entity;
 using UnityEngine;
 
-namespace Assets.Code.GamePlay.Health
+namespace Project.Scripts.GamePlay.Common.Health
 {
     public abstract class BaseHealth:EntityComponent,IHealth
     {

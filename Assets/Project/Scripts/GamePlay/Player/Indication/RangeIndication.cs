@@ -1,6 +1,7 @@
 using System;
-using Assets.Code.GamePlay.Physic.Raycast;
+using Project.Scripts.GamePlay.Common.Physic.Raycast;
 using Project.Scripts.GamePlay.HUD.HudEffects;
+using Project.Scripts.GamePlay.HUD.RangeIndication;
 
 namespace Project.Scripts.GamePlay.Player.Indication
 {

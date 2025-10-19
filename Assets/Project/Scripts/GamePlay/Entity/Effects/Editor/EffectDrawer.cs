@@ -1,5 +1,5 @@
-using Assets.Code.Common.Utils.ActionList.Editor;
 using Assets.Code.GamePlay.DataDriven.Effects;
+using Project.Scripts.Utils.ActionList.Editor;
 using UnityEditor;
 
 namespace Assets.Code.GamePlay.DataDriven.Editor

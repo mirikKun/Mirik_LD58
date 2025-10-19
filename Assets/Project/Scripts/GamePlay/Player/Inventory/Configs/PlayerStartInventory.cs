@@ -1,9 +1,8 @@
 using System.Collections.Generic;
-using Assets.Code.GamePlay.Player.Inventory.General;
-using Assets.Code.GamePlay.Player.Inventory.Items;
+using Project.Scripts.GamePlay.Player.Inventory.General;
 using UnityEngine;
 
-namespace Assets.Code.GamePlay.Player.Inventory.Configs
+namespace Project.Scripts.GamePlay.Player.Inventory.Configs
 {
     [CreateAssetMenu(fileName = "PlayerStartInventory", menuName = "Configs/Inventory/Player Start Inventory")]
     public class PlayerStartInventory:ScriptableObject

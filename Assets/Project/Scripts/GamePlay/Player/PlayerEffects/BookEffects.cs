@@ -5,7 +5,7 @@ using Project.Scripts.Sounds;
 using UnityEngine;
 using STOP_MODE = FMOD.Studio.STOP_MODE;
 
-namespace Project.Scripts.GamePlay.Player.StealSystem
+namespace Project.Scripts.GamePlay.Player.PlayerEffects
 {
     public class BookEffects : MonoBehaviour
     {

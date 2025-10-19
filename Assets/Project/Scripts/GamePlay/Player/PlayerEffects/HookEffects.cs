@@ -1,9 +1,8 @@
 using System.Collections;
-using ImprovedTimers;
 using ImprovedTimers.Project.Scripts.Utils.Timers;
 using UnityEngine;
 
-namespace Assets.Code.GamePlay.Player.PlayerEffects
+namespace Project.Scripts.GamePlay.Player.PlayerEffects
 {
     public class HookEffects:MonoBehaviour
     {

@@ -1,8 +1,7 @@
 using System.Collections.Generic;
-using ImprovedTimers;
 using Project.Scripts.Utils.Extensions;
 
-namespace Assets.Code.GamePlay.Enemies.EnemyController.AttacksSet
+namespace Project.Scripts.GamePlay.Enemies.EnemyController.AttacksSet
 {
     public class InOrderRandomStateOrderStrategy:IStatesOrderStrategy
     {

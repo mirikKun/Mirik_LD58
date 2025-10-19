@@ -1,14 +1,13 @@
-using System;
 using System.Collections.Generic;
-using Assets.Code.GamePlay.Stats;
-using Code.Gameplay.StaticData;
 using ImprovedTimers.Project.Scripts.Utils.Timers;
+using Project.Scripts.GamePlay.StaticData;
 using Project.Scripts.GamePlay.Stats;
+using Project.Scripts.GamePlay.Stats.Configs;
 using Project.Scripts.GamePlay.Statuses;
 using UnityEngine;
 using Zenject;
 
-namespace Project.Scripts.GamePlay.Player.PlayerIndicators
+namespace Project.Scripts.GamePlay.HUD.DurationIndicators
 {
     public class PlayerAbilitiesPanel : MonoBehaviour
     {

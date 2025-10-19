@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Assets.Code.GamePlay.Physic.ColliderLogic
+namespace Project.Scripts.GamePlay.Common.Physic.ColliderLogic
 {
     public interface ITriggerHittable
     {

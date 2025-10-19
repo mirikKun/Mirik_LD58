@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Assets.Code.GamePlay.Physic.Raycast {
+namespace Project.Scripts.GamePlay.Common.Physic.Raycast {
     public class RaycastSensor {
         public float CastLength = 1f;
         public LayerMask Layermask = 255;
@@ -64,14 +64,14 @@ namespace Assets.Code.GamePlay.Physic.Raycast {
             if (!HasDetectedHit()) return;
 
             if(simple)
-                Debug.DrawRay(_hitInfo.point, _hitInfo.normal, Color.red, Time.deltaTime);
+                Debug.DrawRay(_hitInfo.point, _hitInfo.normal, Color.red, UnityEngine.Time.deltaTime);
             else
                 Debug.DrawLine(_hitInfo.point, _hitInfo.point-GetCastDirection()*_hitInfo.distance, Color.red, 20);
 
             float markerSize = 0.2f;
-            Debug.DrawLine(_hitInfo.point + Vector3.up * markerSize, _hitInfo.point - Vector3.up * markerSize, Color.green, Time.deltaTime);
-            Debug.DrawLine(_hitInfo.point + Vector3.right * markerSize, _hitInfo.point - Vector3.right * markerSize, Color.green, Time.deltaTime);
-            Debug.DrawLine(_hitInfo.point + Vector3.forward * markerSize, _hitInfo.point - Vector3.forward * markerSize, Color.green, Time.deltaTime);
+            Debug.DrawLine(_hitInfo.point + Vector3.up * markerSize, _hitInfo.point - Vector3.up * markerSize, Color.green, UnityEngine.Time.deltaTime);
+            Debug.DrawLine(_hitInfo.point + Vector3.right * markerSize, _hitInfo.point - Vector3.right * markerSize, Color.green, UnityEngine.Time.deltaTime);
+            Debug.DrawLine(_hitInfo.point + Vector3.forward * markerSize, _hitInfo.point - Vector3.forward * markerSize, Color.green, UnityEngine.Time.deltaTime);
         }
     }
 }

@@ -1,9 +1,9 @@
-using Code.Gameplay.Common.Time;
+using Project.Scripts.GamePlay.Common.Time;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
-namespace Assets.Code
+namespace Project.Scripts.GamePlay.Common.Input
 {
     public class InputReader : PlayerInputActions.IPlayerActions, IInputReader
     {

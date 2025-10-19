@@ -1,8 +1,8 @@
-using Assets.Code.GamePlay.Physic.Raycast;
+using Project.Scripts.GamePlay.Common.Physic.Raycast;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Project.Scripts.GamePlay.HUD.HudEffects
+namespace Project.Scripts.GamePlay.HUD.RangeIndication
 {
     public class RangeIndicator:MonoBehaviour
     {

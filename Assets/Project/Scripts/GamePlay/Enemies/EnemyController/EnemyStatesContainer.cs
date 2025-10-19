@@ -1,10 +1,10 @@
 using System.Collections.Generic;
 using Assets.Code.GamePlay.Common.Entity;
-using Assets.Code.GamePlay.Enemies.EnemyController.EnemyConfigs;
-using Assets.Code.GamePlay.GameplayStateMachine;
+using Project.Scripts.GamePlay.Common.GameplayStateMachine;
+using Project.Scripts.GamePlay.Enemies.EnemyController.EnemyConfigs.BehaviourConfigs;
 using UnityEngine;
 
-namespace Assets.Code.GamePlay.Enemies.EnemyController
+namespace Project.Scripts.GamePlay.Enemies.EnemyController
 {
 
     public class EnemyStatesContainer:EntityComponent

@@ -1,10 +1,7 @@
 using Assets.Code.GamePlay.Common.Entity;
-using Assets.Code.GamePlay.GameplayStateMachine;
-using Assets.Code.GamePlay.Player.Abilities.Configs;
-using Assets.Code.GamePlay.Player.PlayerStateMachine;
-using UnityEngine;
+using Project.Scripts.GamePlay.Player.Abilities.Configs;
 
-namespace Assets.Code.GamePlay.Abilities.General
+namespace Project.Scripts.GamePlay.Player.Abilities.General
 {
     public class CombatMoveAbility : IAbility
     {

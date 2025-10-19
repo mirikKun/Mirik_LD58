@@ -1,4 +1,4 @@
-namespace Assets.Code.GamePlay.Enemies.EnemyController.AttacksSet
+namespace Project.Scripts.GamePlay.Enemies.EnemyController.AttacksSet
 {
     public class InOrderStaticStateOrderStrategy:IStatesOrderStrategy
     {

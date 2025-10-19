@@ -1,8 +1,7 @@
 using System;
-using ImprovedTimers;
 using ImprovedTimers.Project.Scripts.Utils.Timers;
 
-namespace Code.Gameplay.Common.Time
+namespace Project.Scripts.GamePlay.Common.Time
 {
     public class UnityTimeService : ITimeService
     {

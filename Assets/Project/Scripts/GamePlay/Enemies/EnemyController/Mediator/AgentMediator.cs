@@ -1,10 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Assets.Code.Common.Utils.Extensions;
+using Project.Scripts.Utils.Extensions;
 using UnityEngine;
 
-namespace Assets.Code.GamePlay.Enemies.EnemyController.Mediator
+namespace Project.Scripts.GamePlay.Enemies.EnemyController.Mediator
 {
     public abstract class AgentMediator<T> : MonoBehaviour where T : Component, IVisitable {
         private readonly List<T> _entities = new List<T>();

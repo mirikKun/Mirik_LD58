@@ -1,9 +1,9 @@
 using System;
 using Assets.Code.GamePlay.Common.Entity;
-using Assets.Code.GamePlay.Enemies.EnemyController.Mediator;
+using Project.Scripts.GamePlay.Enemies.EnemyController.Mediator;
 using UnityEngine;
 
-namespace Assets.Code.GamePlay.Enemies.EnemyController
+namespace Project.Scripts.GamePlay.Enemies.EnemyController
 {
     [SelectionBase]
     public class EnemyEntity:ActorEntity,IVisitable

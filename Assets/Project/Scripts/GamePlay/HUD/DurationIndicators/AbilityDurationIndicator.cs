@@ -3,7 +3,7 @@ using ImprovedTimers.Project.Scripts.Utils.Timers;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Project.Scripts.GamePlay.Player.PlayerIndicators
+namespace Project.Scripts.GamePlay.HUD.DurationIndicators
 {
     public class AbilityDurationIndicator:MonoBehaviour
     {

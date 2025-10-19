@@ -1,8 +1,7 @@
-using System;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Assets.Code.GamePlay.HUD
+namespace Project.Scripts.GamePlay.HUD
 {
     public class HealthUI:MonoBehaviour
     {

@@ -4,7 +4,7 @@ using Assets.Code.GamePlay.Common.Entity;
 using Assets.Code.GamePlay.DataDriven.Effects;
 using UnityEngine;
 
-namespace Assets.Code.GamePlay.Physic.ColliderLogic
+namespace Project.Scripts.GamePlay.Common.Physic.ColliderLogic
 {
     public interface IAttackTrigger
     {

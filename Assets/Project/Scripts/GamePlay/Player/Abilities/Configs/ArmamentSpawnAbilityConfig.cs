@@ -1,7 +1,6 @@
-using Assets.Code.GamePlay.Abilities.General;
-using Assets.Code.GamePlay.Player.Abilities.Configs;
-using Assets.Code.GamePlay.Player.Abilities.Factory;
 using Project.Scripts.GamePlay.Armaments.Enums;
+using Project.Scripts.GamePlay.Player.Abilities.Factory;
+using Project.Scripts.GamePlay.Player.Abilities.General;
 using UnityEngine;
 
 namespace Project.Scripts.GamePlay.Player.Abilities.Configs

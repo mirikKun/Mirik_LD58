@@ -1,9 +1,7 @@
-using System;
-using Assets.Code.GamePlay.Health;
-using Assets.Code.GamePlay.Physic.ColliderLogic;
+using Project.Scripts.GamePlay.Common.Health;
 using UnityEngine;
 
-namespace Assets.Code.GamePlay.Enemies.EnemyController.Health
+namespace Project.Scripts.GamePlay.Enemies.EnemyController.Health
 {
     public class EnemyHealth:BaseHealth
     {

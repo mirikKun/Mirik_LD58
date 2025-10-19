@@ -1,11 +1,11 @@
 using System.Collections.Generic;
-using Assets.Code.GamePlay.Abilities.General;
 using Assets.Code.GamePlay.DataDriven.Effects;
-using Assets.Code.GamePlay.Player.Abilities.Factory;
 using FMODUnity;
+using Project.Scripts.GamePlay.Player.Abilities.Factory;
+using Project.Scripts.GamePlay.Player.Abilities.General;
 using UnityEngine;
 
-namespace Assets.Code.GamePlay.Player.Abilities.Configs
+namespace Project.Scripts.GamePlay.Player.Abilities.Configs
 {
     [CreateAssetMenu(fileName = "SelfStatusApplierAbility", menuName = "Configs/Abilities/SelfStatusApplierAbility")]
     public class SelfEffectApplierAbilityConfig:ActionAbilityConfig

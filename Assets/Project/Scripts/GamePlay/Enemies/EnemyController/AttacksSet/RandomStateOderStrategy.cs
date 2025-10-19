@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Assets.Code.GamePlay.Enemies.EnemyController.AttacksSet
+namespace Project.Scripts.GamePlay.Enemies.EnemyController.AttacksSet
 {
     public class RandomStateOderStrategy:IStatesOrderStrategy
     {

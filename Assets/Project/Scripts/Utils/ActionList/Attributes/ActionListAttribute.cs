@@ -1,7 +1,7 @@
 
 using UnityEngine;
 
-namespace Assets.Code.Common.Utils.ActionList.Attributes
+namespace Project.Scripts.Utils.ActionList.Attributes
 {
     public class ActionListAttribute : PropertyAttribute
     {

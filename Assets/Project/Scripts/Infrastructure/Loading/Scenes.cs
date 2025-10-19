@@ -1,4 +1,4 @@
-namespace Code.Infrastructure.Loading
+namespace Project.Scripts.Infrastructure.Loading
 {
     public enum Scenes
     {

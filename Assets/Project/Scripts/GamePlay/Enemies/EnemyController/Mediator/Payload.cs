@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Assets.Code.GamePlay.Enemies.EnemyController.Mediator
+namespace Project.Scripts.GamePlay.Enemies.EnemyController.Mediator
 {
     public abstract class Payload<TData>:IVisitor
     {

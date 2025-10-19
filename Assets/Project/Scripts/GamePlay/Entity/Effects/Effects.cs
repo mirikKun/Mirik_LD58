@@ -1,10 +1,10 @@
 using System;
-using Assets.Code.Common.Utils.ActionList;
 using Assets.Code.GamePlay.Common.Entity;
-using Assets.Code.GamePlay.Health;
-using Assets.Code.GamePlay.Player.Controller;
-using Assets.Code.GamePlay.Stats;
+using Project.Scripts.GamePlay.Common.Health;
+using Project.Scripts.GamePlay.Player.Controller;
 using Project.Scripts.GamePlay.Stats;
+using Project.Scripts.GamePlay.Stats.Configs;
+using Project.Scripts.Utils.ActionList;
 using UnityEngine;
 
 namespace Assets.Code.GamePlay.DataDriven.Effects

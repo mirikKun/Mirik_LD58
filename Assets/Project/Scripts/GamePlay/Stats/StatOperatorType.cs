@@ -1,4 +1,4 @@
-namespace Assets.Code.GamePlay.Stats
+namespace Project.Scripts.GamePlay.Stats
 {
     public enum StatOperatorType
     {

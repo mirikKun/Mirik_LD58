@@ -1,9 +1,7 @@
 using Assets.Code.GamePlay.Common.Entity;
-using Project.Scripts.GamePlay.Player.PlayerIndicators;
-using Project.Scripts.GamePlay.Player.StealSystem;
 using UnityEngine;
 
-namespace Assets.Code.GamePlay.Player.PlayerEffects
+namespace Project.Scripts.GamePlay.Player.PlayerEffects
 {
     public class PlayerEffects : EntityComponent
     {

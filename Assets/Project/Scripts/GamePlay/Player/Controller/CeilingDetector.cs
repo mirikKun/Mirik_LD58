@@ -1,7 +1,7 @@
 using Assets.Code.GamePlay.Common.Entity;
 using UnityEngine;
 
-namespace Assets.Code.GamePlay.Player.Controller {
+namespace Project.Scripts.GamePlay.Player.Controller {
     public class CeilingDetector : EntityComponent {
         [SerializeField] private float _ceilingAngleLimit = 10f;
         [SerializeField] private bool _isInDebugMode;

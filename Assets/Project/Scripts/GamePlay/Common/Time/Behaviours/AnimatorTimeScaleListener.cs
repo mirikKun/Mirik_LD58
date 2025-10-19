@@ -1,8 +1,7 @@
-using System;
 using UnityEngine;
 using Zenject;
 
-namespace Code.Gameplay.Common.Time.Behaviours
+namespace Project.Scripts.GamePlay.Common.Time.Behaviours
 {
     public class AnimatorTimeScaleListener : MonoBehaviour
     {

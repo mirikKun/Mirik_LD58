@@ -1,7 +1,7 @@
-using Code.Gameplay.Windows;
-using Code.Infrastructure.States.StateInfrastructure;
+using Project.Scripts.GamePlay.Windows;
+using Project.Scripts.Infrastructure.States.StateInfrastructure;
 
-namespace Code.Infrastructure.States.GameStates
+namespace Project.Scripts.Infrastructure.States.GameStates
 {
     public class GameOverState : IState
     {

@@ -1,4 +1,4 @@
-namespace Assets.Code.GamePlay.Player.Inventory.Utils
+namespace Project.Scripts.GamePlay.Player.Inventory.Utils
 {
     public static class InventoryItemExtensions
     {

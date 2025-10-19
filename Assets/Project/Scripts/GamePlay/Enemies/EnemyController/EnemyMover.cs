@@ -1,12 +1,11 @@
-using System;
 using Assets.Code.GamePlay.Common.Entity;
-using Assets.Code.GamePlay.Physic.Raycast;
-using Code.Gameplay.Common.Time;
+using Project.Scripts.GamePlay.Common.Physic.Raycast;
+using Project.Scripts.GamePlay.Common.Time;
 using UnityEngine;
 using UnityEngine.AI;
 using Zenject;
 
-namespace Assets.Code.GamePlay.Enemies.EnemyController
+namespace Project.Scripts.GamePlay.Enemies.EnemyController
 {
     public class EnemyMover : EntityComponent
     {

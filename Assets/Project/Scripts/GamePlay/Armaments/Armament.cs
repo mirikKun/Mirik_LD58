@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
 using Assets.Code.GamePlay.Common.Entity;
-using Assets.Code.GamePlay.Common.GameBehaviour.Services;
 using Project.Scripts.GamePlay.Armaments.ArmamentBehaviour.Abstract;
 using Project.Scripts.GamePlay.Armaments.Configs;
+using Project.Scripts.GamePlay.Common.GameBehaviour.Services;
 using Project.Scripts.Sounds;
 using UnityEngine;
 using Zenject;

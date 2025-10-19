@@ -1,8 +1,7 @@
-using ImprovedTimers;
 using ImprovedTimers.Project.Scripts.Utils.Timers;
 using UnityEngine;
 
-namespace Assets.Code.GamePlay.Enemies.EnemyController.Detection
+namespace Project.Scripts.GamePlay.Enemies.EnemyController.Detection
 {
     public interface IDetectionStrategy
     {

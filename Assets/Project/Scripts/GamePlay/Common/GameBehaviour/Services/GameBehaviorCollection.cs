@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Assets.Code.GamePlay.Common.GameBehaviour.Services
+namespace Project.Scripts.GamePlay.Common.GameBehaviour.Services
 {
     public class GameBehaviorCollection<T> where T : class
     {

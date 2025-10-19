@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using Assets.Code.GamePlay.Common.Entity;
 using UnityEngine;
 
-namespace Assets.Code.GamePlay.Enemies.EnemyController
+namespace Project.Scripts.GamePlay.Enemies.EnemyController
 {
     public class EnemyPatrolPointsHolder:EntityComponent
     {

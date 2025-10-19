@@ -1,6 +1,6 @@
 using System;
 
-namespace Assets.Code.GamePlay.GameplayStateMachine
+namespace Project.Scripts.GamePlay.Common.GameplayStateMachine
 {
   public class TransitionConfiguration
     {

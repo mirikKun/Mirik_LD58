@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace Assets.Code.GamePlay.Enemies.EnemyController.StateConfigs
+namespace Project.Scripts.GamePlay.Enemies.EnemyController.StateConfigs
 {
     [Serializable]
     public class KnockbackStateConfig

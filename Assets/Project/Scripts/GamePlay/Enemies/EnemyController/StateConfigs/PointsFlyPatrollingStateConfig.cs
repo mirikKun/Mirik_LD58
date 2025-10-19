@@ -1,10 +1,9 @@
 using System;
-using System.Collections.Generic;
-using Assets.Code.Common.Utils;
-using Assets.Code.GamePlay.Enemies.EnemyController.StateConfigs.Interfaces;
+using Project.Scripts.GamePlay.Enemies.EnemyController.StateConfigs.Interfaces;
+using Project.Scripts.Utils;
 using UnityEngine;
 
-namespace Assets.Code.GamePlay.Enemies.EnemyController.StateConfigs
+namespace Project.Scripts.GamePlay.Enemies.EnemyController.StateConfigs
 {
     [Serializable]
 
