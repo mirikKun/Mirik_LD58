@@ -8,6 +8,7 @@ using ImprovedTimers;
 using ImprovedTimers.Project.Scripts.Utils.Timers;
 using Project.Scripts.GamePlay.Armaments;
 using Project.Scripts.GamePlay.Armaments.ArmamentBehaviour;
+using Project.Scripts.Sounds;
 using UnityEngine;
 
 namespace Assets.Code.GamePlay.Player.PlayerStateMachine.States
@@ -44,6 +45,7 @@ namespace Assets.Code.GamePlay.Player.PlayerStateMachine.States
             Vector3 momentum = _diveDirection * _config.DiveStrikeSpeed;
             Mover.SetMomentum(momentum);
             _startPosition = Mover.Tr.position;
+            _player.Get<SoundSource>().PlaySound(_config.StartSound);
         }
 
         public void OnExit()
@@ -53,6 +55,8 @@ namespace Assets.Code.GamePlay.Player.PlayerStateMachine.States
             _player.Get<ArmamentsHolder>().CreateArmament(_config.ArmamentConfig)
                 .With(new LifetimeArmamentBehaviour(_config.ArmamentConfig.Duration))
                 .StartBehaviours();
+            _player.Get<SoundSource>().PlaySound(_config.LandSound,SoundPlacementType.Root);
+
         }
 
    

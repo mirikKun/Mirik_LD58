@@ -9,6 +9,7 @@ using ImprovedTimers.Project.Scripts.Utils.Timers;
 using Project.Scripts.GamePlay.HUD.HudEffects;
 using Project.Scripts.GamePlay.Player.Indication;
 using Project.Scripts.GamePlay.Statuses;
+using Project.Scripts.Sounds;
 using UnityEngine;
 
 namespace Assets.Code.GamePlay.Player.PlayerStateMachine.States
@@ -90,6 +91,8 @@ namespace Assets.Code.GamePlay.Player.PlayerStateMachine.States
         public void OnEnter()
         {
             Mover.SetMomentum(Vector3.zero);
+            _player.Get<SoundSource>().PlaySound(_config.Sound);
+
             _startRotation = Mover.Tr.rotation;
             _changeRotation = Quaternion.FromToRotation(Mover.Tr.up, _raycastNearSensor.GetNormal());
             _gravityChangeTimer.Start();

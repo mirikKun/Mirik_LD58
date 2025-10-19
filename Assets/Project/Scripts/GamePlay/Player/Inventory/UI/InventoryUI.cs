@@ -7,6 +7,8 @@ using Assets.Code.GamePlay.Player.Inventory.Enums;
 using Assets.Code.GamePlay.Player.Inventory.General;
 using Assets.Code.GamePlay.Player.Inventory.UI;
 using Assets.Code.GamePlay.Player.Inventory.UI.Core;
+using FMODUnity;
+using Project.Scripts.Sounds;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -21,26 +23,33 @@ namespace Assets.Code.GamePlay.Inventory.UI
         [SerializeField] private List<ActiveAbilitySlotUI> _activeAbilitySlots = new List<ActiveAbilitySlotUI>();
         [SerializeField] private List<InactiveAbilitySlotUI> _inactiveAbilitySlots = new List<InactiveAbilitySlotUI>();
 
-[Header("Description")]
-[SerializeField] private GameObject _descriptionRoot;
-[SerializeField] private Image _image;
-[SerializeField] private TextMeshProUGUI _nameText;
-[SerializeField] private TextMeshProUGUI _descriptionText;
+        [Header("Description")] [SerializeField]
+        private GameObject _descriptionRoot;
+
+        [SerializeField] private Image _image;
+        [SerializeField] private TextMeshProUGUI _nameText;
+        [SerializeField] private TextMeshProUGUI _descriptionText;
+        
+         [SerializeField] private EventReference _openInventorySound;
+         [SerializeField] private EventReference _closeInventorySound;
+        [SerializeField] private EventReference _selectSlotSound;
         private IInventorySystem _inventorySystem;
         private InventorySlotUI _selectedSlot;
         private List<InventorySlotUI> _highlightedSlots = new List<InventorySlotUI>();
 
         private bool _created;
+        private ISoundsSystem _soundsSystem;
 
         [Inject]
-        private void Construct(IInventorySystem inventorySystem)
+        private void Construct(IInventorySystem inventorySystem,ISoundsSystem soundsSystem)
         {
+            _soundsSystem = soundsSystem;
             _inventorySystem = inventorySystem;
         }
 
         private void Start()
         {
-            SetupActiveInventory(_inventorySystem.ActiveAbilities );
+            SetupActiveInventory(_inventorySystem.ActiveAbilities);
             SetupInactiveInventory(_inventorySystem.InactiveAbilities);
 
             foreach (var activeAbilitySlot in _activeAbilitySlots)
@@ -52,16 +61,17 @@ namespace Assets.Code.GamePlay.Inventory.UI
             {
                 inactiveAbilitySlot.OnSlotSelected += OnSlotSelected;
             }
-            _created= true;
 
+            _created = true;
         }
 
         private void OnEnable()
         {
+            _soundsSystem.PlayOneShot(_openInventorySound);
+
             if (_created)
             {
                 SetupInactiveInventory(_inventorySystem.InactiveAbilities);
-
             }
         }
 
@@ -70,6 +80,7 @@ namespace Assets.Code.GamePlay.Inventory.UI
             ClearSelectedSlot();
 
             _inventorySystem.OnActiveInventoryChanged();
+            _soundsSystem.PlayOneShot(_closeInventorySound);
 
         }
 
@@ -78,8 +89,9 @@ namespace Assets.Code.GamePlay.Inventory.UI
         {
             for (int i = 0; i < _activeAbilitySlots.Count; i++)
             {
-                if (activeAbilities.Find(x => x.SlotKey == _activeAbilitySlots[i].AbilitySlotKey) is { } activeAbility&&
-                   !_activeAbilitySlots.Any(x=>x.Item==activeAbility.EquippedAbility))
+                if (activeAbilities.Find(x => x.SlotKey == _activeAbilitySlots[i].AbilitySlotKey) is
+                        { } activeAbility &&
+                    !_activeAbilitySlots.Any(x => x.Item == activeAbility.EquippedAbility))
                 {
                     _activeAbilitySlots[i].SetSlot(activeAbility.EquippedAbility);
                 }
@@ -88,12 +100,10 @@ namespace Assets.Code.GamePlay.Inventory.UI
                     _activeAbilitySlots[i].ClearSlot();
                 }
             }
-            
         }
+
         private void SetupInactiveInventory(List<IAbilityItem> inactiveAbilities)
         {
-         
-
             for (int i = 0; i < _inactiveAbilitySlots.Count; i++)
             {
                 if (i < inactiveAbilities.Count)
@@ -116,7 +126,6 @@ namespace Assets.Code.GamePlay.Inventory.UI
             }
             else
             {
-                
                 if (SameSlot(slot))
                 {
                     ChangeSlotActivity(slot);
@@ -124,13 +133,13 @@ namespace Assets.Code.GamePlay.Inventory.UI
                 else if (SameSlotType(slot))
                 {
                     SetSlotAsActive(slot);
-
                 }
                 else
                 {
                     MoveToSlot(slot);
                 }
             }
+            _soundsSystem.PlayOneShot(_selectSlotSound);
         }
 
         private void ChangeSlotActivity(InventorySlotUI slot)
@@ -175,8 +184,8 @@ namespace Assets.Code.GamePlay.Inventory.UI
 
         private bool SameSlotType(InventorySlotUI slot)
         {
-             return (slot is InactiveSlotUI && _selectedSlot is InactiveSlotUI)||
-                    (slot is ActiveSlotUI && _selectedSlot is ActiveSlotUI);
+            return (slot is InactiveSlotUI && _selectedSlot is InactiveSlotUI) ||
+                   (slot is ActiveSlotUI && _selectedSlot is ActiveSlotUI);
             return false;
         }
 
@@ -238,6 +247,7 @@ namespace Assets.Code.GamePlay.Inventory.UI
                 }
             }
         }
+
         private void ShowDescription(InventorySlotUI slot)
         {
             if (slot.Item is IAbilityItem abilityItem)
@@ -250,9 +260,9 @@ namespace Assets.Code.GamePlay.Inventory.UI
             else
             {
                 _descriptionRoot.SetActive(false);
-
             }
         }
+
         private void HideDescription()
         {
             _descriptionRoot.SetActive(false);

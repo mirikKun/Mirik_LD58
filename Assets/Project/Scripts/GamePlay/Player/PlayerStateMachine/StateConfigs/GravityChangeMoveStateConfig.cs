@@ -5,6 +5,7 @@ using Assets.Code.GamePlay.Common.Entity;
 using Assets.Code.GamePlay.GameplayStateMachine;
 using Assets.Code.GamePlay.Player.Controller;
 using Assets.Code.GamePlay.Player.PlayerStateMachine.States;
+using FMODUnity;
 using UnityEngine;
 
 namespace Assets.Code.GamePlay.Player.PlayerStateMachine.StateConfigs
@@ -24,7 +25,9 @@ namespace Assets.Code.GamePlay.Player.PlayerStateMachine.StateConfigs
 
         [field: SerializeField] public float GravityChangeJumpMaxHorizontalDistance { get; private set; } = 13f;
         [field: SerializeField] public float GravityChangeJumpMaxVerticalDistance { get; private set; } = 30f;
-
+        [field:Header("Sounds")]
+        [field: SerializeField] public EventReference Sound { get; private set; }
+        
         public override List<StateConfiguration> GetStateConfiguration(ActorEntity playerEntity,
             AbilityInstance abilitiesInstance)
         {

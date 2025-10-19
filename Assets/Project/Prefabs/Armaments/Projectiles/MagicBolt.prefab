@@ -137,6 +137,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _armamentTrigger: {fileID: 3800485304134146615}
+  _rigidbody: {fileID: 6353960395011428810}
+  _componentBehaviours: []
 --- !u!114 &3800485304134146615
 MonoBehaviour:
   m_ObjectHideFlags: 0

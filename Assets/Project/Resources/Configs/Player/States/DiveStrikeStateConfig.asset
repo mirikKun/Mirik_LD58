@@ -14,3 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <DiveStrikeSpeed>k__BackingField: 42
   <ArmamentConfig>k__BackingField: {fileID: 11400000, guid: 028c65a82dff4c3419ac76d5b9c4e38d, type: 2}
+  <StartSound>k__BackingField:
+    Guid:
+      Data1: 1635053869
+      Data2: 1153206743
+      Data3: -1808251229
+      Data4: -325728450
+    Path: event:/SFX/Slash/Slash 5
+  <LandSound>k__BackingField:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 

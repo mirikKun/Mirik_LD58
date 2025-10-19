@@ -165,10 +165,10 @@ namespace Assets.Code.GamePlay.Player.PlayerEffects
 
         public void StartFallEffect(float height)
         {
-            _soundSource.PlaySound(_fallLandSound,SoundPlacementType.Root);
             float minHeight = 0.3f;
             if (height < minHeight)
                 return;
+            _soundSource.PlaySound(_fallLandSound,SoundPlacementType.Root);
 
             _fallBounceActive = true;
             _fallHeight = height;

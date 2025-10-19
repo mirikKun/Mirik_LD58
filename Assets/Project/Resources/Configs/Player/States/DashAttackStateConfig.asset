@@ -16,4 +16,11 @@ MonoBehaviour:
   <DashExitSpeed>k__BackingField: 8
   <DashDuration>k__BackingField: 0.24
   <UpdatedFov>k__BackingField: 77
+  <Sound>k__BackingField:
+    Guid:
+      Data1: -339000780
+      Data2: 1125172242
+      Data3: 1413282989
+      Data4: -347027529
+    Path: event:/SFX/Swipe/Swipe5
   <ArmamentConfig>k__BackingField: {fileID: 11400000, guid: 76c919038eeb1ff489d5240524316850, type: 2}

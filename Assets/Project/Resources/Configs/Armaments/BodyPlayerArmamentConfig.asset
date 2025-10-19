@@ -24,6 +24,20 @@ MonoBehaviour:
   <Duration>k__BackingField: 0
   <Speed>k__BackingField: 0
   <ArmamentToSpawnOnDestroy>k__BackingField: {fileID: 0}
+  <SpawnSound>k__BackingField:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  <HitSound>k__BackingField:
+    Guid:
+      Data1: -1275882263
+      Data2: 1102662321
+      Data3: 784244927
+      Data4: 2054096324
+    Path: event:/SFX/Impact/DashImpact
   references:
     version: 2
     RefIds:

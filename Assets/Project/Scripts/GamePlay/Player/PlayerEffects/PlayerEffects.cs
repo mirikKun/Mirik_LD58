@@ -26,7 +26,7 @@ namespace Assets.Code.GamePlay.Player.PlayerEffects
             // _trajectoryEffects.InitEffect(Entity);
             _cameraMovingEffects.InitEffect(Entity);
             // _timeSlowEffect.InitEffect(Entity);
-            // _bookEffects.InitEffect(Entity);
+             _bookEffects.InitEffect(Entity);
         }
 
         public void Tick(float deltaTime)

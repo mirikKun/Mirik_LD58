@@ -4874,6 +4874,69 @@ Transform:
   - {fileID: 1256531131733511047}
   m_Father: {fileID: 5424187449711573206}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4648271032928052532
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3763639326228030348}
+  - component: {fileID: 5664656608186946523}
+  m_Layer: 0
+  m_Name: Sounds
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3763639326228030348
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4648271032928052532}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5424187449711573206}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5664656608186946523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4648271032928052532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1147783280
+      Data2: 1164777002
+      Data3: 1881042823
+      Data4: -714869006
+    Path: event:/SFX/Pickable/PickableAmbient
+  Event: 
+  EventPlayTrigger: 1
+  EventStopTrigger: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &6830125844478525895
 GameObject:
   m_ObjectHideFlags: 0
@@ -4909,6 +4972,7 @@ Transform:
   - {fileID: 6304745849285665755}
   - {fileID: 7420243578406442671}
   - {fileID: 6518699494967097529}
+  - {fileID: 3763639326228030348}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &2501457328627518983
@@ -4945,6 +5009,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _abilityItem: {fileID: 11400000, guid: a2eb45f0398dfcf45a52646f614d3d66, type: 2}
+  _pickUpSound:
+    Guid:
+      Data1: -104829694
+      Data2: 1082241119
+      Data3: 225762702
+      Data4: 1451268494
+    Path: event:/SFX/Pickable/PickableCollect
 --- !u!114 &5410283531284949140
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9979,7 +10050,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1323892583030097484, guid: d61b5b3dc5f5fb44da5f5ae76bf676f5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.298
       objectReference: {fileID: 0}
     - target: {fileID: 1323892583030097484, guid: d61b5b3dc5f5fb44da5f5ae76bf676f5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -10031,7 +10102,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7554219690520842881, guid: d61b5b3dc5f5fb44da5f5ae76bf676f5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.6
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 7554219690520842881, guid: d61b5b3dc5f5fb44da5f5ae76bf676f5, type: 3}
       propertyPath: m_LocalRotation.w

@@ -7,6 +7,7 @@ using Project.Scripts.GamePlay.Armaments.ArmamentBehaviour;
 using Project.Scripts.GamePlay.Armaments.Configs;
 using Project.Scripts.GamePlay.Armaments.Enums;
 using Project.Scripts.GamePlay.Armaments.Factories;
+using Project.Scripts.Sounds;
 using UnityEngine;
 using Zenject;
 
@@ -95,12 +96,13 @@ namespace Project.Scripts.GamePlay.Armaments
                 _hitObjects.Add(hittable);
                 hittable.OnHit(this);
             }
-            Hitted?.Invoke();
             if (_dismissed) return;
             foreach (var particleSystem in _particleSystems)
             {
                 particleSystem.Play();
             }
+            Hitted?.Invoke();
+
 
         
 

@@ -1,4 +1,6 @@
+using System.Collections.Generic;
 using Assets.Code.GamePlay.Common.Entity;
+using FMOD.Studio;
 using FMODUnity;
 using UnityEngine;
 using Zenject;
@@ -8,6 +10,7 @@ namespace Project.Scripts.Sounds
     public class SoundSource : EntityComponent
     {
         [SerializeField] private SoundPlacement[] _soundPlacements;
+        private List<EventInstance> _eventInstances = new List<EventInstance>();
         private ISoundsSystem _soundsSystem;
 
         [Inject]
@@ -21,6 +24,15 @@ namespace Project.Scripts.Sounds
             Vector3 position = GetPositionForSound(placementType);
             _soundsSystem.PlayOneShot(sound, position);
         }
+        public EventInstance CreateInstance(EventReference sound, SoundPlacementType placementType = SoundPlacementType.None)
+        {
+            Vector3 position = GetPositionForSound(placementType);
+            EventInstance eventInstance = _soundsSystem.CreateInstance(sound);
+            _eventInstances.Add(eventInstance);
+            return eventInstance;
+        }
+
+
 
         private Vector3 GetPositionForSound(SoundPlacementType type)
         {
@@ -41,7 +53,9 @@ namespace Project.Scripts.Sounds
         None,
         Root,
         Center,
-        Head
+        Head,
+        LeftHand,
+        RightHand,
     }
 
     [System.Serializable]

@@ -19,3 +19,10 @@ MonoBehaviour:
   <GravityChangeJumpAvailable>k__BackingField: 0
   <GravityChangeJumpMaxHorizontalDistance>k__BackingField: 13
   <GravityChangeJumpMaxVerticalDistance>k__BackingField: 30
+  <Sound>k__BackingField:
+    Guid:
+      Data1: 215150733
+      Data2: 1341897112
+      Data3: -731068800
+      Data4: -607860848
+    Path: event:/SFX/Spell/Spell 2

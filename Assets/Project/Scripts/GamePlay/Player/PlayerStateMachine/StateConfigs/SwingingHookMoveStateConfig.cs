@@ -5,6 +5,7 @@ using Assets.Code.GamePlay.Common.Entity;
 using Assets.Code.GamePlay.GameplayStateMachine;
 using Assets.Code.GamePlay.Player.Controller;
 using Assets.Code.GamePlay.Player.PlayerStateMachine.States;
+using FMODUnity;
 using UnityEngine;
 
 namespace Assets.Code.GamePlay.Player.PlayerStateMachine.StateConfigs
@@ -26,7 +27,9 @@ namespace Assets.Code.GamePlay.Player.PlayerStateMachine.StateConfigs
         [field: SerializeField] public float StartSwingMomentum{ get; private set; } = 2f;
         [field: SerializeField] public AnimationCurve SwingingDirectionLerpCurve{ get; private set; }
 
-
+        [field:Header("Sounds")]
+        [field: SerializeField] public EventReference HookSound { get; private set; }
+        [field: SerializeField] public EventReference SwingSound { get; private set; }
         public override List<StateConfiguration> GetStateConfiguration(ActorEntity playerEntity,
             AbilityInstance abilitiesInstance)
         {

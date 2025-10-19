@@ -25,6 +25,27 @@ MonoBehaviour:
   <Duration>k__BackingField: 6
   <Speed>k__BackingField: 16
   <ArmamentToSpawnOnDestroy>k__BackingField: {fileID: 0}
+  <SpawnSound>k__BackingField:
+    Guid:
+      Data1: 1641100643
+      Data2: 1176503335
+      Data3: 128564642
+      Data4: 319334338
+    Path: event:/SFX/Slash/Slash 6
+  <HitSound>k__BackingField:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  <DestroySound>k__BackingField:
+    Guid:
+      Data1: 736284196
+      Data2: 1168732890
+      Data3: -1726400369
+      Data4: 636631677
+    Path: event:/SFX/Impact/MagicBoltImpact
   references:
     version: 2
     RefIds:

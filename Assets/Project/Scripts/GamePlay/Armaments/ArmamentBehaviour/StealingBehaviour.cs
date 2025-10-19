@@ -1,6 +1,7 @@
 using Assets.Code.GamePlay.Common.Entity;
 using Assets.Code.GamePlay.Physic.ColliderLogic;
 using Assets.Code.GamePlay.Player.PlayerEffects;
+using FMODUnity;
 using Project.Scripts.GamePlay.Armaments.ArmamentBehaviour.Abstract;
 using Project.Scripts.GamePlay.Collection.Systems;
 using Project.Scripts.GamePlay.Player.PlayerResources;
@@ -14,6 +15,8 @@ namespace Project.Scripts.GamePlay.Armaments.ArmamentBehaviour
     {
         [SerializeField] private float _manaSpendRate = 10;
         [SerializeField] private ParryTrigger _parryTrigger;
+        
+
         private BookEffects _bookEffects;
         private ICollectionSystem _collectionSystem;
         private BaseEntity _casterEntity;

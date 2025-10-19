@@ -1,32 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-9095977335233549404
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Spell/Spell 6
-  m_EditorClassIdentifier: 
-  Path: event:/Spell/Spell 6
-  Guid:
-    Data1: -1950035962
-    Data2: 1096480236
-    Data3: 1590619561
-    Data4: -487679788
-  Banks:
-  - {fileID: -7224428835513318133}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &-8960345373294980734
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42,12 +15,12 @@ MonoBehaviour:
   Path: ../../FMOD_Projects/RogueScribe_FMOD_Project/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638963447769234291
+  lastModified: 638964038159947845
   FileSizes:
   - Name: Desktop
-    Value: 215072
+    Value: 214784
   Exists: 1
---- !u!114 &-8237384657500427970
+--- !u!114 &-8777401835734857248
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -57,14 +30,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Spell/Spell 7
+  m_Name: event:/SFX/Spell/Spell 9
   m_EditorClassIdentifier: 
-  Path: event:/Spell/Spell 7
+  Path: event:/SFX/Spell/Spell 9
   Guid:
-    Data1: -2079979966
-    Data2: 1086905062
-    Data3: 1840012416
-    Data4: 380009189
+    Data1: 229267774
+    Data2: 1254763863
+    Data3: -1277093226
+    Data4: 1043005408
   Banks:
   - {fileID: -7224428835513318133}
   IsStream: 0
@@ -74,7 +47,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-7996911952148165970
+--- !u!114 &-8353086876526802004
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -84,24 +57,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Slash/Slash 1
+  m_Name: event:/SFX/UI/Button
   m_EditorClassIdentifier: 
-  Path: event:/Slash/Slash 1
+  Path: event:/SFX/UI/Button
   Guid:
-    Data1: -1801374253
-    Data2: 1278893849
-    Data3: 1637987724
-    Data4: 1386803005
+    Data1: 623209277
+    Data2: 1261254591
+    Data3: -1084174195
+    Data4: 1827328364
   Banks:
   - {fileID: -7224428835513318133}
   IsStream: 0
-  Is3D: 1
+  Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-7915818289798522311
+--- !u!114 &-7626580047111946468
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -111,50 +84,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Slash/Slash 2
+  m_Name: event:/SFX/Pickable/PickableAmbient
   m_EditorClassIdentifier: 
-  Path: event:/Slash/Slash 2
+  Path: event:/SFX/Pickable/PickableAmbient
   Guid:
-    Data1: 293507913
-    Data2: 1111508941
-    Data3: 1969872774
-    Data4: -867967761
+    Data1: -1147783280
+    Data2: 1164777002
+    Data3: 1881042823
+    Data4: -714869006
   Banks:
   - {fileID: -7224428835513318133}
   IsStream: 0
   Is3D: 1
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
---- !u!114 &-7881730931861762048
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Spell/Spell 10
-  m_EditorClassIdentifier: 
-  Path: event:/Spell/Spell 10
-  Guid:
-    Data1: 1741274839
-    Data2: 1317400836
-    Data3: -1601610598
-    Data4: 66519375
-  Banks:
-  - {fileID: -7224428835513318133}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
+  Length: 6500
 --- !u!114 &-7224428835513318133
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -170,12 +116,12 @@ MonoBehaviour:
   Path: ../../FMOD_Projects/RogueScribe_FMOD_Project/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638963472952059739
+  lastModified: 638964275028670799
   FileSizes:
   - Name: Desktop
-    Value: 527648
+    Value: 1060320
   Exists: 1
---- !u!114 &-5467439150239601205
+--- !u!114 &-5760721557699857527
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -185,24 +131,51 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Spell/Spell 8
+  m_Name: event:/SFX/Steps/StepsLanding
   m_EditorClassIdentifier: 
-  Path: event:/Spell/Spell 8
+  Path: event:/SFX/Steps/StepsLanding
   Guid:
-    Data1: 513099657
-    Data2: 1259483248
-    Data3: 1302145684
-    Data4: 1862282541
+    Data1: 2043903319
+    Data2: 1217553617
+    Data3: 1608389285
+    Data4: 491876167
   Banks:
   - {fileID: -7224428835513318133}
-  IsStream: 1
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 530
+--- !u!114 &-5366174055943507231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Spell/Spell 3
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Spell/Spell 3
+  Guid:
+    Data1: 214220766
+    Data2: 1191410603
+    Data3: 1508383900
+    Data4: 661475438
+  Banks:
+  - {fileID: -7224428835513318133}
+  IsStream: 0
   Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-4416350847849282030
+--- !u!114 &-3397384706555067253
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -212,14 +185,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Spell/Spell 4
+  m_Name: event:/SFX/Slash/Slash 6
   m_EditorClassIdentifier: 
-  Path: event:/Spell/Spell 4
+  Path: event:/SFX/Slash/Slash 6
   Guid:
-    Data1: 1951996606
-    Data2: 1258595470
-    Data3: -1563458129
-    Data4: -1919980128
+    Data1: 1641100643
+    Data2: 1176503335
+    Data3: 128564642
+    Data4: 319334338
   Banks:
   - {fileID: -7224428835513318133}
   IsStream: 0
@@ -244,10 +217,10 @@ MonoBehaviour:
   Path: ../../FMOD_Projects/RogueScribe_FMOD_Project/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638963447761626141
+  lastModified: 638964134645345686
   FileSizes:
   - Name: Desktop
-    Value: 1454
+    Value: 2026
   Exists: 1
 --- !u!114 &-3014683095604273414
 MonoBehaviour:
@@ -270,13 +243,13 @@ MonoBehaviour:
   Banks:
   - {fileID: -8960345373294980734}
   IsStream: 1
-  Is3D: 1
+  Is3D: 0
   IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
   Length: 18886
---- !u!114 &-2483529617054999551
+--- !u!114 &-1970005257415321949
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -286,41 +259,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Steps/StepsLanding
+  m_Name: event:/SFX/Spell/Spell 4
   m_EditorClassIdentifier: 
-  Path: event:/Steps/StepsLanding
+  Path: event:/SFX/Spell/Spell 4
   Guid:
-    Data1: 2043903319
-    Data2: 1217553617
-    Data3: 1608389285
-    Data4: 491876167
-  Banks:
-  - {fileID: -7224428835513318133}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 530
---- !u!114 &-253685923963682373
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Spell/Spell 2
-  m_EditorClassIdentifier: 
-  Path: event:/Spell/Spell 2
-  Guid:
-    Data1: 215150733
-    Data2: 1341897112
-    Data3: -731068800
-    Data4: -607860848
+    Data1: 1951996606
+    Data2: 1258595470
+    Data3: -1563458129
+    Data4: -1919980128
   Banks:
   - {fileID: -7224428835513318133}
   IsStream: 0
@@ -330,6 +276,141 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-825103736121368684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Spell/Spell 10
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Spell/Spell 10
+  Guid:
+    Data1: 1741274839
+    Data2: 1317400836
+    Data3: -1601610598
+    Data4: 66519375
+  Banks:
+  - {fileID: -7224428835513318133}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-498725197178041832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Spell/Spell 5
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Spell/Spell 5
+  Guid:
+    Data1: 1121102024
+    Data2: 1234339515
+    Data3: -1296386883
+    Data4: 121749108
+  Banks:
+  - {fileID: -7224428835513318133}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-425775117121923513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Impact/DashImpact
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Impact/DashImpact
+  Guid:
+    Data1: -1275882263
+    Data2: 1102662321
+    Data3: 784244927
+    Data4: 2054096324
+  Banks:
+  - {fileID: -7224428835513318133}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-127543335482825597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Impact/MagicBoltImpact
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Impact/MagicBoltImpact
+  Guid:
+    Data1: 736284196
+    Data2: 1168732890
+    Data3: -1726400369
+    Data4: 636631677
+  Banks:
+  - {fileID: -7224428835513318133}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-26490916422198297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Other/Absorbing
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Other/Absorbing
+  Guid:
+    Data1: 219148361
+    Data2: 1176059420
+    Data3: -1336658268
+    Data4: -606556213
+  Banks:
+  - {fileID: -7224428835513318133}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 8500
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -348,63 +429,99 @@ MonoBehaviour:
   - {fileID: -7224428835513318133}
   - {fileID: -8960345373294980734}
   EditorEvents:
-  - {fileID: -9095977335233549404}
-  - {fileID: 5416453437052530543}
-  - {fileID: -8237384657500427970}
-  - {fileID: -7915818289798522311}
-  - {fileID: -5467439150239601205}
-  - {fileID: -253685923963682373}
-  - {fileID: 2050494204096190095}
-  - {fileID: -4416350847849282030}
-  - {fileID: 4448244014716591437}
-  - {fileID: -7996911952148165970}
-  - {fileID: -7881730931861762048}
-  - {fileID: 5917102076758897108}
-  - {fileID: 3928121517017656349}
   - {fileID: -3014683095604273414}
-  - {fileID: -2483529617054999551}
-  - {fileID: 6062202535974191133}
+  - {fileID: 6591775646773631919}
+  - {fileID: -127543335482825597}
+  - {fileID: -8777401835734857248}
+  - {fileID: 4490033191966363627}
+  - {fileID: 2885715382380145629}
+  - {fileID: -26490916422198297}
+  - {fileID: -5760721557699857527}
+  - {fileID: 3459062786060126415}
+  - {fileID: 7395262001065630471}
+  - {fileID: 4078733772608813221}
+  - {fileID: 6224745676212912735}
+  - {fileID: 994941080550034706}
+  - {fileID: 2979438749241950032}
+  - {fileID: -1970005257415321949}
+  - {fileID: -498725197178041832}
+  - {fileID: 221870450256811646}
+  - {fileID: -825103736121368684}
+  - {fileID: -5366174055943507231}
+  - {fileID: -425775117121923513}
+  - {fileID: 2699292558481189186}
+  - {fileID: 7918264506440470062}
+  - {fileID: -7626580047111946468}
+  - {fileID: 4620087163857170736}
+  - {fileID: -3397384706555067253}
+  - {fileID: 7653360658122240610}
+  - {fileID: -8353086876526802004}
+  - {fileID: 7092764390337562302}
   EditorParameters: []
   MasterBanks:
   - {fileID: 3057238179270557938}
   StringsBanks:
   - {fileID: -3289254012517369560}
   cacheVersion: 131849
-  cacheTime: 638963472952059739
+  cacheTime: 638964275028670799
   SerializableEventsDict:
-  - key: event:/Spell/Spell 6
-    index: 0
-  - key: event:/Spell/Spell 9
-    index: 1
-  - key: event:/Spell/Spell 7
-    index: 2
-  - key: event:/Slash/Slash 2
-    index: 3
-  - key: event:/Spell/Spell 8
-    index: 4
-  - key: event:/Spell/Spell 2
-    index: 5
-  - key: event:/Spell/Spell 1
-    index: 6
-  - key: event:/Spell/Spell 4
-    index: 7
-  - key: event:/Spell/Spell 5
-    index: 8
-  - key: event:/Slash/Slash 1
-    index: 9
-  - key: event:/Spell/Spell 10
-    index: 10
-  - key: event:/Spell/Spell 3
-    index: 11
-  - key: event:/Slash/Slash 4
-    index: 12
   - key: event:/Music/Music1
+    index: 0
+  - key: event:/SFX/Spell/Spell 6
+    index: 1
+  - key: event:/SFX/Impact/MagicBoltImpact
+    index: 2
+  - key: event:/SFX/Spell/Spell 9
+    index: 3
+  - key: event:/SFX/Spell/Spell 7
+    index: 4
+  - key: event:/SFX/Slash/Slash 2
+    index: 5
+  - key: event:/SFX/Other/Absorbing
+    index: 6
+  - key: event:/SFX/Steps/StepsLanding
+    index: 7
+  - key: event:/SFX/Impact/FireBallImpact
+    index: 8
+  - key: event:/SFX/Spell/Spell 8
+    index: 9
+  - key: event:/SFX/Steps/Step
+    index: 10
+  - key: event:/SFX/Spell/Spell 2
+    index: 11
+  - key: event:/SFX/Spell/Spell 1
+    index: 12
+  - key: event:/SFX/Impact/DiveDownImpact
     index: 13
-  - key: event:/Steps/StepsLanding
+  - key: event:/SFX/Spell/Spell 4
     index: 14
-  - key: event:/Steps/Step
+  - key: event:/SFX/Spell/Spell 5
     index: 15
---- !u!114 &2050494204096190095
+  - key: event:/SFX/Slash/Slash 1
+    index: 16
+  - key: event:/SFX/Spell/Spell 10
+    index: 17
+  - key: event:/SFX/Spell/Spell 3
+    index: 18
+  - key: event:/SFX/Impact/DashImpact
+    index: 19
+  - key: event:/SFX/Slash/Slash 4
+    index: 20
+  - key: event:/SFX/Slash/Slash 5
+    index: 21
+  - key: event:/SFX/Pickable/PickableAmbient
+    index: 22
+  - key: event:/SFX/Pickable/PickableCollect
+    index: 23
+  - key: event:/SFX/Slash/Slash 6
+    index: 24
+  - key: event:/SFX/Swipe/Swipe5
+    index: 25
+  - key: event:/SFX/UI/Button
+    index: 26
+  - key: event:/SFX/UI/MenuOpen
+    index: 27
+--- !u!114 &221870450256811646
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -414,14 +531,122 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Spell/Spell 1
+  m_Name: event:/SFX/Slash/Slash 1
   m_EditorClassIdentifier: 
-  Path: event:/Spell/Spell 1
+  Path: event:/SFX/Slash/Slash 1
+  Guid:
+    Data1: -1801374253
+    Data2: 1278893849
+    Data3: 1637987724
+    Data4: 1386803005
+  Banks:
+  - {fileID: -7224428835513318133}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &994941080550034706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Spell/Spell 1
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Spell/Spell 1
   Guid:
     Data1: 1813082027
     Data2: 1261767167
     Data3: 1846022553
     Data4: -138702344
+  Banks:
+  - {fileID: -7224428835513318133}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &2699292558481189186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Slash/Slash 4
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Slash/Slash 4
+  Guid:
+    Data1: 1168427005
+    Data2: 1327296111
+    Data3: -1114592124
+    Data4: -1227402148
+  Banks:
+  - {fileID: -7224428835513318133}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &2885715382380145629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Slash/Slash 2
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Slash/Slash 2
+  Guid:
+    Data1: 293507913
+    Data2: 1111508941
+    Data3: 1969872774
+    Data4: -867967761
+  Banks:
+  - {fileID: -7224428835513318133}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &2979438749241950032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Impact/DiveDownImpact
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Impact/DiveDownImpact
+  Guid:
+    Data1: -1998975570
+    Data2: 1224055848
+    Data3: 448297150
+    Data4: -1039393295
   Banks:
   - {fileID: -7224428835513318133}
   IsStream: 0
@@ -446,12 +671,12 @@ MonoBehaviour:
   Path: ../../FMOD_Projects/RogueScribe_FMOD_Project/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638963447761589144
+  lastModified: 638964134645320646
   FileSizes:
   - Name: Desktop
     Value: 1074
   Exists: 1
---- !u!114 &3928121517017656349
+--- !u!114 &3459062786060126415
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -461,14 +686,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Slash/Slash 4
+  m_Name: event:/SFX/Impact/FireBallImpact
   m_EditorClassIdentifier: 
-  Path: event:/Slash/Slash 4
+  Path: event:/SFX/Impact/FireBallImpact
   Guid:
-    Data1: 1168427005
-    Data2: 1327296111
-    Data3: -1114592124
-    Data4: -1227402148
+    Data1: -716606853
+    Data2: 1105761613
+    Data3: -1165910381
+    Data4: -1591765967
   Banks:
   - {fileID: -7224428835513318133}
   IsStream: 0
@@ -478,7 +703,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &4448244014716591437
+--- !u!114 &4078733772608813221
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -488,95 +713,230 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Spell/Spell 5
+  m_Name: event:/SFX/Steps/Step
   m_EditorClassIdentifier: 
-  Path: event:/Spell/Spell 5
-  Guid:
-    Data1: 1121102024
-    Data2: 1234339515
-    Data3: -1296386883
-    Data4: 121749108
-  Banks:
-  - {fileID: -7224428835513318133}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &5416453437052530543
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Spell/Spell 9
-  m_EditorClassIdentifier: 
-  Path: event:/Spell/Spell 9
-  Guid:
-    Data1: 229267774
-    Data2: 1254763863
-    Data3: -1277093226
-    Data4: 1043005408
-  Banks:
-  - {fileID: -7224428835513318133}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &5917102076758897108
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Spell/Spell 3
-  m_EditorClassIdentifier: 
-  Path: event:/Spell/Spell 3
-  Guid:
-    Data1: 214220766
-    Data2: 1191410603
-    Data3: 1508383900
-    Data4: 661475438
-  Banks:
-  - {fileID: -7224428835513318133}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &6062202535974191133
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Steps/Step
-  m_EditorClassIdentifier: 
-  Path: event:/Steps/Step
+  Path: event:/SFX/Steps/Step
   Guid:
     Data1: 421633932
     Data2: 1193331229
     Data3: -1431445833
     Data4: -1759331398
+  Banks:
+  - {fileID: -7224428835513318133}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &4490033191966363627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Spell/Spell 7
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Spell/Spell 7
+  Guid:
+    Data1: -2079979966
+    Data2: 1086905062
+    Data3: 1840012416
+    Data4: 380009189
+  Banks:
+  - {fileID: -7224428835513318133}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &4620087163857170736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Pickable/PickableCollect
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Pickable/PickableCollect
+  Guid:
+    Data1: -104829694
+    Data2: 1082241119
+    Data3: 225762702
+    Data4: 1451268494
+  Banks:
+  - {fileID: -7224428835513318133}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &6224745676212912735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Spell/Spell 2
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Spell/Spell 2
+  Guid:
+    Data1: 215150733
+    Data2: 1341897112
+    Data3: -731068800
+    Data4: -607860848
+  Banks:
+  - {fileID: -7224428835513318133}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &6591775646773631919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Spell/Spell 6
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Spell/Spell 6
+  Guid:
+    Data1: -1950035962
+    Data2: 1096480236
+    Data3: 1590619561
+    Data4: -487679788
+  Banks:
+  - {fileID: -7224428835513318133}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &7092764390337562302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/UI/MenuOpen
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/UI/MenuOpen
+  Guid:
+    Data1: 1576930406
+    Data2: 1264816253
+    Data3: 1121802678
+    Data4: 1108829264
+  Banks:
+  - {fileID: -7224428835513318133}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &7395262001065630471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Spell/Spell 8
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Spell/Spell 8
+  Guid:
+    Data1: 513099657
+    Data2: 1259483248
+    Data3: 1302145684
+    Data4: 1862282541
+  Banks:
+  - {fileID: -7224428835513318133}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &7653360658122240610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Swipe/Swipe5
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Swipe/Swipe5
+  Guid:
+    Data1: -339000780
+    Data2: 1125172242
+    Data3: 1413282989
+    Data4: -347027529
+  Banks:
+  - {fileID: -7224428835513318133}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &7918264506440470062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Slash/Slash 5
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Slash/Slash 5
+  Guid:
+    Data1: 1635053869
+    Data2: 1153206743
+    Data3: -1808251229
+    Data4: -325728450
   Banks:
   - {fileID: -7224428835513318133}
   IsStream: 0

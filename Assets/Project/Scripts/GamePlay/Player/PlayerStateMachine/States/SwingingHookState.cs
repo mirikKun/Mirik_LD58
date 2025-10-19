@@ -11,6 +11,7 @@ using ImprovedTimers.Project.Scripts.Utils.Timers;
 using Project.Scripts.GamePlay.HUD.HudEffects;
 using Project.Scripts.GamePlay.Player.Indication;
 using Project.Scripts.GamePlay.Statuses;
+using Project.Scripts.Sounds;
 using Project.Scripts.Utils;
 using UnityEngine;
 
@@ -72,6 +73,8 @@ namespace Assets.Code.GamePlay.Player.PlayerStateMachine.States
                 _swingingPoint = _raycastSensor.GetPosition();
 
                 _preparingTimer.Start();
+                _player.Get<SoundSource>().PlaySound(_config.HookSound);
+
                 Effects.HookEffects.StartLineDrawing(_swingingPoint,_preparingTimer);
                 _preparingStarted = true;
                 
@@ -89,6 +92,8 @@ namespace Assets.Code.GamePlay.Player.PlayerStateMachine.States
             Mover.OnGroundContactLost();
             OnSwingingHookStart();
             StatusController.AddStatus(new Status(StatusType.InGrapplingHook,_config.SwingingDuration));
+            _player.Get<SoundSource>().PlaySound(_config.SwingSound);
+
 
         }
 

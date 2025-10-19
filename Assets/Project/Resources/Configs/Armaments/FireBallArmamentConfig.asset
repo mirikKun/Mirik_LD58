@@ -24,6 +24,27 @@ MonoBehaviour:
   <Duration>k__BackingField: 9
   <Speed>k__BackingField: 12
   <ArmamentToSpawnOnDestroy>k__BackingField: {fileID: 11400000, guid: c40887e2efebe29419136bfd3e3efa2c, type: 2}
+  <SpawnSound>k__BackingField:
+    Guid:
+      Data1: 1635053869
+      Data2: 1153206743
+      Data3: -1808251229
+      Data4: -325728450
+    Path: event:/SFX/Slash/Slash 5
+  <HitSound>k__BackingField:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  <DestroySound>k__BackingField:
+    Guid:
+      Data1: -716606853
+      Data2: 1105761613
+      Data3: -1165910381
+      Data4: -1591765967
+    Path: event:/SFX/Impact/FireBallImpact
   references:
     version: 2
     RefIds:

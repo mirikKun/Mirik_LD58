@@ -64,7 +64,6 @@ namespace Assets.Code.GamePlay.Common.GameBehaviour.Services
         }
         private void ProcessPendingChanges()
         {
-            // Добавляем новые объекты
             foreach (var behavior in _behaviorsToAdd)
             {
                 if (!_behaviors.Contains(behavior))
@@ -72,7 +71,6 @@ namespace Assets.Code.GamePlay.Common.GameBehaviour.Services
             }
             _behaviorsToAdd.Clear();
 
-            // Удаляем объекты
             foreach (var behavior in _behaviorsToRemove)
             {
                 _behaviors.Remove(behavior);

@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Project.Scripts.GamePlay.Armaments.ArmamentBehaviour
 {
-    public class MovingArmamentBehaviour :IArmamentBehaviour, IUpdateableArmament
+    public class MovingArmamentBehaviour :IArmamentBehaviour, IFixedUpdateableArmament
     {
         private float _speed;
         private Vector3 _direction;
@@ -19,16 +19,18 @@ namespace Project.Scripts.GamePlay.Armaments.ArmamentBehaviour
         public void InitArmament(Armament armament)
         {
             _armament = armament;
+           
 
         }
-        public void Tick(float deltaTime)
+        public void FixedTick(float deltaTime)
         {
             Move(deltaTime);
         }
 
         private void Move(float deltaTime)
         {
-            _armament.transform.position += _direction * (_speed * deltaTime);
+            _armament.Rigidbody.linearVelocity = (_direction * (_speed));
+            
         }
     }
 }

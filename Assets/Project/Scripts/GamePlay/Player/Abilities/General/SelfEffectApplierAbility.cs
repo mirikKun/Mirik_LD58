@@ -1,5 +1,6 @@
 using Assets.Code.GamePlay.Common.Entity;
 using Assets.Code.GamePlay.Player.Abilities.Configs;
+using Project.Scripts.Sounds;
 using UnityEngine;
 
 namespace Assets.Code.GamePlay.Abilities.General
@@ -30,7 +31,7 @@ namespace Assets.Code.GamePlay.Abilities.General
         public void Execute()
         {
             Debug.Log($"SelfEffectApplierAbility.Execute() called for {_caster.name}");
-
+            _caster.Get<SoundSource>().PlaySound(_config.Sound);
             _config.Effects.ForEach(effect => effect.Execute(_caster, _caster,_caster.GetPosition()));
         }
     }

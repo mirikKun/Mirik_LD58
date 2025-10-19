@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Assets.Code.GamePlay.DataDriven.Effects;
+using FMODUnity;
 using Project.Scripts.GamePlay.Armaments.Enums;
 using UnityEngine;
 
@@ -22,5 +23,10 @@ namespace Project.Scripts.GamePlay.Armaments.Configs
         [field: SerializeField] public float Duration { get; private set; }
         [field: SerializeField] public float Speed { get; private set; }
         [field:SerializeField] public ArmamentConfig ArmamentToSpawnOnDestroy { get; private set; }
+        [field:Header("Sounds")]
+        [field: SerializeField] public EventReference SpawnSound { get; private set; }      
+        [field: SerializeField] public EventReference HitSound { get; private set; }
+        [field: SerializeField] public EventReference DestroySound { get; private set; }
+        
     }
 }

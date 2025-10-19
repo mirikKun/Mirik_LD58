@@ -3,6 +3,7 @@ using Assets.Code.GamePlay.Abilities.General;
 using Assets.Code.GamePlay.Common.Entity;
 using Assets.Code.GamePlay.GameplayStateMachine;
 using Assets.Code.GamePlay.Player.PlayerStateMachine.States;
+using FMODUnity;
 using Project.Scripts.GamePlay.Armaments.Configs;
 using UnityEngine;
 
@@ -14,6 +15,10 @@ namespace Assets.Code.GamePlay.Player.PlayerStateMachine.StateConfigs
         [field: SerializeField] public float DiveStrikeSpeed { get; private set; } = 35f;
 
         [field: SerializeField] public ArmamentConfig ArmamentConfig { get; private set; }
+
+        [field:Header("Sounds")]
+        [field: SerializeField] public EventReference StartSound { get; private set; }
+        [field: SerializeField] public EventReference LandSound { get; private set; }
         public override List<StateConfiguration> GetStateConfiguration(ActorEntity playerEntity, AbilityInstance abilitiesInstance)
         {
             List<StateConfiguration> diveStrikeStateConfigurations = new List<StateConfiguration>()

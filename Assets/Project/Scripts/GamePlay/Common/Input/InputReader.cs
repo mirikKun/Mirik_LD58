@@ -1,3 +1,4 @@
+using Code.Gameplay.Common.Time;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
@@ -24,12 +25,18 @@ namespace Assets.Code
         public event UnityAction<RaycastHit> Click = delegate { };
 
         private PlayerInputActions _inputActions;
+        private ITimeService _timeService;
 
         public bool IsJumpKeyPressed() => _inputActions.Player.Jump.IsPressed();
 
         public Vector2 Direction => _inputActions.Player.Move.ReadValue<Vector2>();
         public Vector2 LookDirection => _inputActions.Player.Look.ReadValue<Vector2>();
         public const float HoldDuration = 0.2f;
+
+        public InputReader(ITimeService timeService)
+        {
+            _timeService = timeService;
+        }
 
         public void EnablePlayerActions()
         {
@@ -60,6 +67,7 @@ namespace Assets.Code
 
         public void OnFire(InputAction.CallbackContext context)
         {
+            if (_timeService.TimeScale <= 0) return;
             switch (context.phase)
             {
                 case InputActionPhase.Started:
@@ -218,7 +226,7 @@ namespace Assets.Code
 
         public void OnInventory(InputAction.CallbackContext context)
         {
-            if(context.phase== InputActionPhase.Started)
+            if (context.phase == InputActionPhase.Started)
             {
                 InventoryPressed?.Invoke();
             }

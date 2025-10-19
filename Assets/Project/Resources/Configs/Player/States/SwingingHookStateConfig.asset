@@ -63,3 +63,17 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  <HookSound>k__BackingField:
+    Guid:
+      Data1: 1168427005
+      Data2: 1327296111
+      Data3: -1114592124
+      Data4: -1227402148
+    Path: event:/SFX/Slash/Slash 4
+  <SwingSound>k__BackingField:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 

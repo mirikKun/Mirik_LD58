@@ -24,7 +24,6 @@ namespace Assets.Code.GamePlay.Common.GameBehaviour.Services
         // Execution methods
         public void UpdateAll(float deltaTime)
         {       
-            // Порядок выполнения: Player -> Enemies -> Projectiles -> Effects
             PlayerUpdate.ExecuteAll((updateable, dt) => updateable.GameUpdate(dt), deltaTime);
             EnemiesUpdate.ExecuteAll((updateable, dt) => updateable.GameUpdate(dt), deltaTime);
             ProjectilesUpdate.ExecuteAll((updateable, dt) => updateable.GameUpdate(dt), deltaTime);

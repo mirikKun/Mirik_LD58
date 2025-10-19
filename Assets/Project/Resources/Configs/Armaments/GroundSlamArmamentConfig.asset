@@ -25,6 +25,27 @@ MonoBehaviour:
   <Duration>k__BackingField: 0.1
   <Speed>k__BackingField: 0
   <ArmamentToSpawnOnDestroy>k__BackingField: {fileID: 0}
+  <SpawnSound>k__BackingField:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  <HitSound>k__BackingField:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  <DestroySound>k__BackingField:
+    Guid:
+      Data1: -1998975570
+      Data2: 1224055848
+      Data3: 448297150
+      Data4: -1039393295
+    Path: event:/SFX/Impact/DiveDownImpact
   references:
     version: 2
     RefIds:
