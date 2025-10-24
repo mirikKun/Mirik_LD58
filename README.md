@@ -36,16 +36,6 @@ Collect and customize your playstyle with **8 unique abilities**, fully remappab
 
 Explore the world, discover abilities, and steal powers from your enemies. Assign any ability to any key to create your perfect combat style. Master the parkour movement system combined with your arsenal of abilities to overcome challenges.
 
-## 🛠️ Project Structure
-Assets/Project/Scripts/
-├── GamePlay/
-│   ├── Player/ - Player controller, abilities, inventory
-│   ├── Enemies/ - Enemy AI and behavior systems
-│   ├── Armaments/ - Weapon and combat systems
-│   └── Collection/ - Ability pickup and collection
-├── Infrastructure/ - DI, state management, loading
-└── Utils/ - Helper classes and extensionse to open issues or pull requests.
-
 
 ## 🙏 Acknowledgments
 
