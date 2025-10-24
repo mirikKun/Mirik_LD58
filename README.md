@@ -31,28 +31,27 @@ Collect and customize your playstyle with **8 unique abilities**, fully remappab
 - **State Machine Implementation** - Robust player and enemy behavior management
 - **Modular Systems** - Separated concerns for abilities, inventory, AI, and combat
 
-### 🎨 Technical Stack
-
-- **Unity URP** - Universal Render Pipeline for optimized graphics
-- **FMOD** - Professional audio integration
-- **DOTween** - Smooth animations and transitions
-- **TextMesh Pro** - High-quality text rendering
-
-## 🚀 Getting Started
-
-### Prerequisites
-- Unity 2022.3+ LTS
-- FMOD for Unity plugin
-
-### Installation
-```bash
-git clone https://github.com/yourusername/Rogue-Scribe.git
-cd Rogue-Scribe
-# Open project in Unity
-```
 
 ## 🎮 Gameplay
 
 Explore the world, discover abilities, and steal powers from your enemies. Assign any ability to any key to create your perfect combat style. Master the parkour movement system combined with your arsenal of abilities to overcome challenges.
 
 ## 🛠️ Project Structure
+Assets/Project/Scripts/
+├── GamePlay/
+│   ├── Player/ - Player controller, abilities, inventory
+│   ├── Enemies/ - Enemy AI and behavior systems
+│   ├── Armaments/ - Weapon and combat systems
+│   └── Collection/ - Ability pickup and collection
+├── Infrastructure/ - DI, state management, loading
+└── Utils/ - Helper classes and extensionse to open issues or pull requests.
+
+
+## 🙏 Acknowledgments
+
+- Created for **Ludum Dare 58**
+- Built with Unity and lots of coffee ☕
+
+---
+
+Made with ❤️ for Ludum Dare 58
