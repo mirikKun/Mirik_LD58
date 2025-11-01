@@ -1,26 +1,24 @@
-using Assets.Code.GamePlay.Common.Entity;
+
 using Project.Scripts.GamePlay.Common.Physic.Raycast;
 using Project.Scripts.GamePlay.Common.Time;
+using Project.Scripts.GamePlay.Enemies.EnemyController.Enum;
 using UnityEngine;
 using UnityEngine.AI;
 using Zenject;
 
 namespace Project.Scripts.GamePlay.Enemies.EnemyController
 {
-    public class EnemyMover : EntityComponent
+    public class NavMeshEnemyMover : RigidbodyEnemyMover
     {
         [SerializeField] private NavMeshAgent _agent;
-        [SerializeField] private Rigidbody _rigidbody;
         [SerializeField] private float _stoppingDistance = 1f;
         [SerializeField] private float _groundCheckDistance = 0.2f;
         private float _timeScale = 1f;
         private float _defaultSpeed ;
-        private Transform _transform;
 
 
         private RaycastSensor _sensor;
         private ITimeService _timeService;
-        public Transform Tr => _transform;
         [Inject]
         private void Construct(ITimeService timeService)
         {
@@ -42,11 +40,11 @@ namespace Project.Scripts.GamePlay.Enemies.EnemyController
             _sensor.CastLength = _groundCheckDistance;
         }
 
-        private void Start()
+        protected override void Start()
         {
+            base.Start();
             _timeService.OnTimeScaleChanged += AdjustMoverTimeScale;
 
-            _transform=transform;
         }
 
         public float RotationSpeed => _agent.angularSpeed;
@@ -57,11 +55,6 @@ namespace Project.Scripts.GamePlay.Enemies.EnemyController
             _agent.speed = _defaultSpeed * _timeScale;
             _agent.SetDestination(destination);
             _agent.isStopped = false;
-        }
-
-        public Vector3[] GetPathPoints()
-        {
-            return _agent.path.corners;
         }
 
         private void AdjustMoverTimeScale(float scale)
@@ -115,6 +108,37 @@ namespace Project.Scripts.GamePlay.Enemies.EnemyController
             transform.position = position;
         }
 
+        public override void ApplyForce(Vector3 force)
+        {
+            base.ApplyForce(force);
+            SetMovementType(EnemyMovementType.PhysicsWithGravity);
+        }
+
+        public override void SetMovementType(EnemyMovementType enemyMovementType)
+        {
+            base.SetMovementType(enemyMovementType);
+            if (enemyMovementType == EnemyMovementType.NavMesh)
+            {
+                EnableAgent();
+            }
+            else
+            {
+                DisableAgent();
+            }
+        }
+
+        public override void FixedTick(float fixedDeltaTime)
+        {
+            base.FixedTick(fixedDeltaTime);
+            if (EnemyMovementType != EnemyMovementType.NavMesh)
+            {
+                if (IsGrounded())
+                {
+                    SetMovementType(EnemyMovementType.NavMesh);
+                }
+            }
+        }
+
         public bool DetectGround(float distance)
         {
             _sensor.CastLength = distance;
@@ -124,9 +148,9 @@ namespace Project.Scripts.GamePlay.Enemies.EnemyController
         public bool IsGrounded()
         {
             _sensor.Cast();
-            bool notRising=!_rigidbody.isKinematic||_rigidbody.linearVelocity.y<=0.01f;
+            bool notRising=!Rigidbody.isKinematic||Rigidbody.linearVelocity.y<=0.01f;
             return _sensor.HasDetectedHit()&&notRising;
         }
-        public bool Falling() => _rigidbody.linearVelocity.y<=0.0f;
+        public bool Falling() => Rigidbody.linearVelocity.y<=0.0f;
     }
 }

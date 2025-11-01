@@ -11,7 +11,7 @@ namespace Project.Scripts.GamePlay.Enemies.EnemyController.States
         private readonly ActorEntity _enemy;
         private readonly PatrollingStateConfig _patrollingConfig;
         private Vector3 _startPosition;
-        private EnemyMover Mover => _enemy.Get<EnemyMover>();
+        private NavMeshEnemyMover Mover => _enemy.Get<NavMeshEnemyMover>();
         private EnemyCombat Combat => _enemy.Get<EnemyCombat>();
         public PatrollingState(ActorEntity enemy, PatrollingStateConfig patrollingConfig)
         {

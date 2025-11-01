@@ -1,5 +1,6 @@
 using Assets.Code.GamePlay.Common.Entity;
 using Project.Scripts.GamePlay.Common.GameBehaviour.Services;
+using Project.Scripts.GamePlay.Common.Movement;
 using Project.Scripts.GamePlay.Common.Physic.Raycast;
 using Project.Scripts.GamePlay.Common.Time;
 using Project.Scripts.GamePlay.Player.PlayerStateMachine;
@@ -11,7 +12,7 @@ using Zenject;
 namespace Project.Scripts.GamePlay.Player.Controller
 {
     [RequireComponent(typeof(Rigidbody), typeof(CapsuleCollider))]
-    public class PlayerMover : EntityComponent, IPausable
+    public class PlayerMover : EntityComponent, IPausable,IMovementForceApplier
     {
         [SerializeField] private Transform _footRoot;
 
@@ -26,6 +27,7 @@ namespace Project.Scripts.GamePlay.Player.Controller
 
         [Header("Movement Settings:")] [SerializeField]
         private float _movementSpeed = 7f;
+
 
         [SerializeField] private float _combatSpeedMultiplier = 0.5f;
 
@@ -55,6 +57,7 @@ namespace Project.Scripts.GamePlay.Player.Controller
         private Vector3
             _currentGroundAdjustmentVelocity; // Velocity to adjust player position to maintain ground contact
 
+
         private int _currentLayer;
 
         private Vector3 _momentum;
@@ -63,6 +66,7 @@ namespace Project.Scripts.GamePlay.Player.Controller
 
         [Header("Sensor Settings:")] [SerializeField]
         private bool _isInDebugMode;
+
 
         private bool _isUsingExtendedSensorRange = true; // Use extended range for smoother ground transitions
         private IUpdateService _updateService;
@@ -75,11 +79,13 @@ namespace Project.Scripts.GamePlay.Player.Controller
         public float MovementSpeed => _movementSpeed * Entity.Get<StatsController>()[StatType.MovementSpeed];
         public float AirControlRate => _airControlRate;
 
+        public bool IsFlying => false;
         public Vector3 GetVelocity() => _savedVelocity;
 
         public Vector3 GetMomentum() => _useLocalMomentum ? _tr.localToWorldMatrix * _momentum : _momentum;
 
         public Transform Tr => _tr;
+
 
         [Inject]
         private void Construct(ITimeService timeService, IUpdateService updateService)
@@ -94,7 +100,7 @@ namespace Project.Scripts.GamePlay.Player.Controller
             RecalculateColliderDimensions();
         }
 
-        private void Start()
+        protected void Start()
         {
             _updateService.Pausable.Register(this);
         }
@@ -159,7 +165,6 @@ namespace Project.Scripts.GamePlay.Player.Controller
 
             if (_useLocalMomentum) _momentum = _tr.worldToLocalMatrix * _momentum;
         }
-
 
         public bool IsRising() => VectorMath.GetDotProduct(GetMomentum(), _tr.up) > 0.001f;
 
@@ -239,10 +244,12 @@ namespace Project.Scripts.GamePlay.Player.Controller
 
         public Vector3 GetGroundNormal() => _sensor.GetNormal();
 
+
         public void SetRbVelocity(Vector3 velocity, float timeScale) => _rb.linearVelocity =
             (velocity + _currentGroundAdjustmentVelocity) * timeScale;
 
         public void SetExtendSensorRange(bool isExtended) => _isUsingExtendedSensorRange = isExtended;
+
 
         private void Setup()
         {
@@ -324,6 +331,11 @@ namespace Project.Scripts.GamePlay.Player.Controller
         public void Resume()
         {
             SetRigidbodyKinematic(false);
+        }
+
+        public void ApplyForce(Vector3 force)
+        {
+            SetMomentum(force);
         }
     }
 }

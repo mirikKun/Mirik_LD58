@@ -11,7 +11,7 @@ namespace Project.Scripts.GamePlay.Enemies.EnemyController.States
         private readonly ActorEntity _enemy;
         private readonly AttackPreparingIdleConfig _config;
         private readonly CountdownTimer _idleTimer;
-        private EnemyMover Mover => _enemy.Get<EnemyMover>();
+        private NavMeshEnemyMover Mover => _enemy.Get<NavMeshEnemyMover>();
 
         public AttackPreparingIdleState(ActorEntity enemy, AttackPreparingIdleConfig config)
         {

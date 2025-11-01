@@ -67,7 +67,7 @@ namespace Project.Scripts.GamePlay.Enemies.EnemyController
         {
             foreach (var enemy in _enemies)
             {
-                if(enemy.TryGet(out EnemyRigidbodyMover enemyRigidbodyMover)) enemyRigidbodyMover.FixedTick(fixedDeltaTime);
+                if(enemy.TryGet(out RigidbodyEnemyMover enemyRigidbodyMover)) enemyRigidbodyMover.FixedTick(fixedDeltaTime);
                 enemy.Get<EnemyStatesContainer>().FixedTickUpdate(fixedDeltaTime);
             }
         }

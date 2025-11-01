@@ -14,6 +14,7 @@ namespace Project.Scripts.GamePlay.Enemies.EnemyController.EnemyConfigs.Behaviou
         [SerializeField] private ArmamentSpawnStateConfig _armamentSpawnStateConfig;
         [SerializeField] private PointsFlyPatrollingStateConfig _pointsFlyPatrollingStateConfig;
         [SerializeField] private KnockbackStateConfig _knockbackStateConfig;
+        [SerializeField] private GravityFallStunStateConfig  _gravityFallStunStateConfig;
 
         public override List<StateConfiguration> GetConfigurations(ActorEntity enemyController)
         {
@@ -22,6 +23,7 @@ namespace Project.Scripts.GamePlay.Enemies.EnemyController.EnemyConfigs.Behaviou
                 GetIdleConfiguration(enemyController),
                 GetPatrollingConfiguration(enemyController),
                 GetArmamentSpawnConfiguration(enemyController),
+                GetFallStunConfiguration(enemyController),
             };
             return configurations;
         }
@@ -66,6 +68,23 @@ namespace Project.Scripts.GamePlay.Enemies.EnemyController.EnemyConfigs.Behaviou
                     TransitionConfiguration.GetConfiguration<PointsFlyPatrollingState, ArmamentSpawnState>(state.CanAttackAndCooldownPassed),
                     TransitionConfiguration.GetConfiguration<IdleState, ArmamentSpawnState>(state.CanAttackAndCooldownPassed),
                     TransitionConfiguration.GetConfiguration<ArmamentSpawnState, PointsFlyPatrollingState>(state.AttackTimerFinished),
+                }
+            };
+            return configuration;
+        }
+        private StateConfiguration GetFallStunConfiguration(ActorEntity enemy)
+        {
+
+            var state = new GravityFallStunState(enemy, _gravityFallStunStateConfig);
+            StateConfiguration configuration = new StateConfiguration
+            {
+                State = state,
+                Transitions = new List<TransitionConfiguration>()
+                {
+                    TransitionConfiguration.GetConfiguration<PointsFlyPatrollingState, GravityFallStunState>(state.IsForced),
+                    TransitionConfiguration.GetConfiguration<IdleState, GravityFallStunState>(state.IsForced),
+                    TransitionConfiguration.GetConfiguration<ArmamentSpawnState, GravityFallStunState>(state.IsForced),
+                    TransitionConfiguration.GetConfiguration<GravityFallStunState, PointsFlyPatrollingState>(state.StunTimerFinished),
                 }
             };
             return configuration;

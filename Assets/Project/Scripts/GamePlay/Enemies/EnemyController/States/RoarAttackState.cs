@@ -12,7 +12,7 @@ namespace Project.Scripts.GamePlay.Enemies.EnemyController.States
         private readonly RoarAttackStateConfig _config;
         private readonly CountdownTimer _attackTimer;
         private readonly CountdownTimer _stateTimer;
-        private EnemyMover Mover => _enemy.Get<EnemyMover>();
+        private NavMeshEnemyMover Mover => _enemy.Get<NavMeshEnemyMover>();
         private EnemyCombat Combat => _enemy.Get<EnemyCombat>();
         private EnemyAnimator Animator => _enemy.Get<EnemyAnimator>();
 

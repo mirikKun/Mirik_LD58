@@ -16,7 +16,7 @@ namespace Project.Scripts.GamePlay.Enemies.EnemyController.States
         private readonly CountdownTimer _reloadTimer;
         private readonly CountdownTimer _rotationTimer;
         
-        private EnemyRigidbodyMover Mover => _enemy.Get<EnemyRigidbodyMover>();
+        private RigidbodyEnemyMover Mover => _enemy.Get<RigidbodyEnemyMover>();
         private CharacterDetector Detector => _enemy.Get<CharacterDetector>();
 
         public ArmamentSpawnState(ActorEntity enemy, ArmamentSpawnStateConfig armamentSpawnState)

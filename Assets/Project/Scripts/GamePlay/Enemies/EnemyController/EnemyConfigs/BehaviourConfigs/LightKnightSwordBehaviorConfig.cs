@@ -61,7 +61,7 @@ namespace Project.Scripts.GamePlay.Enemies.EnemyController.EnemyConfigs.Behaviou
                 State = state,
                 Transitions = new List<TransitionConfiguration>()
                 {
-                    TransitionConfiguration.GetConfiguration<PatrollingState, IdleState>(enemy.Get<EnemyMover>().HasReachedDestination)
+                    TransitionConfiguration.GetConfiguration<PatrollingState, IdleState>(enemy.Get<NavMeshEnemyMover>().HasReachedDestination)
                 }
             };
             return configuration;

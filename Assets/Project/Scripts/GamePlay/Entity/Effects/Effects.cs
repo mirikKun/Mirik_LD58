@@ -1,6 +1,7 @@
 using System;
 using Assets.Code.GamePlay.Common.Entity;
 using Project.Scripts.GamePlay.Common.Health;
+using Project.Scripts.GamePlay.Common.Movement;
 using Project.Scripts.GamePlay.Player.Controller;
 using Project.Scripts.GamePlay.Stats;
 using Project.Scripts.GamePlay.Stats.Configs;
@@ -42,10 +43,15 @@ namespace Assets.Code.GamePlay.DataDriven.Effects
         {
             Debug.Log($"{caster.name} knocked back {target.name} with force {_force}");
             Vector3 dir = (target.transform.position - from).normalized;
-            dir.y = Mathf.Abs(dir.y);
-            if (target.TryGet<PlayerMover>(out var mover))
+            
+            if (target.TryGet<IMovementForceApplier>(out var mover))
             {
-                mover.SetMomentum(dir * _force);
+                if (!mover.IsFlying)
+                {
+                     dir.y = Mathf.Abs(dir.y);
+                }
+                mover.ApplyForce(dir * _force);
+                
             }
         }
     }

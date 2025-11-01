@@ -14,7 +14,7 @@ namespace Project.Scripts.GamePlay.Enemies.EnemyController.States
         private readonly ChasingStateConfig _chasingStateConfig;
 
         private Transform _targetTransform;
-        private EnemyMover Mover => _enemy.Get<EnemyMover>();
+        private NavMeshEnemyMover Mover => _enemy.Get<NavMeshEnemyMover>();
         private EnemyCombat Combat => _enemy.Get<EnemyCombat>();
         private EnemyAnimator Animator => _enemy.Get<EnemyAnimator>();
         private CharacterDetector Detector => _enemy.Get<CharacterDetector>();
