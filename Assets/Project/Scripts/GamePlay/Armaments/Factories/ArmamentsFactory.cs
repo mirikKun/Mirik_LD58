@@ -35,7 +35,7 @@ namespace Project.Scripts.GamePlay.Armaments.Factories
             ArmamentConfig armamentData = GetArmamentConfig(armamentType);
             return CreateArmament(armamentData, at, rotation,parent);
         }
-
+     
         public Armament CreateArmament(ArmamentConfig armamentData,Vector3 at,Quaternion rotation,Transform parent=null)
         {
             Transform newParent =parent != null ? parent : _parent;
@@ -69,6 +69,30 @@ namespace Project.Scripts.GamePlay.Armaments.Factories
                 newParticle.Play();
                 Object.Destroy(newParticle.gameObject,newParticle.main.duration);
             }
+        }
+
+        public ArmamentIndicator CreateIndicator(IndicatorType indicatorType, Vector3 position, Quaternion rotation, Transform parent = null)
+        {
+            if (indicatorType == IndicatorType.None)
+            {
+                return null;
+            }
+
+            ArmamentIndicator indicatorPrefab = _staticDataService.GetIndicatorsConfig().GetIndicatorPrefab(indicatorType);
+            if (indicatorPrefab == null)
+            {
+                return null;
+            }
+
+            Transform newParent = parent != null ? parent : _parent;
+            ArmamentIndicator indicator = _instantiator.InstantiatePrefabForComponent<ArmamentIndicator>(
+                indicatorPrefab, newParent);
+            
+            indicator.transform.position = position;
+            indicator.transform.rotation = rotation;
+            indicator.gameObject.SetActive(false);
+
+            return indicator;
         }
    
     }

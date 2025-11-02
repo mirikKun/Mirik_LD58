@@ -46,11 +46,11 @@ namespace Project.Scripts.GamePlay.Player.Abilities.General
             }
         }
 
-        public async void Execute()
+        public void Execute()
         {
             _executing = true;
             ArmamentConfig armamentConfig = _armamentsFactory.GetArmamentConfig(_config.ArmamentType);
-            _armament = _casterEntity.Get<ArmamentsHolder>().CreateArmament(armamentConfig);
+            _armament = _casterEntity.Get<ArmamentsHolder>().CreateArmament(armamentConfig,armamentConfig.HitCaster);
             _casterEntity.Get<PlayerManaController>().ManaEnded += OnExecutionEnded;
             _armament.StartBehaviours();
         }

@@ -18,6 +18,7 @@ namespace Project.Scripts.GamePlay.Armaments
         private List<IArmamentBehaviour> _armamentBehaviours = new List<IArmamentBehaviour>();
         private IUpdateService _updateService;
         public event Action<Armament> Destroyed;
+        public event Action<Armament> Dismissed;
         private bool _dissmissed;
         private ActorEntity _casterEntity;
         private ISoundsSystem _soundsSystem;
@@ -37,7 +38,6 @@ namespace Project.Scripts.GamePlay.Armaments
         {
             _updateService.ProjectilesUpdate.Register(this);
             _updateService.ProjectilesFixedUpdate.Register(this);
-            _armamentTrigger.Dismissed += OnDismissed;
             _armamentTrigger.Hitted += OnHit;
         }
 
@@ -45,7 +45,6 @@ namespace Project.Scripts.GamePlay.Armaments
         {
             _updateService.ProjectilesUpdate.Unregister(this);
             _updateService.ProjectilesFixedUpdate.Unregister(this);
-            _armamentTrigger.Dismissed -= OnDismissed;
             _armamentTrigger.Hitted -= OnHit;
 
         }
@@ -75,6 +74,8 @@ namespace Project.Scripts.GamePlay.Armaments
 
         public void GameUpdate(float deltaTime)
         {
+            _armamentTrigger.GameUpdate(deltaTime);
+            
             foreach (var armamentBehaviour in _armamentBehaviours)
             {
                 if (armamentBehaviour is IUpdateableArmament armament)
@@ -107,10 +108,7 @@ namespace Project.Scripts.GamePlay.Armaments
             }
         }
 
-        private void OnDismissed()
-        {
-            //throw new NotImplementedException();
-        }
+
 
         private void OnHit()
         {
@@ -130,6 +128,20 @@ namespace Project.Scripts.GamePlay.Armaments
             _soundsSystem.PlayOneShot(_config.DestroySound,transform.position);
 
             Destroyed?.Invoke(this);
+            Destroy(gameObject);
+        }
+        public void Dismiss()
+        {
+            foreach (var armamentBehaviour in _armamentBehaviours)
+            {
+                if (armamentBehaviour is IOnDismissableBehaviour armament)
+                {
+                    armament.OnDismissed();
+                }
+            }
+           // _soundsSystem.PlayOneShot(_config.DestroySound,transform.position);
+
+            Dismissed?.Invoke(this);
             Destroy(gameObject);
         }
     }

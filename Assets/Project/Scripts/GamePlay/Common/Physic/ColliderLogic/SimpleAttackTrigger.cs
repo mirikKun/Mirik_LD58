@@ -19,13 +19,15 @@ namespace Project.Scripts.GamePlay.Common.Physic.ColliderLogic
         public BaseEntity CasterEntity=> _casterEntity;
         public List<ITriggerHittable> HitObjects => _hitObjects;
         public List<Effect> Effects { get; private set; }
+        public Transform Transform => transform;
         public event Action Hitted;
-        
+
 
         public void Init(BaseEntity casterEntity)
         {
             _casterEntity= casterEntity;
         }
+
         public void SetEffects(List<Effect> effects)
         {
             Effects = effects;
@@ -36,11 +38,6 @@ namespace Project.Scripts.GamePlay.Common.Physic.ColliderLogic
             _hitObjects.Clear();
             _hitProtectedObjects.Clear();
             _hitCoroutine= null;
-        }
-
-        public Vector3 GetPosition()
-        {
-            return transform.position;
         }
 
         private void OnTriggerEnter(Collider other)

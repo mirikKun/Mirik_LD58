@@ -50,7 +50,7 @@ namespace Project.Scripts.GamePlay.Player.PlayerStateMachine.States
         {
             float fallingHeight = _startPosition.y - Mover.Tr.position.y;
             _player.Get<PlayerEffects.PlayerEffects>().CameraMovingEffects.StartFallEffect(fallingHeight * 2);
-            _player.Get<ArmamentsHolder>().CreateArmament(_config.ArmamentConfig)
+            _player.Get<ArmamentsHolder>().CreateArmament(_config.ArmamentConfig,false)
                 .With(new LifetimeArmamentBehaviour(_config.ArmamentConfig.Duration))
                 .StartBehaviours();
             _player.Get<SoundSource>().PlaySound(_config.LandSound,SoundPlacementType.Root);

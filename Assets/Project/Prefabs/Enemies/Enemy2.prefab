@@ -809,8 +809,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rigidbody: {fileID: 1062370952090122875}
-  _canBeMoved: 1
   _transform: {fileID: 8948569372912181114}
+  _enemyMovementType: 0
+  _isFlying: 0
 --- !u!114 &3152050181293404910
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -927,7 +928,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _armamentLayer: 11
   _armamentPlacements:
-  - <PlacementType>k__BackingField: 1
+  - <PlacementType>k__BackingField: 11
     <Parent>k__BackingField: {fileID: 4805334032799517687}
   _armaments: []
 --- !u!114 &4202019386050950930

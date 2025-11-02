@@ -1,4 +1,5 @@
 using Assets.Code.GamePlay.Common.Entity;
+using Project.Scripts.GamePlay.Common.Enums;
 using Project.Scripts.GamePlay.Common.GameBehaviour.Services;
 using Project.Scripts.GamePlay.Common.Movement;
 using Project.Scripts.GamePlay.Common.Physic.Raycast;
@@ -286,7 +287,7 @@ namespace Project.Scripts.GamePlay.Player.Controller
             _sensor ??= new RaycastSensor(_tr);
 
             _sensor.SetCastOrigin(_col.bounds.center);
-            _sensor.SetCastDirection(RaycastSensor.CastDirection.Down);
+            _sensor.SetCastDirection(CastDirection.Down);
             RecalculateSensorLayerMask();
 
             const float

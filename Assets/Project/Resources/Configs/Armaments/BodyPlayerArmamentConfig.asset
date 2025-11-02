@@ -19,7 +19,7 @@ MonoBehaviour:
   <ParticlesToSpawnOnStart>k__BackingField: []
   <ParticlesToSpawnOnDestroy>k__BackingField: []
   <ArmamentHitType>k__BackingField: 2
-  <ArmamentPlacementType>k__BackingField: 0
+  <ArmamentPlacementType>k__BackingField: 10
   <CasterIsParent>k__BackingField: 1
   <Duration>k__BackingField: 0
   <Speed>k__BackingField: 0
@@ -38,6 +38,13 @@ MonoBehaviour:
       Data3: 784244927
       Data4: 2054096324
     Path: event:/SFX/Impact/DashImpact
+  <DestroySound>k__BackingField:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   references:
     version: 2
     RefIds:

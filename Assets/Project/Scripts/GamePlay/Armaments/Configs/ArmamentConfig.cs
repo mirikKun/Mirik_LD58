@@ -18,10 +18,12 @@ namespace Project.Scripts.GamePlay.Armaments.Configs
         [field: SerializeField] public ArmamentHitType ArmamentHitType { get; private set; }
         [field: SerializeField] public ArmamentPlacementType ArmamentPlacementType { get; private set; }
         [field: SerializeField] public bool CasterIsParent { get; private set; } = true;
+        [field: SerializeField] public bool HitCaster { get; private set; } = false;
 
 
         [field: SerializeField] public float Duration { get; private set; }
         [field: SerializeField] public float Speed { get; private set; }
+        [field: SerializeField] public float HitPeriod { get; private set; }
         [field: SerializeField] public ArmamentConfig ArmamentToSpawnOnDestroy { get; private set; }
         [field: Header("Sounds")]
         [field: SerializeField] public EventReference SpawnSound { get; private set; }

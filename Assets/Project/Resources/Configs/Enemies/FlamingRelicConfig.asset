@@ -26,9 +26,12 @@ MonoBehaviour:
   _pointsFlyPatrollingStateConfig:
     <AnimationName>k__BackingField: 
     <Speed>k__BackingField:
-      _min: 2.5
-      _max: 2.5
+      _min: 2.7460818
+      _max: 2.9469664
+    <Acceleration>k__BackingField: 3.5
     <RotationSpeed>k__BackingField: 2
     <ReachThreshold>k__BackingField: 0.2
   _knockbackStateConfig:
     <Duration>k__BackingField: 2.2
+  _gravityFallStunStateConfig:
+    <StunDuration>k__BackingField: 4.2

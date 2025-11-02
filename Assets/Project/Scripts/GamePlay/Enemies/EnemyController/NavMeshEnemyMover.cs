@@ -1,4 +1,5 @@
 
+using Project.Scripts.GamePlay.Common.Enums;
 using Project.Scripts.GamePlay.Common.Physic.Raycast;
 using Project.Scripts.GamePlay.Common.Time;
 using Project.Scripts.GamePlay.Enemies.EnemyController.Enum;
@@ -36,7 +37,7 @@ namespace Project.Scripts.GamePlay.Enemies.EnemyController
             _sensor ??= new RaycastSensor(transform);
 
             _sensor.SetCastOrigin(transform.transform.position);
-            _sensor.SetCastDirection(RaycastSensor.CastDirection.Down);
+            _sensor.SetCastDirection(CastDirection.Down);
             _sensor.CastLength = _groundCheckDistance;
         }
 

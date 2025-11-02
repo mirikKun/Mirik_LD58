@@ -1,5 +1,6 @@
 using System;
 using Assets.Code.GamePlay.Common.Entity;
+using Project.Scripts.GamePlay.Common.Enums;
 using Project.Scripts.GamePlay.Common.Health;
 using Project.Scripts.GamePlay.Common.Movement;
 using Project.Scripts.GamePlay.Player.Controller;
@@ -13,7 +14,7 @@ namespace Assets.Code.GamePlay.DataDriven.Effects
     [Serializable]
     public abstract class Effect : IActionElement
     {
-        public abstract void Execute(BaseEntity caster, BaseEntity target, Vector3 from);
+        public abstract void Execute(BaseEntity caster, BaseEntity target, Transform from);
     }
 
     [Serializable]
@@ -21,7 +22,7 @@ namespace Assets.Code.GamePlay.DataDriven.Effects
     {
         [SerializeField] private float _amount;
 
-        public override void Execute(BaseEntity caster, BaseEntity target, Vector3 from)
+        public override void Execute(BaseEntity caster, BaseEntity target, Transform from)
         {
             Debug.Log($"{caster.name} dealt {_amount} damage to {target.name}");
             float amount = _amount;
@@ -39,10 +40,10 @@ namespace Assets.Code.GamePlay.DataDriven.Effects
     {
         [SerializeField] private float _force;
 
-        public override void Execute(BaseEntity caster, BaseEntity target, Vector3 from)
+        public override void Execute(BaseEntity caster, BaseEntity target, Transform from)
         {
             Debug.Log($"{caster.name} knocked back {target.name} with force {_force}");
-            Vector3 dir = (target.transform.position - from).normalized;
+            Vector3 dir = (target.transform.position - from.position).normalized;
             
             if (target.TryGet<IMovementForceApplier>(out var mover))
             {
@@ -55,13 +56,46 @@ namespace Assets.Code.GamePlay.DataDriven.Effects
             }
         }
     }
+    [Serializable]
+    public class StraightKnockbackEffect : Effect
+    {
+        [SerializeField] private float _force;
+        [SerializeField] private CastDirection _castDirection;
+
+        public override void Execute(BaseEntity caster, BaseEntity target, Transform from)
+        {
+            Debug.Log($"{caster.name} knocked back {target.name} with force {_force}");
+            Vector3 dir = GetCastDirection(from);
+            
+            if (target.TryGet<IMovementForceApplier>(out var mover))
+            {
+                if (!mover.IsFlying)
+                {
+                     dir.y = Mathf.Abs(dir.y);
+                }
+                mover.ApplyForce(dir * _force);
+                
+            }
+        }
+        private Vector3 GetCastDirection(Transform tr) {
+            return _castDirection switch {
+                CastDirection.Forward => tr.forward,
+                CastDirection.Right => tr.right,
+                CastDirection.Up => tr.up,
+                CastDirection.Backward => -tr.forward,
+                CastDirection.Left => -tr.right,
+                CastDirection.Down => -tr.up,
+                _ => Vector3.one
+            };
+        }
+    }
 
     [Serializable]
     public class ChangeStateEffect : Effect
     {
         [SerializeField] private StatModifierConfig[] _statsModifierConfigs;
 
-        public override void Execute(BaseEntity caster, BaseEntity target, Vector3 from)
+        public override void Execute(BaseEntity caster, BaseEntity target, Transform from)
         {
             // Assuming the target has a method to change its state
             // target.ChangeState(_newState);
@@ -87,7 +121,7 @@ namespace Assets.Code.GamePlay.DataDriven.Effects
     {
         [SerializeField] private bool _invincible;
 
-        public override void Execute(BaseEntity caster, BaseEntity target, Vector3 from)
+        public override void Execute(BaseEntity caster, BaseEntity target, Transform from)
         {
             // Assuming the target has a method to become invincible
             // target.BecomeInvincible(_duration);

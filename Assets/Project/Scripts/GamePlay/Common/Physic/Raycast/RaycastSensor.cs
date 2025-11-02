@@ -1,3 +1,4 @@
+using Project.Scripts.GamePlay.Common.Enums;
 using UnityEngine;
 
 namespace Project.Scripts.GamePlay.Common.Physic.Raycast {
@@ -8,7 +9,6 @@ namespace Project.Scripts.GamePlay.Common.Physic.Raycast {
         private Vector3 _origin = Vector3.zero;
         private Transform _tr;
         
-        public enum CastDirection { Forward, Right, Up, Backward, Left, Down }
         private CastDirection _castDirection;
         private RaycastHit _hitInfo;
 
@@ -34,6 +34,7 @@ namespace Project.Scripts.GamePlay.Common.Physic.Raycast {
         public bool HasDetectedHit() => _hitInfo.collider != null;
         public float GetDistance() => _hitInfo.distance;
         public Vector3 GetNormal() => _hitInfo.normal;
+        public Quaternion GetNormalRotation() => Quaternion.LookRotation(Vector3.ProjectOnPlane(GetCastDirection(), _hitInfo.normal).normalized, _hitInfo.normal);
         public Vector3 GetPosition() => _hitInfo.point;
         public Collider GetCollider() => _hitInfo.collider;
         public Transform GetTransform() => _hitInfo.transform;
@@ -48,7 +49,7 @@ namespace Project.Scripts.GamePlay.Common.Physic.Raycast {
         }
      
 
-        Vector3 GetCastDirection() {
+        private Vector3 GetCastDirection() {
             return _castDirection switch {
                 CastDirection.Forward => _tr.forward,
                 CastDirection.Right => _tr.right,

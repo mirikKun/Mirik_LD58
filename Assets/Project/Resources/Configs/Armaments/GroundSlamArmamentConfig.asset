@@ -20,7 +20,7 @@ MonoBehaviour:
   - {fileID: 8940274357215124245, guid: 429225c0a25f741428e369d14fc1d219, type: 3}
   <ParticlesToSpawnOnDestroy>k__BackingField: []
   <ArmamentHitType>k__BackingField: 2
-  <ArmamentPlacementType>k__BackingField: 5
+  <ArmamentPlacementType>k__BackingField: 15
   <CasterIsParent>k__BackingField: 0
   <Duration>k__BackingField: 0.1
   <Speed>k__BackingField: 0

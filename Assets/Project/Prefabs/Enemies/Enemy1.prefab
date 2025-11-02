@@ -195,7 +195,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _armamentLayer: 11
   _armamentPlacements:
-  - <PlacementType>k__BackingField: 1
+  - <PlacementType>k__BackingField: 11
     <Parent>k__BackingField: {fileID: 606544126883706955}
   _armaments: []
 --- !u!114 &2008685731245536308

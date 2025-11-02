@@ -1,4 +1,5 @@
 using Assets.Code.GamePlay.Common.Entity;
+using Project.Scripts.GamePlay.Common.Enums;
 using Project.Scripts.GamePlay.Common.GameplayStateMachine;
 using Project.Scripts.GamePlay.Common.Physic.Raycast;
 using Project.Scripts.GamePlay.Player.Controller;
@@ -27,7 +28,7 @@ namespace Project.Scripts.GamePlay.Player.PlayerStateMachine.States
             PlayerController.Input.Action1 += HandleActionInput;
             _raycastSensor = new RaycastSensor(PlayerController.CameraTrY);
             _raycastSensor.CastLength=(_config.GravityChangeJumpMaxVerticalDistance+_config.GravityChangeJumpMaxHorizontalDistance);
-            _raycastSensor.SetCastDirection(RaycastSensor.CastDirection.Forward);
+            _raycastSensor.SetCastDirection(CastDirection.Forward);
 
 
         }

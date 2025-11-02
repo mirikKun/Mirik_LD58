@@ -11,5 +11,6 @@ namespace Project.Scripts.GamePlay.Armaments.Factories
         Armament CreateArmament(ArmamentConfig armamentData,Vector3 at,Quaternion rotation,Transform parent=null);
         void CreateArmamentParticles(Armament armament,ParticleSystem[] particleSystems);
         ArmamentConfig GetArmamentConfig(ArmamentType armamentType);
+        ArmamentIndicator CreateIndicator(IndicatorType indicatorType, Vector3 position, Quaternion rotation, Transform parent = null);
     }
 }

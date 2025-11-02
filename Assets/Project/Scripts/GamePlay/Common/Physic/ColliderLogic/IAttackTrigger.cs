@@ -13,7 +13,7 @@ namespace Project.Scripts.GamePlay.Common.Physic.ColliderLogic
         BaseEntity CasterEntity { get; }
         List<ITriggerHittable> HitObjects { get; }
         public void Reset();
-        public Vector3 GetPosition();
+        public Transform Transform { get; }
         public void AddHitProtected(ITriggerHittable hittable);
         event Action Hitted;
     }

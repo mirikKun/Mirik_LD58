@@ -37,6 +37,17 @@ namespace Project.Scripts.GamePlay.Player.Abilities.Behaviours
 
         }
 
+        public void Tick(float deltaTime)
+        {
+            foreach (var ability in _abilities)
+            {
+                if (ability is ITickableAbility tickableAbility)
+                {
+                    tickableAbility.Tick(deltaTime);
+                }
+            }
+        }
+
         public void Init()
         {
             foreach (AbilityInstance abilityInstance in _abilitiesSystem.Abilities)

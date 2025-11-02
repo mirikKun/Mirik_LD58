@@ -6,17 +6,19 @@ namespace Project.Scripts.GamePlay.VFX
     public class ScaleOnEnable:MonoBehaviour
     {
         [SerializeField] private float _scaleSpeed=15;
-        private float _currentScale;
+        [SerializeField] private Vector3 _targetScale=Vector3.one;
+        [SerializeField] private Vector3 _startScale=Vector3.zero;
+        private Vector3 _currentScale;
         
         private void Update()
         {
-            transform.localScale=Vector3.one*Mathf.Lerp(_currentScale,1,Time.deltaTime*_scaleSpeed);
-            _currentScale = transform.localScale.x;
+            transform.localScale=Vector3.Lerp(_currentScale,_targetScale,Time.deltaTime*_scaleSpeed);
+            _currentScale = transform.localScale;
         }
 
         private void OnEnable()
         {
-            _currentScale = 0;
+            _currentScale = _startScale;
         }
     }
 }

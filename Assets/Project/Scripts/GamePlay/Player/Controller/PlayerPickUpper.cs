@@ -1,4 +1,5 @@
 using Assets.Code.GamePlay.Common.Entity;
+using Project.Scripts.GamePlay.Common.Enums;
 using Project.Scripts.GamePlay.Common.Input;
 using Project.Scripts.GamePlay.Common.Physic.Raycast;
 using Project.Scripts.GamePlay.PickUp;
@@ -27,7 +28,7 @@ namespace Project.Scripts.GamePlay.Player.Controller
         {
             _raycastSensor = new RaycastSensor(_raycastOrigin);
             _raycastSensor.CastLength = (_checkDistance);
-            _raycastSensor.SetCastDirection(RaycastSensor.CastDirection.Forward);
+            _raycastSensor.SetCastDirection(CastDirection.Forward);
             _inputReader.Interact+= OnInteractInput;
         }
 

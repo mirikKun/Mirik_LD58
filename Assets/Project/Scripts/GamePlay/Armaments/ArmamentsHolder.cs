@@ -22,16 +22,27 @@ namespace Project.Scripts.GamePlay.Armaments
             _armamentsFactory = armamentsFactory;
         }
 
-        public Armament CreateArmament(ArmamentConfig config)
+        public Armament CreateArmament(ArmamentConfig config,bool hitCaster)
         {
             Transform placement = GetArmamentPlacement(config);
             Transform parent = config.CasterIsParent ? placement : null;
-            Quaternion rotation =  placement.rotation;
-            Armament armament = _armamentsFactory.CreateArmament(config, placement.position, rotation, parent);
+            Quaternion rotation = placement.rotation;
+            Vector3 placementPosition = placement.position;
+
+            var armament = CreateArmament(config, placementPosition, rotation, parent,hitCaster);
+            return armament;
+        }
+
+        public Armament CreateArmament(ArmamentConfig config, Vector3 at, Quaternion rotation, Transform parent,bool hitCaster)
+        {
+            Armament armament = _armamentsFactory.CreateArmament(config, at, rotation, parent);
             armament.Destroyed += OnArmamentDestroyed;
             armament.Init(Entity, config);
-            armament.gameObject.layer = _armamentLayer;
-            _armaments.Add(armament); 
+            if(!hitCaster)
+            {
+                armament.gameObject.layer = _armamentLayer;
+            }           
+            _armaments.Add(armament);
             return armament;
         }
 
@@ -59,15 +70,32 @@ namespace Project.Scripts.GamePlay.Armaments
 
         public Transform GetArmamentPlacement(ArmamentConfig config)
         {
+            ArmamentPlacementType configArmamentPlacementType = config.ArmamentPlacementType;
+            return GetArmamentPlacement(configArmamentPlacementType);
+        }
+
+        public Transform GetArmamentPlacement(ArmamentPlacementType type)
+        {
             foreach (var placement in _armamentPlacements)
             {
-                if (placement.PlacementType == config.ArmamentPlacementType)
+                if (placement.PlacementType == type)
                 {
                     return placement.Parent;
                 }
             }
 
-            throw new Exception($"No armament placement found for type: {config.ArmamentPlacementType}");
+            throw new Exception($"No armament placement found for type: {type}");
+        }
+
+        public ArmamentIndicator CreateIndicator(IndicatorType indicatorType,Vector3 at, Quaternion rotation)
+        {
+            ArmamentIndicator currentIndicator = _armamentsFactory.CreateIndicator(indicatorType, at, rotation);
+            if (currentIndicator != null)
+            {
+                currentIndicator.Show();
+            }
+
+            return currentIndicator;
         }
     }
 

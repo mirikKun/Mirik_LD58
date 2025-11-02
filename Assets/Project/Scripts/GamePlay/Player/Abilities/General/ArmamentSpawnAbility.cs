@@ -3,6 +3,7 @@ using Project.Scripts.GamePlay.Armaments;
 using Project.Scripts.GamePlay.Armaments.ArmamentBehaviour;
 using Project.Scripts.GamePlay.Armaments.Configs;
 using Project.Scripts.GamePlay.Armaments.Factories;
+using Project.Scripts.GamePlay.Common.Time;
 using Project.Scripts.GamePlay.Player.Abilities.Configs;
 using UnityEngine;
 using Zenject;
@@ -15,10 +16,12 @@ namespace Project.Scripts.GamePlay.Player.Abilities.General
 
         private IArmamentsFactory _armamentsFactory;
         private ActorEntity _casterEntity;
+        private ITimeService _timeService;
 
         [Inject]
-        private void Construct(IArmamentsFactory armamentsFactory)
+        private void Construct(IArmamentsFactory armamentsFactory,ITimeService timeService)
         {
+            _timeService = timeService;
             _armamentsFactory = armamentsFactory;
         }
         public void SetConfig(ArmamentSpawnAbilityConfig config)
@@ -39,16 +42,16 @@ namespace Project.Scripts.GamePlay.Player.Abilities.General
             }
         }
 
-        public async void Execute()
+        public void Execute()
         {
             ArmamentConfig armamentConfig = _armamentsFactory.GetArmamentConfig(_config.ArmamentType);
-            Armament armament = _casterEntity.Get<ArmamentsHolder>().CreateArmament(armamentConfig);
+            Armament armament = _casterEntity.Get<ArmamentsHolder>().CreateArmament(armamentConfig,armamentConfig.HitCaster);
 
 
             Vector3 directionToTarget = _casterEntity.Get<ArmamentsHolder>().GetArmamentPlacement(armamentConfig).forward;
             armament
                 .With(new LifetimeArmamentBehaviour(armamentConfig.Duration))
-                .With(new MovingArmamentBehaviour(armamentConfig.Speed,directionToTarget))
+                .With(new MovingArmamentBehaviour(armamentConfig.Speed,directionToTarget,_timeService))
                 .StartBehaviours();
         }
     }

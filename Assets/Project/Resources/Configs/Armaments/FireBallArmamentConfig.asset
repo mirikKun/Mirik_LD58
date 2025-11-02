@@ -19,7 +19,7 @@ MonoBehaviour:
   <ParticlesToSpawnOnStart>k__BackingField: []
   <ParticlesToSpawnOnDestroy>k__BackingField: []
   <ArmamentHitType>k__BackingField: 0
-  <ArmamentPlacementType>k__BackingField: 1
+  <ArmamentPlacementType>k__BackingField: 11
   <CasterIsParent>k__BackingField: 0
   <Duration>k__BackingField: 9
   <Speed>k__BackingField: 12

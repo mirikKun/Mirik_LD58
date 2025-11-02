@@ -21,7 +21,7 @@ namespace Project.Scripts.GamePlay.StaticData
         private PlayerStartAbilities _playerStartAbilities;
         private AllCollectableAbilities _allCollectableAbilities;
         private ArmamentsConfig _armamentsConfig;
-
+        private IndicatorsConfig _indicatorsConfig;
 
         private StatIconsConfig _statIconsConfig;
         private StatusIconsConfig _statusIconsConfig;
@@ -35,7 +35,7 @@ namespace Project.Scripts.GamePlay.StaticData
             LoadStartInventoryConfig();
             LoadProjectilesConfig();
             LoadAllCollectableAbilitiesConfig();
-            
+            LoadIndicatorsConfig();
             LoadIconsConfigs();
         }
 
@@ -60,6 +60,8 @@ namespace Project.Scripts.GamePlay.StaticData
             _playerStartAbilities ?? throw new Exception("Player start abilities config was not loaded");
         public ArmamentsConfig GetProjectilesConfig() =>
             _armamentsConfig ?? throw new Exception("Projectiles config was not loaded");
+        public IndicatorsConfig GetIndicatorsConfig() =>
+            _indicatorsConfig ?? throw new Exception("Indicators config was not loaded");
         public StatIconsConfig GetStatIconsConfig() =>
             _statIconsConfig ?? throw new Exception("Stat icons config was not loaded");
         public StatusIconsConfig GetStatusIconsConfig() =>
@@ -76,6 +78,13 @@ namespace Project.Scripts.GamePlay.StaticData
             _armamentsConfig= Resources
                 .Load<ArmamentsConfig>("Configs/Armaments/ProjectilesConfig");
         }
+
+        private void LoadIndicatorsConfig()
+        {
+            _indicatorsConfig = Resources
+                .Load<IndicatorsConfig>("Configs/Player/Abilities/IndicatorsConfig");
+        }
+
         private void LoadAllCollectableAbilitiesConfig()
         {
             _allCollectableAbilities= Resources

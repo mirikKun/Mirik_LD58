@@ -22,7 +22,7 @@ namespace Project.Scripts.GamePlay.Player.PlayerStateMachine.States
         public override void OnEnter()
         {
             base.OnEnter();
-            _armament = _player.Get<ArmamentsHolder>().CreateArmament(_attackConfig.ArmamentConfig);
+            _armament = _player.Get<ArmamentsHolder>().CreateArmament(_attackConfig.ArmamentConfig,false);
             _player.Get<LayerChanger>().ChangeLayerToIntangible();
         }
 

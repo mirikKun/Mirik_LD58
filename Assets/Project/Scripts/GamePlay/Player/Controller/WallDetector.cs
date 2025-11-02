@@ -1,4 +1,5 @@
 using Assets.Code.GamePlay.Common.Entity;
+using Project.Scripts.GamePlay.Common.Enums;
 using Project.Scripts.GamePlay.Common.Physic.Raycast;
 using UnityEngine;
 
@@ -66,13 +67,13 @@ namespace Project.Scripts.GamePlay.Player.Controller
             float angleToFront=Vector3.Angle(_wallNormal,-_cameraTransform.forward);
             
 
-            if(angleToLeft<_currentWallAngleLimit&&SideWallHit(RaycastSensor.CastDirection.Left))
+            if(angleToLeft<_currentWallAngleLimit&&SideWallHit(CastDirection.Left))
                 _wallWasTouchedToTheLeft = true;
-            else if(angleToRight<_currentWallAngleLimit&&SideWallHit(RaycastSensor.CastDirection.Right))
+            else if(angleToRight<_currentWallAngleLimit&&SideWallHit(CastDirection.Right))
                 _wallWasTouchedToTheRight = true;
             else if (angleToFront < _currentWallAngleLimit)
             {
-                if (SideWallHit(RaycastSensor.CastDirection.Forward))
+                if (SideWallHit(CastDirection.Forward))
                     _wallWasTouchedToTheFront = true;
                 else if(ForwardBottomWallHit())
                 {
@@ -99,10 +100,10 @@ namespace Project.Scripts.GamePlay.Player.Controller
             _wallWasTouchedToTheFrontBottom = false;
         }
 
-        private bool SideWallHit(RaycastSensor.CastDirection castDirection)
+        private bool SideWallHit(CastDirection castDirection)
         {
             return _dawnSensor.CastInDirection(castDirection)&&_topSensor.CastInDirection(castDirection);
         }
-        private bool ForwardBottomWallHit() => !_topSensor.CastInDirection(RaycastSensor.CastDirection.Forward)&&_dawnSensor.CastInDirection(RaycastSensor.CastDirection.Forward);
+        private bool ForwardBottomWallHit() => !_topSensor.CastInDirection(CastDirection.Forward)&&_dawnSensor.CastInDirection(CastDirection.Forward);
     }
 }

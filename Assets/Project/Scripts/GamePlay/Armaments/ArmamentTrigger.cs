@@ -19,9 +19,11 @@ namespace Project.Scripts.GamePlay.Armaments
         [SerializeField] private GameObject _root;
         private List<ITriggerHittable> _hitObjects = new List<ITriggerHittable>();
         private List<ITriggerHittable> _hitProtectedObjects = new List<ITriggerHittable>();
+        private Dictionary<ITriggerHittable, float> _hitCooldowns = new Dictionary<ITriggerHittable, float>();
+        private List<ITriggerHittable> _targetsInTrigger = new List<ITriggerHittable>();
         private ArmamentHitType _configArmamentHitType;
+        private float _hitPeriod;
         private BaseEntity _casterEntity;
-        private Coroutine _hitCoroutine;
         private IArmamentsFactory _armamentsFactory;
         private ArmamentConfig _armamentToSpawn;
         private ArmamentConfig _currentArmamentConfig;
@@ -30,7 +32,7 @@ namespace Project.Scripts.GamePlay.Armaments
         public List<Effect> Effects { get; private set; }
         public ArmamentConfig ArmamentConfig=> _currentArmamentConfig;
         public event Action Hitted;
-        public event Action Dismissed;
+        public Transform Transform=>transform;
         private bool _dismissed;
         private Armament _armament;
 
@@ -50,6 +52,7 @@ namespace Project.Scripts.GamePlay.Armaments
             _currentArmamentConfig= config;
             Effects = config.Effects;
             _configArmamentHitType = config.ArmamentHitType;
+            _hitPeriod = config.HitPeriod;
             _armamentToSpawn = config.ArmamentToSpawnOnDestroy;
             _armament = armament;
         }
@@ -59,29 +62,88 @@ namespace Project.Scripts.GamePlay.Armaments
         {
             _hitObjects.Clear();
             _hitProtectedObjects.Clear();
-            _hitCoroutine = null;
+            _hitCooldowns.Clear();
+            _targetsInTrigger.Clear();
         }
 
         public void Dismiss()
         {
-            Dismissed?.Invoke();
             _dismissed= true;
-            Destroy(_root);
+            _armament.Dismiss();
 
         }
 
-        public Vector3 GetPosition()
+       
+
+        public void GameUpdate(float deltaTime)
         {
-            return transform.position;
+            if (_configArmamentHitType != ArmamentHitType.EveryoneWithPeriod)
+                return;
+
+            // Update cooldowns
+            var keysToUpdate = new List<ITriggerHittable>(_hitCooldowns.Keys);
+            foreach (var target in keysToUpdate)
+            {
+                _hitCooldowns[target] -= deltaTime;
+            }
+
+            // Check targets in trigger for periodic hits
+            foreach (var target in _targetsInTrigger)
+            {
+                if (CanHitTarget(target))
+                {
+                    OnHit(target);
+                }
+            }
         }
 
         private void OnTriggerEnter(Collider other)
         {
-            if (other.TryGetComponent(out ITriggerHittable hittable) && !_hitObjects.Contains(hittable) &&
-                !_hitProtectedObjects.Contains(hittable))
+            if (other.TryGetComponent(out ITriggerHittable hittable) && !_hitProtectedObjects.Contains(hittable))
             {
-                OnHit(hittable);
+                if (_configArmamentHitType == ArmamentHitType.EveryoneWithPeriod)
+                {
+                    // Add to targets in trigger
+                    if (!_targetsInTrigger.Contains(hittable))
+                    {
+                        _targetsInTrigger.Add(hittable);
+                    }
+                    
+                    // For EveryoneWithPeriod, allow hitting even if already hit        
+                    if (CanHitTarget(hittable))
+                    {
+                        OnHit(hittable);
+                    }
+                }               
+                else if (!_hitObjects.Contains(hittable))
+                {
+                    // For other types, only hit if not already hit
+                    OnHit(hittable);
+                }
             }
+        }
+
+        private void OnTriggerExit(Collider other)
+        {
+            if (_configArmamentHitType != ArmamentHitType.EveryoneWithPeriod)
+                return;
+
+            if (other.TryGetComponent(out ITriggerHittable hittable))
+            {
+                _targetsInTrigger.Remove(hittable);
+            }
+        }
+
+        private bool CanHitTarget(ITriggerHittable hittable)
+        {
+            if (!_hitCooldowns.TryGetValue(hittable, out float cooldown))
+            {
+                // Never hit this target before
+                return true;
+            }
+
+            // Check if cooldown has expired
+            return cooldown <= 0;
         }
 
         private void OnCollisionEnter(Collision other)
@@ -93,7 +155,23 @@ namespace Project.Scripts.GamePlay.Armaments
         {
             if (hittable != null)
             {
-                _hitObjects.Add(hittable);
+                // For EveryoneWithPeriod, set cooldown timer
+                if (_configArmamentHitType == ArmamentHitType.EveryoneWithPeriod)
+                {
+                    _hitCooldowns[hittable] = _hitPeriod;
+                    
+                    // Still add to _hitObjects for tracking, but it won't prevent re-hits
+                    if (!_hitObjects.Contains(hittable))
+                    {
+                        _hitObjects.Add(hittable);
+                    }
+                }
+                else
+                {
+                    // For other types, just add to _hitObjects
+                    _hitObjects.Add(hittable);
+                }
+                
                 hittable.OnHit(this);
             }
             if (_dismissed) return;

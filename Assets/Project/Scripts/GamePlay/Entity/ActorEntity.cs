@@ -13,13 +13,16 @@ namespace Assets.Code.GamePlay.Common.Entity
         {
             return transform.position;
         }
-        
+        public Transform GetTransform()
+        {
+            return transform;
+        }
 
         public void OnHit(IAttackTrigger attackTrigger)
         {
             foreach (var effect in attackTrigger.Effects)
             {
-                effect.Execute(attackTrigger.CasterEntity,this,attackTrigger.GetPosition());
+                effect.Execute(attackTrigger.CasterEntity,this,attackTrigger.Transform);
             }
         }
     }

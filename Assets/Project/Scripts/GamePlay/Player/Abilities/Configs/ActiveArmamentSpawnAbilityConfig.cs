@@ -4,7 +4,8 @@ using Project.Scripts.GamePlay.Player.Abilities.General;
 using UnityEngine;
 
 namespace Project.Scripts.GamePlay.Player.Abilities.Configs
-{    [CreateAssetMenu(fileName = "ActiveArmamentSpawnAbility", menuName = "Configs/Abilities/ActiveArmamentSpawnAbility")]
+{    
+    [CreateAssetMenu(fileName = "ActiveArmamentSpawnAbility", menuName = "Configs/Abilities/ActiveArmamentSpawnAbility")]
 
     public class ActiveArmamentSpawnAbilityConfig : ActionAbilityConfig
     {

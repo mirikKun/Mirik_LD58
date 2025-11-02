@@ -1,5 +1,6 @@
 using Assets.Code.GamePlay.Common.Entity;
 using ImprovedTimers.Project.Scripts.Utils.Timers;
+using Project.Scripts.GamePlay.Common.Enums;
 using Project.Scripts.GamePlay.Common.GameplayStateMachine;
 using Project.Scripts.GamePlay.Common.Physic.Raycast;
 using Project.Scripts.GamePlay.HUD.RangeIndication;
@@ -54,12 +55,12 @@ namespace Project.Scripts.GamePlay.Player.PlayerStateMachine.States
 
             _raycastNearSensor = new RaycastSensor(PlayerController.CameraTrY);
             _raycastNearSensor.CastLength = (_config.RaycastNearDistance);
-            _raycastNearSensor.SetCastDirection(RaycastSensor.CastDirection.Forward);
+            _raycastNearSensor.SetCastDirection(CastDirection.Forward);
 
             _raycastFarSensor = new RaycastSensor(PlayerController.CameraTrY);
             _raycastFarSensor.CastLength = (_config.GravityChangeJumpMaxVerticalDistance +
                                             _config.GravityChangeJumpMaxHorizontalDistance);
-            _raycastFarSensor.SetCastDirection(RaycastSensor.CastDirection.Forward);
+            _raycastFarSensor.SetCastDirection(CastDirection.Forward);
             _player.Get<AbilitiesIndicationController>().RangeIndication.EquipAbilityWithRange(RangeIndicationType.GravityChange,_raycastNearSensor);
         }
 

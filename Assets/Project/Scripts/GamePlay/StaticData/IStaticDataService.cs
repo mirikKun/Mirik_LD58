@@ -21,5 +21,6 @@ namespace Project.Scripts.GamePlay.StaticData
         AllCollectableAbilities GetAllCollectableAbilities();
         StatIconsConfig GetStatIconsConfig();
         StatusIconsConfig GetStatusIconsConfig();
+        IndicatorsConfig GetIndicatorsConfig();
     }
 }

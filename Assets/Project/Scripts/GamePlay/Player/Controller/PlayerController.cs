@@ -94,6 +94,9 @@ namespace Project.Scripts.GamePlay.Player.Controller
             Entity.Get<PlayerEffects.PlayerEffects>().Tick(deltaTime);
             Entity.Get<StatsController>().Mediator.Tick(deltaTime);
             Entity.Get<StatusController>().Tick(deltaTime);
+            
+            Entity.Get<AbilitiesCaster>().Tick(deltaTime);
+
         }
 
         public void GameLateUpdate(float deltaTime)

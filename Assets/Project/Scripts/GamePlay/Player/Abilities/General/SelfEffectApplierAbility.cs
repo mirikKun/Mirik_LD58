@@ -32,7 +32,7 @@ namespace Project.Scripts.GamePlay.Player.Abilities.General
         {
             Debug.Log($"SelfEffectApplierAbility.Execute() called for {_caster.name}");
             _caster.Get<SoundSource>().PlaySound(_config.Sound);
-            _config.Effects.ForEach(effect => effect.Execute(_caster, _caster,_caster.GetPosition()));
+            _config.Effects.ForEach(effect => effect.Execute(_caster, _caster,_caster.GetTransform()));
         }
     }
 }
