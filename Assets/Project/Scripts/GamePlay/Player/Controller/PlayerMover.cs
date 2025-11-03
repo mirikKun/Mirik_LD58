@@ -28,7 +28,7 @@ namespace Project.Scripts.GamePlay.Player.Controller
 
         [Header("Movement Settings:")] [SerializeField]
         private float _movementSpeed = 7f;
-
+        
 
         [SerializeField] private float _combatSpeedMultiplier = 0.5f;
 

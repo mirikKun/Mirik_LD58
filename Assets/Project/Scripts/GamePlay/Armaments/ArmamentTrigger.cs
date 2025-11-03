@@ -101,7 +101,7 @@ namespace Project.Scripts.GamePlay.Armaments
         {
             if (other.TryGetComponent(out ITriggerHittable hittable) && !_hitProtectedObjects.Contains(hittable))
             {
-                if (_configArmamentHitType == ArmamentHitType.EveryoneWithPeriod)
+                    if (_configArmamentHitType == ArmamentHitType.EveryoneWithPeriod)
                 {
                     // Add to targets in trigger
                     if (!_targetsInTrigger.Contains(hittable))

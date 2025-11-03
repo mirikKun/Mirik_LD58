@@ -24,6 +24,8 @@ namespace Assets.Code.GamePlay.DataDriven.Effects
 
         public override void Execute(BaseEntity caster, BaseEntity target, Transform from)
         {
+            if(caster==target)
+                return;
             Debug.Log($"{caster.name} dealt {_amount} damage to {target.name}");
             float amount = _amount;
             if (caster.TryGet(out StatsController stats) && stats[StatType.Attack] > 0)
