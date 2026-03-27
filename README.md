@@ -1,4 +1,4 @@
-# 🎮 Rogue Scribe
+# Rogue Scribe
 
 [![Ludum Dare 58](https://img.shields.io/badge/Ludum%20Dare-58-orange)](https://ldjam.com/)
 [![Unity](https://img.shields.io/badge/Unity-2022+-black)](https://unity.com/)
@@ -6,13 +6,13 @@
 
 > A dynamic action-parkour game developed for Ludum Dare 58 game jam
 
-## 🎯 About
+## About
 
 **Rogue Scribe** is a fast-paced action-parkour game where movement and combat abilities are your greatest weapons. The core gameplay revolves around discovering and mastering 8 unique abilities that can be found throughout the world or stolen from enemies.
 
-## ✨ Key Features
+## Key Features
 
-### 🔥 Dynamic Ability System
+### Dynamic Ability System
 Collect and customize your playstyle with **8 unique abilities**, fully remappable to any key:
 
 - **Dash** - Swift directional movement
@@ -24,7 +24,7 @@ Collect and customize your playstyle with **8 unique abilities**, fully remappab
 - **Gravity Change** - Manipulate gravity physics
 - **Grappling Hook** - Swing and traverse environments
 
-### 🏗️ Professional Architecture
+### Professional Architecture
 
 - **Zenject Dependency Injection** - Clean, testable code structure
 - **Entity-Component Pattern** - Flexible and modular game object design
@@ -32,16 +32,16 @@ Collect and customize your playstyle with **8 unique abilities**, fully remappab
 - **Modular Systems** - Separated concerns for abilities, inventory, AI, and combat
 
 
-## 🎮 Gameplay
+## Gameplay
 
 Explore the world, discover abilities, and steal powers from your enemies. Assign any ability to any key to create your perfect combat style. Master the parkour movement system combined with your arsenal of abilities to overcome challenges.
 
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - Created for **Ludum Dare 58**
-- Built with Unity and lots of coffee ☕
+- Built with Unity and lots of coffee 
 
 ---
 
-Made with ❤️ for Ludum Dare 58
+Made with for Ludum Dare 58
